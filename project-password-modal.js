@@ -8,32 +8,42 @@
   }
 
   function init() {
-    // Find ALL onboarding project card links (both in nav and main content)
-    const onboardingLinks = document.querySelectorAll('a[href="skytab-onboarding.html"]');
+    const protectedProjects = [
+      {
+        targetUrl: 'skytab-onboarding.html',
+        password: 'ricky',
+        sessionKey: 'password_verified_onboarding'
+      },
+      {
+        targetUrl: 'intelligence-inbox-premium-case-study.html',
+        password: 'ricky',
+        sessionKey: 'password_verified_intelligence_inbox'
+      }
+    ];
 
-    if (onboardingLinks.length === 0) {
-      console.log('Onboarding card not found');
-      return;
-    }
+    protectedProjects.forEach(function(project) {
+      const projectLinks = document.querySelectorAll(
+        'a[href="' + project.targetUrl + '"]'
+      );
 
-    console.log('Password modal initialized for', onboardingLinks.length, 'onboarding links');
-
-    // Prevent default navigation for all links
-    onboardingLinks.forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        console.log('Onboarding link clicked, showing password modal');
-        showPasswordModal('skytab-onboarding.html', 'ricky');
-        return false;
-      }, true); // Use capture phase
+      projectLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          showPasswordModal(
+            project.targetUrl,
+            project.password,
+            project.sessionKey
+          );
+          return false;
+        }, true);
+      });
     });
   }
 
-  function showPasswordModal(targetUrl, correctPassword) {
+  function showPasswordModal(targetUrl, correctPassword, sessionKey) {
     // Check if already verified in session
-    const sessionKey = 'password_verified_onboarding';
     const isVerified = sessionStorage.getItem(sessionKey);
 
     console.log('Session verified status:', isVerified);
