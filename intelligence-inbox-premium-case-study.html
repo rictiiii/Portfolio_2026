@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intelligence Inbox Case Study | Ricky Liu</title>
+  <meta name="description" content="Designing a new AI-powered operational copilot that helps restaurant operators understand priorities and take action.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="navigation.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="chat-widget.js" defer></script>
+  <script src="go-to-top.js" defer></script>
+</head>
+<body class="ii-page" data-theme="light">
+
+  <nav class="navigation">
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html">Ricky Liu</a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="index.html" class="nav-link active">Work</a>
+          <div class="nav-dropdown-menu">
+            <a href="intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
+            <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
+            <a href="koto.html" class="nav-dropdown-item">Koto</a>
+            <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
+          </div>
+        </div>
+        <a href="#" class="nav-link">CV</a>
+        <a href="contact/contact.html" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="ii-hero">
+      <div class="container">
+        <div class="ii-kicker">AI Product Design · Restaurant Operations</div>
+        <h1>From an AI inbox to an operational copilot.</h1>
+        <p class="ii-hero__lede">I designed a new AI-powered experience that tells restaurant operators what needs attention, explains why, and helps them take the next step.</p>
+
+        <div class="ii-meta">
+          <div class="ii-meta__item">
+            <span class="ii-meta__label">Role</span>
+            <span class="ii-meta__value">Lead Product Designer</span>
+          </div>
+          <div class="ii-meta__item">
+            <span class="ii-meta__label">Focus</span>
+            <span class="ii-meta__value">AI UX &amp; product strategy</span>
+          </div>
+          <div class="ii-meta__item">
+            <span class="ii-meta__label">Deliverables</span>
+            <span class="ii-meta__value">Draft + final prototypes</span>
+          </div>
+          <div class="ii-meta__item">
+            <span class="ii-meta__label">Platform</span>
+            <span class="ii-meta__value">Restaurant operations</span>
+          </div>
+        </div>
+
+        <div class="ii-hero-card ii-reveal">
+          <div class="ii-hero-card__content">
+            <span class="ii-chip">AI product experience</span>
+            <h2>Less interface. More direction.</h2>
+            <p>The final concept moved away from asking operators to manage AI insights and toward letting the AI prioritize the day, explain each issue, and lead directly into action.</p>
+          </div>
+          <figure class="ii-hero-product">
+            <img src="intelligence-inbox/ai-chat-home-final.png" alt="Final Intelligence Inbox home screen prioritizing four restaurant operations issues">
+            <figcaption>Final concept · AI Operations Assistant</figcaption>
+          </figure>
+        </div>
+      </div>
+    </header>
+
+    <section class="ii-section ii-section--challenge">
+      <div class="container">
+        <div class="ii-section__head">
+          <div class="ii-section__number">01 / The challenge</div>
+          <div>
+            <h2>The first concept surfaced too much at once.</h2>
+            <p class="ii-section__intro">The initial prototype explored rich operational analysis, confidence scores, filters, lifecycle tabs, recommended actions, and ROI estimates. It was powerful, but the operator still had to scan, interpret, prioritize, and manage the system.</p>
+          </div>
+        </div>
+
+        <div class="ii-grid">
+          <article class="ii-card ii-reveal">
+            <h3>Information overload</h3>
+            <p>Search, filters, lifecycle states, impact labels, confidence percentages, evidence, and multiple actions all competed for attention.</p>
+          </article>
+          <article class="ii-card ii-reveal">
+            <h3>AI behaving like software</h3>
+            <p>The draft made operators manage an AI insight tool instead of allowing the AI to behave like a proactive operational partner.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="ii-section ii-section--editorial">
+      <div class="container">
+        <div class="ii-quote ii-reveal">The key question changed from “How should operators manage AI insights?” to <span>“What should the AI help them do next?”</span></div>
+
+        <div class="ii-artifact-showcase ii-reveal">
+          <div class="ii-artifact-showcase__copy">
+            <span class="ii-artifact-showcase__eyebrow">Interaction language</span>
+            <h3>Questions reveal depth only when the operator needs it.</h3>
+            <p>Short, contextual prompts replaced generic dashboard controls. They make the next step feel conversational while keeping the home experience calm.</p>
+            <div class="ii-question-chips" aria-label="Examples of contextual questions">
+              <img src="intelligence-inbox/text.svg" alt="Why did this happen?">
+              <img src="intelligence-inbox/text-1.svg" alt="What happened during peak hours?">
+              <img src="intelligence-inbox/text-2.svg" alt="Versus last month?">
+            </div>
+          </div>
+          <div class="ii-artifact-showcase__visual">
+            <img class="ii-opportunity-card" src="intelligence-inbox/container.svg" alt="Recommendation card: Recover $1,440 this month through a peak-hour staffing opportunity">
+            <div class="ii-signal-detail">
+              <img src="intelligence-inbox/frame-481509.svg" alt="" aria-hidden="true">
+              <span><strong>Opportunity cue</strong> communicates value before asking for action.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ii-section ii-section--prototypes" id="prototypes">
+      <div class="container">
+        <div class="ii-section__head">
+          <div class="ii-section__number">02 / Concept iteration</div>
+          <div>
+            <h2>Compare two approaches to the same problem.</h2>
+            <p class="ii-section__intro">Draft and Final now use the same presentation format, so the difference in product thinking is clear without cropped or competing previews.</p>
+          </div>
+        </div>
+
+        <div class="ii-prototype-switcher ii-reveal">
+          <div class="ii-prototype-tabs" role="tablist" aria-label="Prototype versions">
+            <button class="ii-prototype-tab active" id="ii-draft-tab" type="button" role="tab" aria-selected="true" aria-controls="ii-draft-panel">
+              Draft
+            </button>
+            <button class="ii-prototype-tab" id="ii-final-tab" type="button" role="tab" aria-selected="false" aria-controls="ii-final-panel" tabindex="-1">
+              Final
+            </button>
+          </div>
+
+          <article class="ii-prototype-panel active" id="ii-draft-panel" role="tabpanel" aria-labelledby="ii-draft-tab">
+            <div class="ii-prototype__head">
+              <div>
+                <span class="ii-prototype__label">Draft</span>
+                <h3>AI insight inbox</h3>
+                <p>A data-rich command center organized around insights, filters, status, evidence, and recommended actions.</p>
+              </div>
+              <dl class="ii-prototype__details">
+                <div>
+                  <dt>Primary focus</dt>
+                  <dd>Surface every useful insight</dd>
+                </div>
+                <div>
+                  <dt>Interaction model</dt>
+                  <dd>Search, filter, review, and manage</dd>
+                </div>
+                <div>
+                  <dt>Role of AI</dt>
+                  <dd>Insight generator inside a dashboard</dd>
+                </div>
+              </dl>
+              <a class="ii-prototype__link" href="https://rictiiii.github.io/Intelligence-Inbox-Draft/" target="_blank" rel="noopener noreferrer">Open Draft prototype <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="ii-prototype-panel" id="ii-final-panel" role="tabpanel" aria-labelledby="ii-final-tab">
+            <div class="ii-prototype__head">
+              <div>
+                <span class="ii-prototype__label ii-prototype__label--final">Final</span>
+                <h3>AI operations assistant</h3>
+                <p>A calm home experience that prioritizes four issues and uses direct actions to move naturally into resolution.</p>
+              </div>
+              <dl class="ii-prototype__details">
+                <div>
+                  <dt>Primary focus</dt>
+                  <dd>Direct attention to what matters now</dd>
+                </div>
+                <div>
+                  <dt>Interaction model</dt>
+                  <dd>Understand, investigate, and act</dd>
+                </div>
+                <div>
+                  <dt>Role of AI</dt>
+                  <dd>Operational assistant with follow-through</dd>
+                </div>
+              </dl>
+              <a class="ii-prototype__link" href="https://rictiiii.github.io/Intelligence-Inbox-Final/" target="_blank" rel="noopener noreferrer">Open Final prototype <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ii-section">
+      <div class="container">
+        <div class="ii-section__head">
+          <div class="ii-section__number">03 / What improved</div>
+          <div>
+            <h2>The final design changes the user’s job.</h2>
+            <p class="ii-section__intro">Instead of managing a system of recommendations, the operator arrives to a short, personalized briefing and acts through focused entry points.</p>
+          </div>
+        </div>
+
+        <div class="ii-comparison ii-reveal">
+          <div class="ii-comparison__row">
+            <div>Dimension</div>
+            <div>Draft</div>
+            <div>Final</div>
+            <div>Why it improved</div>
+          </div>
+          <div class="ii-comparison__row">
+            <div><strong>Entry point</strong></div>
+            <div><p>Inbox containing a set of AI insights</p></div>
+            <div><p>Personalized daily briefing</p></div>
+            <div><p>Creates immediate relevance and removes the feeling of another tool to maintain.</p></div>
+          </div>
+          <div class="ii-comparison__row">
+            <div><strong>Prioritization</strong></div>
+            <div><p>Search, filters, tabs, and impact labels</p></div>
+            <div><p>A short list that needs attention today</p></div>
+            <div><p>The AI performs the prioritization instead of outsourcing it back to the operator.</p></div>
+          </div>
+          <div class="ii-comparison__row">
+            <div><strong>Information density</strong></div>
+            <div><p>Metrics, confidence, evidence, status, and actions</p></div>
+            <div><p>One headline, context line, and next step</p></div>
+            <div><p>Progressive disclosure improves scanning while preserving deeper analysis when requested.</p></div>
+          </div>
+          <div class="ii-comparison__row">
+            <div><strong>Interaction model</strong></div>
+            <div><p>Manage, dismiss, customize, and track insights</p></div>
+            <div><p>Ask, investigate, submit, or see how</p></div>
+            <div><p>Actions are expressed in the language of the operator’s goal rather than the system’s workflow.</p></div>
+          </div>
+          <div class="ii-comparison__row">
+            <div><strong>AI role</strong></div>
+            <div><p>Insight generator inside a dashboard</p></div>
+            <div><p>Operational assistant with follow-through</p></div>
+            <div><p>Proactive prompts and contextual actions make the experience continuous rather than transactional.</p></div>
+          </div>
+          <div class="ii-comparison__row">
+            <div><strong>Scope</strong></div>
+            <div><p>Primarily optimization recommendations</p></div>
+            <div><p>Revenue, staffing, devices, and growth</p></div>
+            <div><p>The concept expands from analytics into a unified restaurant operations surface.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ii-section">
+      <div class="container">
+        <div class="ii-section__head">
+          <div class="ii-section__number">04 / Design decisions</div>
+          <div>
+            <h2>Four decisions made the AI feel more useful.</h2>
+          </div>
+        </div>
+
+        <div class="ii-grid">
+          <article class="ii-card ii-decision ii-reveal">
+            <div class="ii-decision__index">01</div>
+            <h3>Lead with the day, not the database</h3>
+            <p>“There are four things that need your attention today” gives the page a clear purpose and frames the AI around urgency.</p>
+          </article>
+          <article class="ii-card ii-decision ii-reveal">
+            <div class="ii-decision__index">02</div>
+            <h3>Replace taxonomy with intent</h3>
+            <p>Instead of asking users to navigate statuses and impact filters, the final design offers contextual actions in the language of their goals.</p>
+          </article>
+          <article class="ii-card ii-decision ii-reveal">
+            <div class="ii-decision__index">03</div>
+            <h3>Use conversation as progressive disclosure</h3>
+            <p>Detailed analysis no longer occupies the starting screen. Operators enter a focused conversation only when a topic needs investigation.</p>
+          </article>
+          <article class="ii-card ii-decision ii-reveal">
+            <div class="ii-decision__index">04</div>
+            <h3>Unify insight and execution</h3>
+            <p>The assistant can identify a decline, explain an opportunity, prepare a support request, and celebrate growth from one operational surface.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ii-section">
+      <div class="container">
+        <div class="ii-outcome ii-reveal">
+          <h2>The final concept is simpler because the AI does more of the organizing.</h2>
+          <p>The final iteration reduces cognitive overhead, broadens the concept from analytics to operations, and creates a natural path from awareness to investigation and action.</p>
+          <div class="ii-actions">
+            <a class="ii-button ii-button--primary" href="https://rictiiii.github.io/Intelligence-Inbox-Final/" target="_blank" rel="noopener noreferrer">Launch final prototype</a>
+            <a class="ii-button" href="https://rictiiii.github.io/Intelligence-Inbox-Draft/" target="_blank" rel="noopener noreferrer">View early concept</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ii-footer">
+    <div class="container ii-footer__inner">
+      <span>© 2026 Ricky Liu</span>
+    </div>
+  </footer>
+
+</body>
+</html>

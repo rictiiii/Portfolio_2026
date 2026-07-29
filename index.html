@@ -7,7 +7,7 @@
   <meta name="description" content="Product designer crafting intuitive experiences that drive business impact">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="project-password-modal.js"></script>
@@ -25,6 +25,7 @@
         <div class="nav-dropdown">
           <a href="#" class="nav-link active">Work</a>
           <div class="nav-dropdown-menu">
+            <a href="intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
             <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
             <a href="koto.html" class="nav-dropdown-item">Koto</a>
             <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
@@ -48,6 +49,24 @@
       <section class="work-section">
         <div class="project-cards-container">
           <div class="project-cards">
+
+            <a href="intelligence-inbox-premium-case-study.html" class="project-card">
+              <div class="project-card-inner">
+                <div class="project-image intelligence-inbox-cover">
+                  <div class="intelligence-inbox-cover__glow" aria-hidden="true"></div>
+                  <img src="intelligence-inbox/ai-chat-home-final.png" alt="Final Intelligence Inbox home experience showing four prioritized restaurant operations recommendations">
+                </div>
+                <div class="project-content">
+                  <h2 class="project-title">Intelligence Inbox</h2>
+                  <p class="project-description">Evolving a dense AI insights dashboard into a focused operational copilot that prioritizes decisions and helps restaurant operators act</p>
+                  <div class="project-tags">
+                    <span class="tag">AI Product Design</span>
+                    <span class="tag">Product Strategy</span>
+                    <span class="tag">Prototyping</span>
+                  </div>
+                </div>
+              </div>
+            </a>
 
             <a href="skytab-onboarding.html" class="project-card project-card-skytab">
             <div class="project-card-inner">
@@ -115,14 +134,14 @@
 
           <section style="margin-top: var(--spacing-24); padding: var(--spacing-16) 0 var(--spacing-8);">
             <div class="about-section-grid">
-              <div style="max-width: 600px;">
+              <div class="about-copy" style="max-width: 600px;">
                 <h2>About</h2>
-                <p>Senior Product Designer with 10+ years of experience shipping complex B2B SaaS platforms. I specialize in <strong>design systems, user-centered workflows, and simplifying data-rich, regulated experiences across web, desktop, and mobile.</strong></p>
-                <p>Proven track record of delivering measurable results: +60% adoption, -40% escalations, 50% faster handoffs. Currently designing onboarding and merchant experiences at <a href="https://www.shift4.com/" target="_blank" rel="noopener" style="color: var(--color-accent); text-decoration: underline; font-weight: 400;">Shift4</a>, helping 20,000+ businesses succeed.</p>
-                <p>Passionate about exploring how AI is reshaping the design landscape—from ideation and prototyping to production. I <strong>actively experiment with AI-powered design tools and vibe coding</strong> to rapidly test ideas, build interactive prototypes, and push the boundaries of what's possible in product design.</p>
+                <p>I’m a Senior Product Designer with 10+ years of experience turning complex operational systems into clear, scalable products. At <a href="https://www.shift4.com/" target="_blank" rel="noopener" style="color: var(--color-accent); text-decoration: underline; font-weight: 400;">Shift4</a>, I lead end-to-end design for merchant onboarding, payments, kiosk, and AI-assisted experiences used by 20,000+ businesses.</p>
+                <p>My strongest work sits at the intersection of <strong>systems thinking, product strategy, and hands-on execution.</strong> I bring clarity to ambiguous problems, simplify data-rich and regulated workflows, and partner closely with product and engineering to ship across web, mobile, desktop, and touch-screen platforms.</p>
+                <p>I’ve delivered outcomes including <strong>60% higher completion, 40% fewer escalations, and 50% faster design-to-development handoffs</strong> while building design systems that support 5+ product squads. I’m especially interested in AI-native products—using rapid prototyping and code to explore how intelligent systems can become more useful, trustworthy, and actionable.</p>
               </div>
-              <div>
-                <img src="memoji.png" alt="Ricky's memoji" style="width: 200px; height: auto;">
+              <div class="about-character">
+                <img src="homepage/ricky-3d-character-wave-white.png" alt="3D character illustration of Ricky waving">
               </div>
             </div>
           </section>
@@ -130,9 +149,25 @@
           <style>
             .about-section-grid {
               display: grid;
-              grid-template-columns: 1fr auto;
+              grid-template-columns: 1fr minmax(220px, 320px);
               gap: 60px;
-              align-items: end;
+              align-items: stretch;
+            }
+
+            .about-character {
+              position: relative;
+              min-width: 220px;
+            }
+
+            .about-character img {
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              width: auto;
+              max-width: 100%;
+              height: 90%;
+              object-fit: contain;
+              display: block;
             }
 
             @media (max-width: 768px) {
@@ -141,10 +176,17 @@
                 gap: 40px;
               }
 
-              .about-section-grid img {
-                width: 150px !important;
+              .about-character {
+                position: static;
+                min-width: 0;
+              }
+
+              .about-character img {
+                position: static;
+                width: 180px;
+                max-width: 100%;
+                height: auto;
                 margin: 0 auto;
-                display: block;
               }
             }
           </style>
@@ -159,7 +201,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-copyright">
-          © 2025 Ricky Liu
+          © 2026 Ricky Liu
         </div>
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/ricky-liu/" target="_blank" rel="noopener">LinkedIn</a>

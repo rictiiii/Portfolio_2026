@@ -21,6 +21,101 @@ document.addEventListener('DOMContentLoaded', function() {
 // Scroll-progress based animations for project cards
 document.addEventListener('DOMContentLoaded', function() {
   const projectCards = document.querySelectorAll('.project-card');
+  const revealElements = document.querySelectorAll('.ii-reveal');
+
+  if ('IntersectionObserver' in window && revealElements.length) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+  } else {
+    revealElements.forEach((element) => element.classList.add('is-visible'));
+  }
+
+  const prototypeFrames = document.querySelectorAll('.ii-frame[data-prototype-width]');
+
+  function sizePrototypeFrame(frame) {
+    const canvas = frame.querySelector('.ii-frame__canvas');
+    if (!canvas) return;
+
+    const prototypeWidth = Number(frame.dataset.prototypeWidth) || 1440;
+    const prototypeHeight = Number(frame.dataset.prototypeHeight) || 960;
+    const scale = Math.min(frame.clientWidth / prototypeWidth, 1);
+
+    canvas.style.width = `${prototypeWidth}px`;
+    canvas.style.height = `${prototypeHeight}px`;
+    canvas.style.transform = `scale(${scale})`;
+    frame.style.height = `${Math.round(prototypeHeight * scale)}px`;
+  }
+
+  if (prototypeFrames.length) {
+    prototypeFrames.forEach(sizePrototypeFrame);
+
+    if ('ResizeObserver' in window) {
+      const prototypeResizeObserver = new ResizeObserver((entries) => {
+        entries.forEach((entry) => sizePrototypeFrame(entry.target));
+      });
+      prototypeFrames.forEach((frame) => prototypeResizeObserver.observe(frame));
+    } else {
+      window.addEventListener('resize', () => {
+        prototypeFrames.forEach(sizePrototypeFrame);
+      }, { passive: true });
+    }
+  }
+
+  const prototypeTabs = Array.from(document.querySelectorAll('.ii-prototype-tab'));
+  const prototypePanels = Array.from(document.querySelectorAll('.ii-prototype-panel'));
+
+  function activatePrototypeTab(tab, moveFocus = false) {
+    const panelId = tab.getAttribute('aria-controls');
+    const activePanel = document.getElementById(panelId);
+    if (!activePanel) return;
+
+    prototypeTabs.forEach((item) => {
+      const isActive = item === tab;
+      item.classList.toggle('active', isActive);
+      item.setAttribute('aria-selected', String(isActive));
+      item.tabIndex = isActive ? 0 : -1;
+    });
+
+    prototypePanels.forEach((panel) => {
+      panel.classList.toggle('active', panel === activePanel);
+    });
+
+    if (moveFocus) tab.focus();
+
+    const activeFrame = activePanel.querySelector('.ii-frame[data-prototype-width]');
+    if (activeFrame) {
+      window.requestAnimationFrame(() => sizePrototypeFrame(activeFrame));
+    }
+  }
+
+  prototypeTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activatePrototypeTab(tab));
+    tab.addEventListener('keydown', (event) => {
+      let nextIndex;
+
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+        nextIndex = (index + 1) % prototypeTabs.length;
+      } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+        nextIndex = (index - 1 + prototypeTabs.length) % prototypeTabs.length;
+      } else if (event.key === 'Home') {
+        nextIndex = 0;
+      } else if (event.key === 'End') {
+        nextIndex = prototypeTabs.length - 1;
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+      activatePrototypeTab(prototypeTabs[nextIndex], true);
+    });
+  });
 
   function updateCardTransforms() {
     const windowHeight = window.innerHeight;
