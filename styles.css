@@ -4523,12 +4523,12 @@ footer {
 }
 
 .ii-prototype-panel .ii-prototype__head {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
   min-height: 0;
-  padding: clamp(30px, 5vw, 56px);
+  padding: 30px;
 }
 
 .ii-prototype-panel .ii-prototype__head p {
@@ -4537,60 +4537,44 @@ footer {
 }
 
 .ii-prototype-panel .ii-prototype__link {
-  display: inline-flex;
-  align-items: center;
-  align-self: flex-start;
-  gap: 8px;
+  display: inline;
   margin: 0;
-  padding: 14px 18px;
-  border: 1px solid rgba(95, 72, 215, 0.24);
-  border-radius: 12px;
-  background: #5f48d7;
-  color: #fff;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #5f48d7;
+  font-weight: 700;
   white-space: nowrap;
 }
 
 .ii-prototype-panel .ii-prototype__link:hover {
-  background: #513cc7;
+  color: #4531b4;
 }
 
-.ii-prototype__details {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid rgba(23, 23, 25, 0.08);
-  border-radius: 16px;
-  background: rgba(23, 23, 25, 0.08);
+.ii-frame--native {
+  position: relative;
+  width: 100%;
+  height: min(78vh, 900px);
+  min-height: 680px;
+  border-top: 1px solid rgba(23, 23, 25, 0.08);
+  background: #ecebe7;
 }
 
-.ii-prototype__details > div {
-  min-height: 124px;
-  padding: 22px;
-  background: #fafafa;
-}
-
-.ii-prototype__details dt {
-  margin-bottom: 10px;
-  color: #7b7882;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.ii-prototype__details dd {
-  margin: 0;
-  color: #242228;
-  font-size: 0.98rem;
-  font-weight: 500;
-  line-height: 1.45;
+.ii-frame--native iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
 }
 
 @media (max-width: 960px) {
-  .ii-prototype__details {
+  .ii-prototype-panel .ii-prototype__head {
     grid-template-columns: 1fr;
+  }
+
+  .ii-frame--native {
+    height: 720px;
+    min-height: 620px;
   }
 }
 
@@ -4605,5 +4589,14 @@ footer {
 
   .ii-prototype-tabs {
     padding: 10px;
+  }
+
+  .ii-prototype-panel .ii-prototype__head {
+    padding: 24px;
+  }
+
+  .ii-frame--native {
+    height: 640px;
+    min-height: 560px;
   }
 }
