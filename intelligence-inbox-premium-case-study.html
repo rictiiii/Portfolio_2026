@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=11">
   <script src="navigation.js" defer></script>
   <script src="script.js" defer></script>
   <script src="chat-widget.js" defer></script>
@@ -42,6 +42,7 @@
         <div class="ii-kicker">AI Product Design · Restaurant Operations</div>
         <h1>From an AI inbox to an operational copilot.</h1>
         <p class="ii-hero__lede">I designed a new AI-powered experience that tells restaurant operators what needs attention, explains why, and helps them take the next step.</p>
+        <a class="ii-hero-prototype-cta" href="#final-prototype">Try the AI prototype</a>
 
         <div class="ii-meta">
           <div class="ii-meta__item">
@@ -126,64 +127,34 @@
       </div>
     </section>
 
-    <section class="ii-section ii-section--prototypes" id="prototypes">
+    <section class="ii-section ii-section--prototype" id="draft-prototype">
       <div class="container">
         <div class="ii-section__head">
-          <div class="ii-section__number">02 / Concept iteration</div>
+          <div class="ii-section__number">02 / Early prototype</div>
           <div>
-            <h2>Compare two approaches to the same problem.</h2>
-            <p class="ii-section__intro">Toggle between Draft and Final to compare the same concept at full width, then use the open link for an unrestricted view.</p>
+            <h2>The draft made the complexity visible.</h2>
+            <p class="ii-section__intro">The first prototype tested a data-rich inbox organized around insights, filters, evidence, status, and recommended actions.</p>
           </div>
         </div>
 
-        <div class="ii-prototype-switcher ii-reveal">
-          <div class="ii-prototype-tabs" role="tablist" aria-label="Prototype versions">
-            <button class="ii-prototype-tab active" id="ii-draft-tab" type="button" role="tab" aria-selected="true" aria-controls="ii-draft-panel">
-              Draft — AI Insight Inbox
-            </button>
-            <button class="ii-prototype-tab" id="ii-final-tab" type="button" role="tab" aria-selected="false" aria-controls="ii-final-panel" tabindex="-1">
-              Final — AI Operations Assistant
-            </button>
+        <article class="ii-prototype-showcase ii-reveal">
+          <div class="ii-prototype__head">
+            <div>
+              <span class="ii-prototype__label">Draft</span>
+              <h3>AI insight inbox</h3>
+              <p>A data-rich command center organized around insights, filters, status, evidence, and recommended actions.</p>
+            </div>
+            <a class="ii-prototype__link" href="https://rictiiii.github.io/Intelligence-Inbox-Draft/" target="_blank" rel="noopener noreferrer">Open draft prototype <span aria-hidden="true">↗</span></a>
           </div>
-
-          <article class="ii-prototype-panel active" id="ii-draft-panel" role="tabpanel" aria-labelledby="ii-draft-tab">
-            <div class="ii-prototype__head">
-              <div>
-                <span class="ii-prototype__label">Draft</span>
-                <h3>AI insight inbox</h3>
-                <p>A data-rich command center organized around insights, filters, status, evidence, and recommended actions.</p>
-              </div>
-              <a class="ii-prototype__link" href="https://rictiiii.github.io/Intelligence-Inbox-Draft/" target="_blank" rel="noopener noreferrer">Open full prototype <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="ii-frame ii-frame--native">
-              <iframe
-                src="https://rictiiii.github.io/Intelligence-Inbox-Draft/"
-                title="Draft Intelligence Inbox interactive prototype"
-                loading="lazy"
-                allowfullscreen>
-              </iframe>
-            </div>
-          </article>
-
-          <article class="ii-prototype-panel" id="ii-final-panel" role="tabpanel" aria-labelledby="ii-final-tab">
-            <div class="ii-prototype__head">
-              <div>
-                <span class="ii-prototype__label ii-prototype__label--final">Final</span>
-                <h3>AI operations assistant</h3>
-                <p>A calm home experience that prioritizes four issues and uses direct actions to move naturally into resolution.</p>
-              </div>
-              <a class="ii-prototype__link" href="https://rictiiii.github.io/Intelligence-Inbox-Final/" target="_blank" rel="noopener noreferrer">Open full prototype <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="ii-frame ii-frame--native">
-              <iframe
-                src="https://rictiiii.github.io/Intelligence-Inbox-Final/"
-                title="Final Intelligence Inbox interactive prototype"
-                loading="lazy"
-                allowfullscreen>
-              </iframe>
-            </div>
-          </article>
-        </div>
+          <div class="ii-frame ii-frame--native">
+            <iframe
+              src="https://rictiiii.github.io/Intelligence-Inbox-Draft/"
+              title="Draft Intelligence Inbox interactive prototype"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -275,6 +246,37 @@
             <p>The assistant can identify a decline, explain an opportunity, prepare a support request, and celebrate growth from one operational surface.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="ii-section ii-section--prototype ii-section--final-prototype" id="final-prototype">
+      <div class="container">
+        <div class="ii-section__head">
+          <div class="ii-section__number">05 / Final prototype</div>
+          <div>
+            <h2>The finished experience turns insight into direction.</h2>
+            <p class="ii-section__intro">The final prototype prioritizes four issues, reveals context progressively, and leads operators directly toward resolution.</p>
+          </div>
+        </div>
+
+        <article class="ii-prototype-showcase ii-reveal">
+          <div class="ii-prototype__head">
+            <div>
+              <span class="ii-prototype__label ii-prototype__label--final">Final</span>
+              <h3>AI operations assistant</h3>
+              <p>A calm home experience that organizes the day and uses direct actions to move naturally into resolution.</p>
+            </div>
+            <a class="ii-prototype__link" href="https://rictiiii.github.io/Intelligence-Inbox-Final/" target="_blank" rel="noopener noreferrer">Open final prototype <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="ii-frame ii-frame--native">
+            <iframe
+              src="https://rictiiii.github.io/Intelligence-Inbox-Final/"
+              title="Final Intelligence Inbox interactive prototype"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </article>
       </div>
     </section>
 

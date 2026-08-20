@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="hero-section.css">
-  <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding.css?v=2">
+  <link rel="stylesheet" href="hero-section.css?v=11">
+  <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding.css?v=3">
   <script src="navigation.js" defer></script>
   <script src="chat-widget.js" defer></script>
   <script src="go-to-top.js" defer></script>
@@ -51,13 +51,7 @@
           <div class="hero-text">
             <h1 class="hero-title">SkyTab Onboarding: Reimagining Merchant Experience Across Lifecycle Stages</h1>
             <p class="hero-subtitle">How a state-aware onboarding system helped 11,000+ merchants launch faster, saving 4.7 days per merchant and driving 18,000+ feature adoptions</p>
-            <div class="hero-details">
-              <div class="hero-detail-item">Product Design</div>
-              <div class="hero-detail-item">UX Research</div>
-              <div class="hero-detail-item">Dashboard</div>
-              <div class="hero-detail-item">B2B</div>
-              <div class="hero-detail-item">SaaS Product</div>
-            </div>
+            <a class="hero-prototype-cta" href="#ai-prototype">Try the AI prototype</a>
           </div>
           <div class="hero-image-container">
             <img src="skytab-onboarding/Hero.png" alt="SkyTab Onboarding Dashboard" style="width: 100%; height: auto; border-radius: 16px;">
@@ -80,6 +74,13 @@
             <div class="hero-metric-value">90%</div>
             <p class="hero-metric-label">Bug resolution rate (283 resolved, 29 open)</p>
           </div>
+        </div>
+        <div class="hero-details">
+          <div class="hero-detail-item">Product Design</div>
+          <div class="hero-detail-item">UX Research</div>
+          <div class="hero-detail-item">Dashboard</div>
+          <div class="hero-detail-item">B2B</div>
+          <div class="hero-detail-item">SaaS Product</div>
         </div>
       </div>
     </section>
@@ -415,6 +416,21 @@
             </div>
             <div class="case-study-image">
               <img src="skytab-onboarding/6.png" alt="Online Ordering module step 6" style="border-radius: 16px;">
+            </div>
+          </div>
+
+          <div class="prototype-showcase" id="ai-prototype">
+            <div class="prototype-showcase-header">
+              <h3>Try the AI Prototype</h3>
+              <p>Explore the end-to-end onboarding flow, from account setup through the adaptive Customer Hub dashboard.</p>
+            </div>
+            <div class="prototype-frame">
+              <iframe
+                src="interactive-prototype/index.html"
+                title="Interactive SkyTab onboarding prototype"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
             </div>
           </div>
 
