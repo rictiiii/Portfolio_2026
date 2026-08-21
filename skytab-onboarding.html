@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="hero-section.css?v=11">
-  <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding.css?v=3">
+  <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding.css?v=18">
   <script src="navigation.js" defer></script>
   <script src="chat-widget.js" defer></script>
   <script src="go-to-top.js" defer></script>
@@ -51,7 +51,7 @@
           <div class="hero-text">
             <h1 class="hero-title">SkyTab Onboarding: Reimagining Merchant Experience Across Lifecycle Stages</h1>
             <p class="hero-subtitle">How a state-aware onboarding system helped 11,000+ merchants launch faster, saving 4.7 days per merchant and driving 18,000+ feature adoptions</p>
-            <a class="hero-prototype-cta" href="#ai-prototype">Try the AI prototype</a>
+            <a class="hero-prototype-cta" href="#ai-prototype"><span>Try the AI prototype</span></a>
           </div>
           <div class="hero-image-container">
             <img src="skytab-onboarding/Hero.png" alt="SkyTab Onboarding Dashboard" style="width: 100%; height: auto; border-radius: 16px;">
@@ -98,7 +98,7 @@
           <div class="section-divider"></div>
 
           <h3>The Business Challenge</h3>
-          <p>SkyTab merchants exist in vastly different states throughout their lifecycle—from pre-launch setup to mature operations—yet the MX Hub interface treated all merchants the same. This one-size-fits-all approach created friction, confusion, and missed opportunities for engagement at critical moments.</p>
+          <p>SkyTab merchants exist in vastly different states throughout their lifecycle, from pre-launch setup to mature operations, yet the MX Hub interface treated all merchants the same. This one-size-fits-all approach created friction, confusion, and missed opportunities for engagement at critical moments.</p>
 
           <div class="case-study-image" style="width: 60%; margin-left: auto; margin-right: auto;">
             <img src="dashboard-before.png" alt="Dashboard before redesign showing scattered information and unclear hierarchy">
@@ -310,15 +310,166 @@
           <h2 class="section-title">State-Adaptive Dashboard</h2>
           <div class="section-divider"></div>
 
-          <h3>How It Works</h3>
-          <p>The core of the solution is a dashboard that intelligently adapts to merchant lifecycle stage:</p>
-
-          <div class="case-study-image">
-            <img src="skytab-onboarding/merchant-lifecycle-revised.svg" alt="SkyTab onboarding lifecycle diagram showing Activate, Configure, Operate, and Optimize stages with merchant goals, what merchants see, SkyTab guidance, and transition examples">
-            <div class="case-study-image-caption">
-              Complete user flow mapping how merchants transition between states and what they see at each stage
+          <section class="lifecycle-explorer" aria-labelledby="lifecycle-title">
+            <div class="lifecycle-intro">
+              <h3 id="lifecycle-title">How the dashboard adapts</h3>
+              <p>SkyTab changes what merchants see as they move from setup to daily operations and growth.</p>
             </div>
-          </div>
+
+            <div class="lifecycle-desktop">
+              <div class="lifecycle-tabs" role="tablist" aria-label="Merchant lifecycle stages">
+                <button class="lifecycle-tab is-active" id="lifecycle-tab-activate" type="button" role="tab" aria-selected="true" aria-controls="lifecycle-panel-activate" tabindex="0" data-lifecycle-stage="activate">
+                  <span class="lifecycle-tab-name">Activate</span>
+                  <span class="lifecycle-tab-outcome">Clear launch blockers</span>
+                </button>
+                <button class="lifecycle-tab" id="lifecycle-tab-configure" type="button" role="tab" aria-selected="false" aria-controls="lifecycle-panel-configure" tabindex="-1" data-lifecycle-stage="configure">
+                  <span class="lifecycle-tab-name">Configure</span>
+                  <span class="lifecycle-tab-outcome">Finish essential setup</span>
+                </button>
+                <button class="lifecycle-tab" id="lifecycle-tab-operate" type="button" role="tab" aria-selected="false" aria-controls="lifecycle-panel-operate" tabindex="-1" data-lifecycle-stage="operate">
+                  <span class="lifecycle-tab-name">Operate</span>
+                  <span class="lifecycle-tab-outcome">Run the business reliably</span>
+                </button>
+                <button class="lifecycle-tab" id="lifecycle-tab-optimize" type="button" role="tab" aria-selected="false" aria-controls="lifecycle-panel-optimize" tabindex="-1" data-lifecycle-stage="optimize">
+                  <span class="lifecycle-tab-name">Optimize</span>
+                  <span class="lifecycle-tab-outcome">Find opportunities to grow</span>
+                </button>
+              </div>
+
+              <div class="lifecycle-panels">
+                <div class="lifecycle-panel is-active" id="lifecycle-panel-activate" role="tabpanel" aria-labelledby="lifecycle-tab-activate" data-lifecycle-panel="activate">
+                  <div class="lifecycle-detail-grid">
+                    <div>
+                      <h4>Merchant objective</h4>
+                      <p>Understand what is required to launch and resolve blockers quickly.</p>
+                    </div>
+                    <div>
+                      <h4>Dashboard response</h4>
+                      <ul>
+                        <li>Prioritizes launch-critical tasks</li>
+                        <li>Surfaces hardware delivery and readiness</li>
+                        <li>Connects merchants with launch support</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="lifecycle-transition">
+                    <h4>Moves forward when</h4>
+                    <p>The merchant is ready to configure the business.</p>
+                  </div>
+                </div>
+
+                <div class="lifecycle-panel" id="lifecycle-panel-configure" role="tabpanel" aria-labelledby="lifecycle-tab-configure" data-lifecycle-panel="configure" hidden>
+                  <div class="lifecycle-detail-grid">
+                    <div>
+                      <h4>Merchant objective</h4>
+                      <p>Complete the setup needed to take orders with confidence.</p>
+                    </div>
+                    <div>
+                      <h4>Dashboard response</h4>
+                      <ul>
+                        <li>Guides menu and location setup</li>
+                        <li>Clarifies team roles and permissions</li>
+                        <li>Tracks progress toward going live</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="lifecycle-transition">
+                    <h4>Moves forward when</h4>
+                    <p>The business begins taking live orders.</p>
+                  </div>
+                </div>
+
+                <div class="lifecycle-panel" id="lifecycle-panel-operate" role="tabpanel" aria-labelledby="lifecycle-tab-operate" data-lifecycle-panel="operate" hidden>
+                  <div class="lifecycle-detail-grid">
+                    <div>
+                      <h4>Merchant objective</h4>
+                      <p>Keep daily service running and address urgent issues first.</p>
+                    </div>
+                    <div>
+                      <h4>Dashboard response</h4>
+                      <ul>
+                        <li>Elevates orders and system health</li>
+                        <li>Flags issues that need attention</li>
+                        <li>Keeps common actions within reach</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="lifecycle-transition">
+                    <h4>Moves forward when</h4>
+                    <p>Enough operating data exists to reveal useful patterns.</p>
+                  </div>
+                </div>
+
+                <div class="lifecycle-panel" id="lifecycle-panel-optimize" role="tabpanel" aria-labelledby="lifecycle-tab-optimize" data-lifecycle-panel="optimize" hidden>
+                  <div class="lifecycle-detail-grid">
+                    <div>
+                      <h4>Merchant objective</h4>
+                      <p>Use performance signals to improve operations and grow.</p>
+                    </div>
+                    <div>
+                      <h4>Dashboard response</h4>
+                      <ul>
+                        <li>Highlights trends and opportunities</li>
+                        <li>Recommends relevant SkyTab features</li>
+                        <li>Connects insights to clear next actions</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="lifecycle-transition">
+                    <h4>Adapts continuously</h4>
+                    <p>New needs can return merchants to Configure or Operate.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lifecycle-mobile" aria-label="Merchant lifecycle stages">
+              <details class="lifecycle-accordion" open>
+                <summary><span>Activate</span><small>Clear launch blockers</small></summary>
+                <div class="lifecycle-accordion-content">
+                  <p><strong>Merchant objective:</strong> Understand what is required to launch and resolve blockers quickly.</p>
+                  <p><strong>Dashboard response:</strong> Prioritized tasks, hardware readiness, and launch support.</p>
+                  <p><strong>Moves forward when:</strong> the merchant is ready to configure the business.</p>
+                </div>
+              </details>
+              <details class="lifecycle-accordion">
+                <summary><span>Configure</span><small>Finish essential setup</small></summary>
+                <div class="lifecycle-accordion-content">
+                  <p><strong>Merchant objective:</strong> Complete the setup needed to take orders with confidence.</p>
+                  <p><strong>Dashboard response:</strong> Menu, location, roles, permissions, and go-live progress.</p>
+                  <p><strong>Moves forward when:</strong> the business begins taking live orders.</p>
+                </div>
+              </details>
+              <details class="lifecycle-accordion">
+                <summary><span>Operate</span><small>Run the business reliably</small></summary>
+                <div class="lifecycle-accordion-content">
+                  <p><strong>Merchant objective:</strong> Keep daily service running and address urgent issues first.</p>
+                  <p><strong>Dashboard response:</strong> Orders, system health, urgent exceptions, and common actions.</p>
+                  <p><strong>Moves forward when:</strong> operating data begins to reveal useful patterns.</p>
+                </div>
+              </details>
+              <details class="lifecycle-accordion">
+                <summary><span>Optimize</span><small>Find opportunities to grow</small></summary>
+                <div class="lifecycle-accordion-content">
+                  <p><strong>Merchant objective:</strong> Use performance signals to improve operations and grow.</p>
+                  <p><strong>Dashboard response:</strong> Trends, opportunities, relevant features, and recommended actions.</p>
+                  <p><strong>Adapts continuously:</strong> new needs can return merchants to Configure or Operate.</p>
+                </div>
+              </details>
+            </div>
+
+            <aside class="lifecycle-loop" aria-label="Non-linear merchant journeys">
+              <h4>Merchant journeys are not always linear</h4>
+              <p>Urgent issues can return the dashboard to Operate. New locations or services can bring setup guidance back into view.</p>
+            </aside>
+
+            <details class="lifecycle-full-map">
+              <summary>View the complete lifecycle map</summary>
+              <div class="case-study-image">
+                <img src="skytab-onboarding/merchant-lifecycle-revised.svg" alt="Detailed SkyTab lifecycle map showing merchant goals, dashboard content, guidance, and transitions across Activate, Configure, Operate, and Optimize">
+              </div>
+            </details>
+          </section>
 
           <h3>Design Iterations</h3>
 
@@ -502,7 +653,7 @@
 
           <div class="key-insight">
             <h3>Core Insight</h3>
-            <p><strong>Design for the user's context, not your convenience.</strong> By adapting the experience to merchant lifecycle stages, we created a system that serves merchants where they are—resulting in measurable impact across onboarding, adoption, and satisfaction.</p>
+            <p><strong>Design for the user's context, not your convenience.</strong> By adapting the experience to merchant lifecycle stages, we created a system that serves merchants where they are, resulting in measurable impact across onboarding, adoption, and satisfaction.</p>
           </div>
 
           <style>
@@ -623,6 +774,56 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = Array.from(document.querySelectorAll('[data-lifecycle-stage]'));
+      const panels = Array.from(document.querySelectorAll('[data-lifecycle-panel]'));
+
+      function selectLifecycleStage(stage, focusTab) {
+        tabs.forEach(function (tab) {
+          const isSelected = tab.dataset.lifecycleStage === stage;
+          tab.classList.toggle('is-active', isSelected);
+          tab.setAttribute('aria-selected', String(isSelected));
+          tab.tabIndex = isSelected ? 0 : -1;
+          if (isSelected && focusTab) tab.focus();
+        });
+
+        panels.forEach(function (panel) {
+          const isSelected = panel.dataset.lifecyclePanel === stage;
+          panel.hidden = !isSelected;
+          panel.classList.toggle('is-active', isSelected);
+        });
+      }
+
+      tabs.forEach(function (tab, index) {
+        tab.addEventListener('click', function () {
+          selectLifecycleStage(tab.dataset.lifecycleStage, false);
+        });
+
+        tab.addEventListener('keydown', function (event) {
+          if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          let nextIndex = index;
+          if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+          if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+          if (event.key === 'Home') nextIndex = 0;
+          if (event.key === 'End') nextIndex = tabs.length - 1;
+          selectLifecycleStage(tabs[nextIndex].dataset.lifecycleStage, true);
+        });
+      });
+
+      const accordions = Array.from(document.querySelectorAll('.lifecycle-accordion'));
+      accordions.forEach(function (accordion) {
+        accordion.addEventListener('toggle', function () {
+          if (!accordion.open) return;
+          accordions.forEach(function (other) {
+            if (other !== accordion) other.removeAttribute('open');
+          });
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

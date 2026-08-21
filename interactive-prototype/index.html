@@ -19,7 +19,7 @@
     --blue:#0E5BF3;
     --blue-hover:#1D65F4;
     --blue-dark:#0a45bf;
-    --blue-tint:rgba(14,91,243,0.06);
+    --blue-tint:#F1F5FE;
     --dark:#090304;
     --gray-bg:#F4F5F7;
     --border:rgba(0,0,0,0.14);
@@ -60,11 +60,12 @@
   .toolbar button:disabled{opacity:0.4;cursor:default;}
 
   .stage{position:relative;width:100%;height:calc(100vh - 52px);overflow:hidden;background:#fff;}
-  .screen{position:absolute;inset:0;display:none;overflow-y:auto;}
+  .screen{position:absolute;inset:0;display:none;overflow-x:hidden;overflow-y:auto;}
   .screen.active{display:block;}
 
   /* =========== AUTH SPLIT SCREENS (On-Board / Sign In) — 720/720 (50/50) per spec =========== */
   .split{display:flex;min-height:100%;}
+  #onboard.screen,#signin.screen{overflow:hidden;}
   .split-left{
     flex:1 1 50%;background:var(--blue-tint);position:relative;
     display:flex;flex-direction:column;min-width:0;
