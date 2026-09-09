@@ -1,314 +1,153 @@
-// Theme Switcher
-document.addEventListener('DOMContentLoaded', function() {
-  const themeSwitcher = document.querySelector('.theme-switcher');
+const folder = document.querySelector('.portfolio-folder');
+const home = document.querySelector('.folder-home');
+const sticker = document.querySelector('.eye-sticker');
+const workMenu = document.querySelector('.nav-dropdown');
+const workButton = workMenu.querySelector('.nav-link');
+const cards = [...folder.querySelectorAll('.folder-card')];
+const folderFront = folder.querySelector('.folder-front');
+const folderBack = folder.querySelector('.folder-back');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const introAlreadyPlayed = document.documentElement.classList.contains('skip-intro');
+const returnView = document.documentElement.dataset.returnView;
+const returnViewKey = 'ricky-portfolio-return-view';
+const introStartedAt = performance.now();
 
-  // Check for saved theme preference or default to 'dark'
-  const currentTheme = localStorage.getItem('theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', currentTheme);
-
-  // Theme toggle handler
-  if (themeSwitcher) {
-    themeSwitcher.addEventListener('click', function() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-  }
-});
-
-// Scroll-progress based animations for project cards
-document.addEventListener('DOMContentLoaded', function() {
-  const projectCards = document.querySelectorAll('.project-card');
-  const revealElements = document.querySelectorAll('.ii-reveal');
-
-  if ('IntersectionObserver' in window && revealElements.length) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.12 });
-
-    revealElements.forEach((element) => revealObserver.observe(element));
-  } else {
-    revealElements.forEach((element) => element.classList.add('is-visible'));
+function revealPortfolio() {
+  if (introAlreadyPlayed || reduceMotion.matches) {
+    document.body.classList.remove('is-loading');
+    document.body.classList.add('is-ready', 'is-settled');
+    return;
   }
 
-  const prototypeFrames = document.querySelectorAll('.ii-frame[data-prototype-width]');
+  const remainingLetteringTime = Math.max(0, 3720 - (performance.now() - introStartedAt));
+  window.setTimeout(() => {
+    document.body.classList.remove('is-loading');
+    document.body.classList.add('is-ready');
+    window.setTimeout(() => document.body.classList.add('is-settled'), 830);
+  }, remainingLetteringTime);
+}
 
-  function sizePrototypeFrame(frame) {
-    const canvas = frame.querySelector('.ii-frame__canvas');
-    if (!canvas) return;
+if (document.readyState === 'complete') {
+  revealPortfolio();
+} else {
+  window.addEventListener('load', revealPortfolio, { once: true });
+}
 
-    const prototypeWidth = Number(frame.dataset.prototypeWidth) || 1440;
-    const prototypeHeight = Number(frame.dataset.prototypeHeight) || 960;
-    const scale = Math.min(frame.clientWidth / prototypeWidth, 1);
+function setExpanded(expanded) {
+  const cardStarts = cards.map((card) => card.getBoundingClientRect());
+  const frontStart = folderFront.getBoundingClientRect();
+  const backStart = folderBack.getBoundingClientRect();
 
-    canvas.style.width = `${prototypeWidth}px`;
-    canvas.style.height = `${prototypeHeight}px`;
-    canvas.style.transform = `scale(${scale})`;
-    frame.style.height = `${Math.round(prototypeHeight * scale)}px`;
-  }
+  folder.classList.toggle('is-expanded', expanded);
+  home.classList.toggle('is-expanded', expanded);
+  folder.setAttribute('aria-expanded', String(expanded));
 
-  if (prototypeFrames.length) {
-    prototypeFrames.forEach(sizePrototypeFrame);
+  if (reduceMotion.matches) return;
 
-    if ('ResizeObserver' in window) {
-      const prototypeResizeObserver = new ResizeObserver((entries) => {
-        entries.forEach((entry) => sizePrototypeFrame(entry.target));
-      });
-      prototypeFrames.forEach((frame) => prototypeResizeObserver.observe(frame));
-    } else {
-      window.addEventListener('resize', () => {
-        prototypeFrames.forEach(sizePrototypeFrame);
-      }, { passive: true });
-    }
-  }
-
-  const prototypeTabs = Array.from(document.querySelectorAll('.ii-prototype-tab'));
-  const prototypePanels = Array.from(document.querySelectorAll('.ii-prototype-panel'));
-
-  function activatePrototypeTab(tab, moveFocus = false) {
-    const panelId = tab.getAttribute('aria-controls');
-    const activePanel = document.getElementById(panelId);
-    if (!activePanel) return;
-
-    prototypeTabs.forEach((item) => {
-      const isActive = item === tab;
-      item.classList.toggle('active', isActive);
-      item.setAttribute('aria-selected', String(isActive));
-      item.tabIndex = isActive ? 0 : -1;
-    });
-
-    prototypePanels.forEach((panel) => {
-      panel.classList.toggle('active', panel === activePanel);
-    });
-
-    if (moveFocus) tab.focus();
-
-    const activeFrame = activePanel.querySelector('.ii-frame[data-prototype-width]');
-    if (activeFrame) {
-      window.requestAnimationFrame(() => sizePrototypeFrame(activeFrame));
-    }
-  }
-
-  prototypeTabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => activatePrototypeTab(tab));
-    tab.addEventListener('keydown', (event) => {
-      let nextIndex;
-
-      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-        nextIndex = (index + 1) % prototypeTabs.length;
-      } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-        nextIndex = (index - 1 + prototypeTabs.length) % prototypeTabs.length;
-      } else if (event.key === 'Home') {
-        nextIndex = 0;
-      } else if (event.key === 'End') {
-        nextIndex = prototypeTabs.length - 1;
-      } else {
-        return;
-      }
-
-      event.preventDefault();
-      activatePrototypeTab(prototypeTabs[nextIndex], true);
-    });
-  });
-
-  function updateCardTransforms() {
-    const windowHeight = window.innerHeight;
-
-    projectCards.forEach((card) => {
-      const rect = card.getBoundingClientRect();
-      const cardTop = rect.top;
-      const cardHeight = rect.height;
-
-      // Calculate progress: 0 when card bottom enters viewport, 1 when card top reaches center
-      const startPoint = windowHeight;
-      const endPoint = windowHeight / 2 - cardHeight / 2;
-
-      let progress = 0;
-      if (cardTop < startPoint) {
-        progress = (startPoint - cardTop) / (startPoint - endPoint);
-        progress = Math.max(0, Math.min(1, progress)); // Clamp between 0 and 1
-      }
-
-      // Apply easing (ease-out)
-      const eased = 1 - Math.pow(1 - progress, 3);
-
-      // Calculate values based on progress
-      const opacity = eased;
-      const scale = 0.8 + (0.2 * eased); // 0.8 to 1
-      const translateY = 60 - (60 * eased); // 60px to 0
-      const rotateX = 35 - (35 * eased); // 35deg to 0deg (more obvious trapezoid)
-
-      // Store scroll-based values as data attributes for hover to use
-      card.dataset.scrollScale = scale;
-      card.dataset.scrollTranslateY = translateY;
-      card.dataset.scrollRotateX = rotateX;
-
-      // Apply transforms (hover will override if active)
-      if (!card.matches(':hover')) {
-        card.style.opacity = opacity;
-        card.style.transform = `perspective(1200px) scale(${scale}) translateY(${translateY}px) rotateX(${rotateX}deg)`;
-      }
-    });
-  }
-
-  // Handle hover state
-  projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      const scale = parseFloat(this.dataset.scrollScale) || 1;
-      const rotateX = parseFloat(this.dataset.scrollRotateX) || 0;
-      this.style.transform = `perspective(1200px) scale(${scale}) translateY(-16px) rotateX(${rotateX}deg)`;
-    });
-
-    card.addEventListener('mouseleave', function() {
-      const scale = parseFloat(this.dataset.scrollScale) || 1;
-      const translateY = parseFloat(this.dataset.scrollTranslateY) || 0;
-      const rotateX = parseFloat(this.dataset.scrollRotateX) || 0;
-      this.style.transform = `perspective(1200px) scale(${scale}) translateY(${translateY}px) rotateX(${rotateX}deg)`;
-    });
-  });
-
-  // Update on scroll
-  window.addEventListener('scroll', updateCardTransforms, { passive: true });
-
-  // Initial update
-  updateCardTransforms();
-});
-
-// Back to top button
-document.addEventListener('DOMContentLoaded', function() {
-  const backToTopButton = document.querySelector('.back-to-top');
-
-  if (backToTopButton) {
-    // Show/hide button based on scroll position
-    function toggleBackToTop() {
-      if (window.scrollY > 400) {
-        backToTopButton.classList.add('visible');
-      } else {
-        backToTopButton.classList.remove('visible');
-      }
-    }
-
-    // Smooth scroll to top
-    backToTopButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+  requestAnimationFrame(() => {
+    cards.forEach((card, index) => {
+      const end = card.getBoundingClientRect();
+      const start = cardStarts[index];
+      const surface = card.querySelector('.card-surface');
+      surface.animate([
+        {
+          transform: `translate(${start.left - end.left}px, ${start.top - end.top}px) scale(${start.width / end.width}, ${start.height / end.height})`,
+          transformOrigin: 'top left'
+        },
+        { transform: 'translate(0, 0) scale(1)', transformOrigin: 'top left' }
+      ], {
+        duration: 720,
+        easing: 'cubic-bezier(.2,.8,.2,1)'
       });
     });
 
-    // Listen to scroll events
-    window.addEventListener('scroll', toggleBackToTop, { passive: true });
-
-    // Initial check
-    toggleBackToTop();
-  }
-});
-
-// Counter animation for impact cards
-document.addEventListener('DOMContentLoaded', function() {
-  const counters = document.querySelectorAll('.counter');
-
-  if (counters.length === 0) return;
-
-  let hasAnimated = false;
-
-  function animateCounter(counter) {
-    const target = parseFloat(counter.getAttribute('data-target'));
-    const decimal = parseInt(counter.getAttribute('data-decimal')) || 0;
-    const suffix = counter.getAttribute('data-suffix') || '';
-    const duration = 2000; // 2 seconds
-    const frameRate = 1000 / 60; // 60 FPS
-    const totalFrames = Math.round(duration / frameRate);
-    let frame = 0;
-
-    const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
-
-    const updateCounter = () => {
-      frame++;
-      const progress = easeOutQuart(frame / totalFrames);
-      const current = progress * target;
-
-      if (decimal > 0) {
-        counter.textContent = current.toFixed(decimal) + suffix;
-      } else {
-        // For whole numbers, format with commas if it's 11 or 18
-        const rounded = Math.floor(current);
-        if (target === 11000 || target === 18000) {
-          // Show the base number (11 or 18) then add suffix
-          counter.textContent = rounded.toLocaleString().split(',')[0] + suffix;
-        } else {
-          counter.textContent = Math.floor(current) + suffix;
-        }
-      }
-
-      if (frame < totalFrames) {
-        requestAnimationFrame(updateCounter);
-      } else {
-        // Final value
-        if (decimal > 0) {
-          counter.textContent = target.toFixed(decimal) + suffix;
-        } else {
-          if (target === 11000 || target === 18000) {
-            const baseNum = target === 11000 ? '11' : '18';
-            counter.textContent = baseNum + suffix;
-          } else {
-            counter.textContent = Math.floor(target) + suffix;
-          }
-        }
-      }
-    };
-
-    updateCounter();
-  }
-
-  // Use Intersection Observer to trigger animation when scrolled into view
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !hasAnimated) {
-        hasAnimated = true;
-        counters.forEach(counter => {
-          animateCounter(counter);
-        });
-        observer.disconnect();
-      }
+    [
+      [folderFront, frontStart, 'translateX(-50%) translateY(0) rotateX(0deg) scale(.96)'],
+      [folderBack, backStart, 'translateX(-50%) translateY(0) scale(.96)']
+    ].forEach(([part, start, restingTransform]) => {
+      const end = part.getBoundingClientRect();
+      part.animate([
+        { transform: `${restingTransform} translateY(${start.top - end.top}px)` },
+        { transform: restingTransform }
+      ], {
+        duration: 760,
+        easing: 'cubic-bezier(.2,.8,.2,1)'
+      });
     });
-  }, {
-    threshold: 0.5 // Trigger when 50% of the element is visible
   });
+}
 
-  // Observe the impact-cards container
-  const impactCards = document.querySelector('.impact-cards');
-  if (impactCards) {
-    observer.observe(impactCards);
+if (returnView === 'expanded') {
+  folder.classList.add('is-expanded');
+  home.classList.add('is-expanded');
+  folder.setAttribute('aria-expanded', 'true');
+}
+
+cards.forEach((card) => {
+  card.addEventListener('click', () => {
+    try {
+      sessionStorage.setItem(returnViewKey, folder.classList.contains('is-expanded') ? 'expanded' : 'closed');
+    } catch (error) {
+      document.documentElement.removeAttribute('data-return-view');
+    }
+  });
+});
+
+window.addEventListener('pageshow', () => {
+  try {
+    sessionStorage.removeItem(returnViewKey);
+  } catch (error) {
+    document.documentElement.removeAttribute('data-return-view');
   }
 });
 
-// Contact form handler
-document.addEventListener('DOMContentLoaded', function() {
-  const contactForm = document.getElementById('contact-form');
+folder.addEventListener('click', (event) => {
+  if (event.target.closest('.folder-card')) return;
+  setExpanded(!folder.classList.contains('is-expanded'));
+});
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
+document.addEventListener('click', (event) => {
+  if (!folder.classList.contains('is-expanded')) return;
+  if (folder.contains(event.target)) return;
+  setExpanded(false);
+});
 
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
+folder.addEventListener('keydown', (event) => {
+  if (event.key !== 'Enter' && event.key !== ' ') return;
+  if (event.target.closest('.folder-card')) return;
+  event.preventDefault();
+  setExpanded(!folder.classList.contains('is-expanded'));
+});
 
-      // Create mailto link
-      const subject = encodeURIComponent(`Message from ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-      const mailtoLink = `mailto:rickyliudesign@gmail.com?subject=${subject}&body=${body}`;
+workButton.addEventListener('click', () => {
+  const open = workMenu.classList.toggle('is-open');
+  workButton.setAttribute('aria-expanded', String(open));
+});
 
-      // Open default email client
-      window.location.href = mailtoLink;
-    });
-  }
+document.addEventListener('click', (event) => {
+  if (workMenu.contains(event.target)) return;
+  workMenu.classList.remove('is-open');
+  workButton.setAttribute('aria-expanded', 'false');
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  workMenu.classList.remove('is-open');
+  workButton.setAttribute('aria-expanded', 'false');
+  if (folder.classList.contains('is-expanded')) setExpanded(false);
+});
+
+home.addEventListener('pointermove', (event) => {
+  const box = sticker.getBoundingClientRect();
+  const dx = event.clientX - (box.left + box.width / 2);
+  const dy = event.clientY - (box.top + box.height / 2);
+  const length = Math.hypot(dx, dy) || 1;
+  const distance = box.width * 0.055;
+  sticker.style.setProperty('--eye-x', `${(dx / length) * distance}px`);
+  sticker.style.setProperty('--eye-y', `${(dy / length) * distance}px`);
+});
+
+home.addEventListener('pointerleave', () => {
+  sticker.style.setProperty('--eye-x', '0px');
+  sticker.style.setProperty('--eye-y', '0px');
 });

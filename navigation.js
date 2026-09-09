@@ -1,37 +1,33 @@
-// Navigation scroll behavior - hide on scroll down, show on scroll up
+// Shared portfolio navigation dropdown
 (function() {
-  let lastScrollTop = 0;
-  let scrollThreshold = 100; // Start hiding after scrolling 100px
-  const nav = document.querySelector('.navigation');
+  const dropdown = document.querySelector('.navigation .nav-dropdown');
+  if (!dropdown) return;
 
-  if (!nav) return;
+  const button = dropdown.querySelector('button.nav-link');
+  if (!button) return;
 
-  window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  function closeDropdown() {
+    dropdown.classList.remove('is-open');
+    button.setAttribute('aria-expanded', 'false');
+  }
 
-    // Add background blur when scrolled past threshold
-    if (scrollTop > 50) {
-      nav.classList.add('nav-scrolled');
-    } else {
-      nav.classList.remove('nav-scrolled');
+  button.addEventListener('click', function(event) {
+    event.stopPropagation();
+    const willOpen = !dropdown.classList.contains('is-open');
+    dropdown.classList.toggle('is-open', willOpen);
+    button.setAttribute('aria-expanded', String(willOpen));
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!dropdown.contains(event.target)) closeDropdown();
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeDropdown();
+      button.focus();
     }
-
-    // Hide/show navigation based on scroll direction
-    if (scrollTop > scrollThreshold) {
-      if (scrollTop > lastScrollTop) {
-        // Scrolling down - hide nav
-        nav.classList.add('nav-hidden');
-      } else {
-        // Scrolling up - show nav
-        nav.classList.remove('nav-hidden');
-      }
-    } else {
-      // Always show nav at top of page
-      nav.classList.remove('nav-hidden');
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  }, false);
+  });
 })();
 
 // Counting animation for metrics

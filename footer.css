@@ -1,0 +1,79 @@
+.site-footer {
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+  margin-top: 24px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(21, 21, 21, 0.1);
+  background: #ffffff;
+}
+
+.site-footer .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.site-footer .footer-content,
+.site-footer .ii-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #777b82;
+  font: 400 14px/1.2 "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+.site-footer .footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.site-footer .footer-links a {
+  color: #666b72;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-links a:focus-visible {
+  color: #151515;
+}
+
+.site-footer .footer-links a:focus-visible {
+  outline: 2px solid #147b9b;
+  outline-offset: 4px;
+}
+
+.site-footer.ii-footer .ii-footer__inner {
+  justify-content: flex-start;
+}
+
+@media (max-width: 760px) {
+  .site-footer {
+    margin-top: 16px;
+    padding: 16px 0;
+  }
+
+  .site-footer .container {
+    padding: 0 20px;
+  }
+
+  .site-footer .footer-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .site-footer .footer-links {
+    gap: 14px;
+  }
+
+  .site-footer .footer-content,
+  .site-footer .ii-footer__inner,
+  .site-footer .footer-links a {
+    font-size: 12px;
+  }
+}

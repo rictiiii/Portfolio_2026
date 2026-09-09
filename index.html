@@ -1,215 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ricky Liu - Product Designer</title>
-  <meta name="description" content="Product designer crafting intuitive experiences that drive business impact">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="project-password-modal.js?v=20260729" defer></script>
-  <script src="navigation.js" defer></script>
-  <script src="script.js?v=3" defer></script>
-  <script src="chat-widget.js" defer></script>
-  <script src="go-to-top.js" defer></script>
-</head>
-<body data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Ricky Liu is a product designer crafting clear, scalable experiences for complex products." />
+    <title>Ricky Liu - Product Designer</title>
+    <script>
+      try {
+        const introKey = 'ricky-portfolio-intro-played';
+        const returnViewKey = 'ricky-portfolio-return-view';
+        const returnView = sessionStorage.getItem(returnViewKey);
 
-  <nav class="navigation">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo" style="text-decoration: none; cursor: pointer;">Ricky Liu</a>
-      <div class="nav-links">
-        <div class="nav-dropdown">
-          <a href="#" class="nav-link active">Work</a>
-          <div class="nav-dropdown-menu">
-            <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
-            <a href="intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
-            <a href="koto.html" class="nav-dropdown-item">Koto</a>
-            <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
+        if (returnView === 'expanded' || returnView === 'closed') {
+          document.documentElement.dataset.returnView = returnView;
+          sessionStorage.removeItem(returnViewKey);
+        }
+
+        if (sessionStorage.getItem(introKey) === 'true') {
+          document.documentElement.classList.add('skip-intro');
+        } else {
+          sessionStorage.setItem(introKey, 'true');
+        }
+      } catch (error) {
+        document.documentElement.classList.remove('skip-intro');
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=15" />
+    <link rel="stylesheet" href="navigation.css?v=3" />
+    <link rel="stylesheet" href="footer.css?v=1" />
+    <script src="script.js" defer></script>
+    <script src="nav-scroll.js?v=1" defer></script>
+  </head>
+  <body class="is-loading" data-theme="light">
+    <nav class="navigation" aria-label="Primary navigation">
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+          <div class="nav-dropdown">
+            <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">Work</button>
+            <div class="nav-dropdown-menu">
+              <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
+              <a href="intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
+              <a href="koto.html" class="nav-dropdown-item">Koto</a>
+              <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
+            </div>
           </div>
-        </div>
-        <a href="Ricky_Liu_Resume.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
-        <a href="contact/contact.html" class="nav-link">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <div class="container">
-
-      <section class="hero">
-        <h1 class="hero-name"><span class="hero-name-gradient">Hi! I'm Ricky</span> 👋🏼</h1>
-        <p class="hero-description">Product designer crafting intuitive experiences that drive measurable business impact.</p>
-        <a href="mailto:rickyliudesign@gmail.com" class="hero-cta">Connect with me</a>
-      </section>
-
-      <section class="work-section">
-        <div class="project-cards-container">
-          <div class="project-cards">
-
-            <a href="skytab-onboarding.html" class="project-card project-card-skytab">
-            <div class="project-card-inner">
-              <div class="project-image project-image-custom" style="position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
-                  <div data-us-project="MHDhsF4L2aXAN70CmB0o" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
-                </div>
-                <img src="skytab-onboarding/Hero.png" alt="SkyTab Onboarding dashboard" style="width: 70%; height: auto; position: relative; z-index: 2;">
-              </div>
-              <div class="project-content">
-                <h2 class="project-title">SkyTab Onboarding</h2>
-                <p class="project-description">State-aware onboarding system that helped 11,000+ merchants launch 4.7 days faster and drove 18,000+ feature adoptions</p>
-                <div class="project-tags">
-                  <span class="tag">Product Design</span>
-                  <span class="tag">UX Research</span>
-                  <span class="tag">Dashboard</span>
-                  <span class="tag">B2B</span>
-                  <span class="tag">SaaS Product</span>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="intelligence-inbox-premium-case-study.html" class="project-card">
-            <div class="project-card-inner">
-              <div class="project-image intelligence-inbox-cover">
-                <div class="intelligence-inbox-cover__glow" aria-hidden="true"></div>
-                <img src="intelligence-inbox/ai-chat-home-final.png" alt="Final Intelligence Inbox home experience showing four prioritized restaurant operations recommendations">
-              </div>
-              <div class="project-content">
-                <h2 class="project-title">Intelligence Inbox</h2>
-                <p class="project-description">Evolving a dense AI insights dashboard into a focused operational copilot that prioritizes decisions and helps restaurant operators act</p>
-                <div class="project-tags">
-                  <span class="tag">AI Product Design</span>
-                  <span class="tag">Product Strategy</span>
-                  <span class="tag">Prototyping</span>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="koto.html" class="project-card">
-            <div class="project-card-inner">
-              <div class="project-image" style="position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
-                  <div data-us-project="7QlU2ees1t5Gk8uhghBE" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
-                </div>
-                <img src="Koto/Hero.png" alt="Koto app screens" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%); width: 55%; height: auto; z-index: 2; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-origin: center;">
-              </div>
-              <div class="project-content">
-                <h2 class="project-title">Koto by Toyota</h2>
-                <p class="project-description">Automotive service platform combining e-commerce and digital key technology—45% more bookings and 82% digital key adoption</p>
-                <div class="project-tags">
-                  <span class="tag">UX Research</span>
-                  <span class="tag">Design Systems</span>
-                  <span class="tag">B2C</span>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="skytab-kiosk.html" class="project-card">
-            <div class="project-card-inner">
-              <div class="project-image" style="position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
-                  <div data-us-project="JI9DJn6PAN07InxEepgS" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
-                </div>
-                <img src="skytab-kiosk/Kiosk hero.png" alt="Kiosk Demo" style="position: absolute; top: calc(50% + 10px); left: 50%; transform: translate(-50%, -50%); width: 60%; height: auto; z-index: 2; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
-              </div>
-              <div class="project-content">
-                <h2 class="project-title">Shift4 Kiosk</h2>
-                <p class="project-description">Self-ordering kiosk that reduced order time by 30% and increased adoption by 20% through intuitive touch-first design</p>
-                <div class="project-tags">
-                  <span class="tag">User Testing</span>
-                  <span class="tag">Interaction Design</span>
-                  <span class="tag">B2C</span>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          </div>
-
-          <section style="margin-top: var(--spacing-24); padding: var(--spacing-16) 0 var(--spacing-8);">
-            <div class="about-section-grid">
-              <div class="about-copy" style="max-width: 600px;">
-                <h2>About</h2>
-                <p>I’m a Senior Product Designer with 10+ years of experience turning complex operational systems into clear, scalable products. At <a href="https://www.shift4.com/" target="_blank" rel="noopener" style="color: var(--color-accent); text-decoration: underline; font-weight: 400;">Shift4</a>, I lead end-to-end design for merchant onboarding, payments, kiosk, and AI-assisted experiences used by 20,000+ businesses.</p>
-                <p>My strongest work sits at the intersection of <strong>systems thinking, product strategy, and hands-on execution.</strong> I bring clarity to ambiguous problems, simplify data-rich and regulated workflows, and partner closely with product and engineering to ship across web, mobile, desktop, and touch-screen platforms.</p>
-                <p>I’ve delivered outcomes including <strong>60% higher completion, 40% fewer escalations, and 50% faster design-to-development handoffs</strong> while building design systems that support 5+ product squads. I’m especially interested in AI-native products—using rapid prototyping and code to explore how intelligent systems can become more useful, trustworthy, and actionable.</p>
-              </div>
-              <div class="about-character">
-                <img src="homepage/ricky-3d-character-wave-white.png" alt="3D character illustration of Ricky waving">
-              </div>
-            </div>
-          </section>
-
-          <style>
-            .about-section-grid {
-              display: grid;
-              grid-template-columns: 1fr minmax(220px, 320px);
-              gap: 60px;
-              align-items: stretch;
-            }
-
-            .about-character {
-              position: relative;
-              min-width: 220px;
-            }
-
-            .about-character img {
-              position: absolute;
-              right: 0;
-              bottom: 0;
-              width: auto;
-              max-width: 100%;
-              height: 90%;
-              object-fit: contain;
-              display: block;
-            }
-
-            @media (max-width: 768px) {
-              .about-section-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-              }
-
-              .about-character {
-                position: static;
-                min-width: 0;
-              }
-
-              .about-character img {
-                position: static;
-                width: 180px;
-                max-width: 100%;
-                height: auto;
-                margin: 0 auto;
-              }
-            }
-          </style>
-
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-copyright">
-          © 2026 Ricky Liu
-        </div>
-        <div class="footer-links">
-          <a href="https://www.linkedin.com/in/ricky-liu/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="mailto:rickyliudesign@gmail.com">Email</a>
+          <a href="Ricky_Liu_Resume.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
+          <a href="contact/contact.html" class="nav-link">Contact</a>
         </div>
       </div>
-    </div>
-  </footer>
+    </nav>
 
-</body>
+    <main>
+      <section class="folder-home" id="intro" aria-label="Portfolio folder home">
+        <div class="folder-stage">
+          <div class="portfolio-folder" role="group" aria-label="Ricky Liu project folder" aria-expanded="false" tabindex="0">
+            <div class="welcome-word" aria-hidden="true">
+              <svg class="welcome-script" viewBox="0 0 1440 600" role="presentation">
+                <defs>
+                  <linearGradient id="welcome-rainbow" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#8ce2d7" />
+                    <stop offset=".34" stop-color="#81cdf2" />
+                    <stop offset=".68" stop-color="#9daff1" />
+                    <stop offset="1" stop-color="#c3a3e7" />
+                  </linearGradient>
+                  <path id="welcome-script-path" pathLength="1" d="M58 130 C50 235 36 410 80 460 C116 501 149 430 176 255 C160 366 165 470 211 470 C253 468 278 380 289 165 C295 67 341 58 344 143 C347 225 298 312 286 375 C278 433 318 472 370 463 C420 454 466 407 455 354 C447 318 413 315 386 339 C352 370 355 425 392 454 C426 480 478 466 520 424 C555 389 557 335 551 273 C544 189 557 92 590 84 C625 76 636 118 626 168 C614 232 568 310 555 369 C545 421 575 466 626 462 C670 458 697 421 722 383 C747 346 784 325 824 329 C852 332 864 347 865 351 C829 332 796 343 770 374 C740 411 750 453 792 463 C830 472 870 451 894 418 C916 386 929 351 971 350 C1014 349 1042 386 1036 421 C1030 461 996 480 961 470 C928 460 915 430 925 397 C936 362 973 349 1005 365 C1038 383 1048 414 1047 467 C1057 422 1060 370 1075 361 C1090 353 1091 379 1088 406 L1083 463 C1097 405 1112 360 1134 364 C1156 368 1146 417 1142 463 C1155 412 1170 367 1193 370 C1216 374 1207 424 1204 454 C1201 482 1217 488 1240 467 C1260 448 1270 421 1281 393 C1295 359 1335 357 1352 386 C1368 413 1346 442 1307 450 C1284 455 1267 450 1260 437 C1264 472 1300 483 1340 467 C1360 459 1378 445 1392 430" />
+                </defs>
+                <use class="welcome-guide" href="#welcome-script-path" />
+                <use class="welcome-rainbow" href="#welcome-script-path" />
+              </svg>
+            </div>
+            <div class="folder-shell">
+              <div class="folder-card-stack">
+                <a href="skytab-onboarding.html" class="folder-card project-onboarding" aria-label="Read the SkyTab Onboarding case study" style="--open-x:-210px;--open-y:42px;--open-r:-13deg;--open-scale:1.03;--card-w:176px;--card-h:184px;--delay:0ms;--z:2;--peek-x:-48px;--peek-y:-68px;--peek-r:-5deg">
+                  <span class="card-surface"><img src="skytab-onboarding/Hero.png" alt="SkyTab Onboarding dashboard" /><span class="card-project-name">SkyTab Onboarding</span></span>
+                </a>
+                <a href="intelligence-inbox-premium-case-study.html" class="folder-card project-inbox" aria-label="Read the Intelligence Inbox case study" style="--open-x:-72px;--open-y:-18px;--open-r:-4deg;--open-scale:1.07;--card-w:176px;--card-h:184px;--delay:40ms;--z:4;--peek-x:-16px;--peek-y:-84px;--peek-r:-2deg">
+                  <span class="card-surface"><img src="intelligence-inbox/ai-chat-home-final.png" alt="Intelligence Inbox operational copilot" /><span class="card-project-name">Intelligence Inbox</span></span>
+                </a>
+                <a href="koto.html" class="folder-card project-koto" aria-label="Read the Koto by Toyota case study" style="--open-x:72px;--open-y:-18px;--open-r:4deg;--open-scale:1.07;--card-w:176px;--card-h:184px;--delay:80ms;--z:5;--peek-x:18px;--peek-y:-82px;--peek-r:2deg">
+                  <span class="card-surface"><img src="Koto/Hero.png" alt="Koto by Toyota mobile app screens" /><span class="card-project-name">Koto by Toyota</span></span>
+                </a>
+                <a href="skytab-kiosk.html" class="folder-card project-kiosk" aria-label="Read the Shift4 Kiosk case study" style="--open-x:210px;--open-y:42px;--open-r:13deg;--open-scale:1.03;--card-w:176px;--card-h:184px;--delay:120ms;--z:2;--peek-x:50px;--peek-y:-66px;--peek-r:5deg">
+                  <span class="card-surface"><img src="skytab-kiosk/Kiosk hero.png" alt="Shift4 self-ordering kiosk interface" /><span class="card-project-name">Shift4 Kiosk</span></span>
+                </a>
+              </div>
+
+              <div class="folder-body">
+                <div class="folder-back" aria-hidden="true"></div>
+                <div class="folder-front" aria-hidden="true">
+                  <strong class="folder-title">Ricky Liu</strong>
+                  <span class="eye-sticker">
+                    <img src="assets/portfolio-eye-sticker-Xyf3zcJj.png" alt="" />
+                    <span class="googly-eye left"><span class="pupil"></span></span>
+                    <span class="googly-eye right"><span class="pupil"></span></span>
+                  </span>
+                  <img class="idea-sticker" src="assets/good-idea-sticker-D9H0dvzv.png" alt="" />
+                  <span class="action-bubble"><span class="arrow"></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-copyright">© 2026 Ricky Liu</div>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/ricky-liu/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:rickyliudesign@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

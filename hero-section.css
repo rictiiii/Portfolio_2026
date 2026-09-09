@@ -1,15 +1,5 @@
 /* Hero Section Styles - Full-width container with title, details, image, and metrics */
 
-/* Navigation white text on case study pages */
-.hero-wrapper .navigation .nav-logo,
-.hero-wrapper .navigation .nav-link {
-  color: white;
-}
-
-.hero-wrapper .navigation .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .hero-section {
   width: 100vw;
   min-height: auto;

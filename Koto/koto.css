@@ -6,37 +6,7 @@
   --color-background-accent: #EB0A1E;
 }
 
-/* Navigation - Static positioning, shares background with hero */
-.navigation {
-  position: relative !important;
-  background: transparent !important;
-  border-bottom: none;
-  transform: none !important;
-  z-index: 2;
-}
-
-.navigation.nav-hidden {
-  transform: none !important;
-}
-
-.nav-container {
-  border-bottom: none;
-}
-
-.nav-logo {
-  color: white;
-}
-
-.nav-link {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: white;
-}
-
-/* Hero Wrapper - Contains both nav and hero section with shared background */
+/* Hero Wrapper with shared background */
 .hero-wrapper {
   position: relative;
   overflow: hidden;
@@ -57,6 +27,14 @@ main {
   position: relative;
   margin-top: 0 !important;
   z-index: 1;
+}
+
+@media (min-width: 1025px) {
+  .hero-main {
+    /* The visual offset below still needs matching space in document flow. */
+    margin-bottom: 80px;
+    transform: translateY(40px);
+  }
 }
 
 /* Override tag colors */

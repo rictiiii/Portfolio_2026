@@ -9,20 +9,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=12">
-  <script src="navigation.js" defer></script>
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="portfolio-styles.css?v=12">
+  <link rel="stylesheet" href="navigation.css?v=3">
+  <link rel="stylesheet" href="footer.css?v=1">
+  <script src="navigation.js?v=2" defer></script>
+  <script src="nav-scroll.js?v=1" defer></script>
+  <script src="portfolio-script.js" defer></script>
   <script src="chat-widget.js" defer></script>
   <script src="go-to-top.js" defer></script>
 </head>
 <body class="ii-page" data-theme="light">
 
-  <nav class="navigation">
+  <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container">
-      <a class="nav-logo" href="index.html">Ricky Liu</a>
       <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
         <div class="nav-dropdown">
-          <a href="index.html" class="nav-link active">Work</a>
+          <button class="nav-link active" type="button" aria-haspopup="true" aria-expanded="false">Work</button>
           <div class="nav-dropdown-menu">
             <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
             <a href="intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
@@ -42,7 +45,7 @@
         <div class="ii-kicker">AI Product Design · Restaurant Operations</div>
         <h1>From an AI inbox to an operational copilot.</h1>
         <p class="ii-hero__lede">I designed a new AI-powered experience that tells restaurant operators what needs attention, explains why, and helps them take the next step.</p>
-        <a class="ii-hero-prototype-cta" href="#final-prototype"><span>Try the AI prototype</span></a>
+        <a class="ii-hero-prototype-cta" href="#final-prototype">Try the AI prototype</a>
 
         <div class="ii-meta">
           <div class="ii-meta__item">
@@ -294,7 +297,7 @@
     </section>
   </main>
 
-  <footer class="ii-footer">
+  <footer class="ii-footer site-footer">
     <div class="container ii-footer__inner">
       <span>© 2026 Ricky Liu</span>
     </div>

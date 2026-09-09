@@ -6,37 +6,7 @@
   --color-background-accent: #F8A900;
 }
 
-/* Navigation - Static positioning, shares background with hero */
-.navigation {
-  position: relative !important;
-  background: transparent !important;
-  border-bottom: none;
-  transform: none !important;
-  z-index: 2;
-}
-
-.navigation.nav-hidden {
-  transform: none !important;
-}
-
-.nav-container {
-  border-bottom: none;
-}
-
-.nav-logo {
-  color: white;
-}
-
-.nav-link {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: white;
-}
-
-/* Hero Wrapper - Contains both nav and hero section with shared background */
+/* Hero Wrapper with shared background */
 .hero-wrapper {
   position: relative;
   overflow: hidden;

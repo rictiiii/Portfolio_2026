@@ -9,20 +9,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
-  <script src="../navigation.js" defer></script>
-  <script src="../script.js?v=3" defer></script>
+  <link rel="stylesheet" href="../portfolio-styles.css">
+  <link rel="stylesheet" href="../navigation.css?v=3">
+  <link rel="stylesheet" href="../footer.css?v=1">
+  <script src="../navigation.js?v=2" defer></script>
+  <script src="../nav-scroll.js?v=1" defer></script>
+  <script src="../portfolio-script.js?v=3" defer></script>
   <script src="../chat-widget.js" defer></script>
   <script src="../go-to-top.js" defer></script>
 </head>
 <body data-theme="light">
 
-  <nav class="navigation">
+  <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container">
-      <a href="../index.html" class="nav-logo" style="text-decoration: none; cursor: pointer;">Ricky Liu</a>
       <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
         <div class="nav-dropdown">
-          <a href="#" class="nav-link">Work</a>
+          <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">Work</button>
           <div class="nav-dropdown-menu">
             <a href="../skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
             <a href="../intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
@@ -31,7 +34,7 @@
           </div>
         </div>
         <a href="../Ricky_Liu_Resume.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
       </div>
     </div>
   </nav>
@@ -131,11 +134,11 @@
     </div>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-copyright">
-          © 2025 Ricky Liu
+          © 2026 Ricky Liu
         </div>
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/ricky-liu/" target="_blank" rel="noopener">LinkedIn</a>

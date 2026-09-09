@@ -9,12 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="portfolio-styles.css?v=10">
   <link rel="stylesheet" href="hero-section.css?v=11">
-  <link rel="stylesheet" href="Koto/koto.css?v=10">
+  <link rel="stylesheet" href="Koto/koto.css?v=12">
   <link rel="stylesheet" href="Koto/pie-charts.css?v=10">
+  <link rel="stylesheet" href="navigation.css?v=3">
+  <link rel="stylesheet" href="footer.css?v=1">
   <script src="project-password-modal.js?v=20260729" defer></script>
-  <script src="navigation.js" defer></script>
+  <script src="navigation.js?v=2" defer></script>
+  <script src="nav-scroll.js?v=1" defer></script>
   <script src="Koto/pie-charts.js?v=10" defer></script>
   <script src="scroll-hijack.js" defer></script>
   <script src="chat-widget.js" defer></script>
@@ -22,30 +25,30 @@
 </head>
 <body class="case-study-page">
 
-  <!-- Hero Wrapper - Contains nav and hero with shared gradient background -->
+  <nav class="navigation" aria-label="Primary navigation">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-link active" type="button" aria-haspopup="true" aria-expanded="false">Work</button>
+          <div class="nav-dropdown-menu">
+            <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
+            <a href="intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
+            <a href="koto.html" class="nav-dropdown-item">Koto</a>
+            <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
+          </div>
+        </div>
+        <a href="Ricky_Liu_Resume.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
+        <a href="contact/contact.html" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Wrapper with shared gradient background -->
   <div class="hero-wrapper">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
       <div data-us-project="7QlU2ees1t5Gk8uhghBE" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
     </div>
-    <nav class="navigation">
-      <div class="nav-container">
-        <a href="index.html" class="nav-logo" style="text-decoration: none; cursor: pointer;">Ricky Liu</a>
-        <div class="nav-links">
-          <div class="nav-dropdown">
-            <a href="#" class="nav-link">Work</a>
-            <div class="nav-dropdown-menu">
-              <a href="skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
-              <a href="intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
-              <a href="koto.html" class="nav-dropdown-item">Koto</a>
-              <a href="skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
-            </div>
-          </div>
-          <a href="Ricky_Liu_Resume.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
-          <a href="contact/contact.html" class="nav-link">Contact</a>
-        </div>
-      </div>
-    </nav>
-
     <!-- Hero Section -->
     <section class="hero-section" style="position: relative; z-index: 1;">
       <div class="hero-content-wrapper">
@@ -559,11 +562,11 @@
   <!-- Back to Top Button -->
   <button class="back-to-top" aria-label="Back to top">↑</button>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-copyright">
-          © 2025 Ricky Liu
+          © 2026 Ricky Liu
         </div>
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/ricky-liu/" target="_blank" rel="noopener">LinkedIn</a>
