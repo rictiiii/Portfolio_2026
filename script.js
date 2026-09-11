@@ -34,8 +34,6 @@ if (document.readyState === 'complete') {
 }
 
 function setExpanded(expanded) {
-  cards.forEach((card) => card.getAnimations().forEach((animation) => animation.cancel()));
-  [folderFront, folderBack].forEach((part) => part.getAnimations().forEach((animation) => animation.cancel()));
   const cardStarts = cards.map((card) => card.getBoundingClientRect());
   const frontStart = folderFront.getBoundingClientRect();
   const backStart = folderBack.getBoundingClientRect();
@@ -52,7 +50,7 @@ function setExpanded(expanded) {
       const start = cardStarts[index];
       const delay = expanded ? index * 105 : (cards.length - 1 - index) * 55;
       const duration = expanded ? 820 : 560;
-      const cardAnimation = card.animate([
+      card.animate([
         {
           opacity: expanded ? .72 : 1,
           transform: `translate(${start.left - end.left}px, ${start.top - end.top + (expanded ? 46 : 0)}px) scale(${start.width / end.width}, ${start.height / end.height})`,
@@ -69,7 +67,6 @@ function setExpanded(expanded) {
         easing: 'cubic-bezier(.16,1,.3,1)',
         fill: 'both'
       });
-      cardAnimation.finished.finally(() => cardAnimation.cancel());
     });
 
     [
@@ -77,7 +74,7 @@ function setExpanded(expanded) {
       [folderBack, backStart, 'translateX(-50%) translateY(0) scale(.96)']
     ].forEach(([part, start, restingTransform]) => {
       const end = part.getBoundingClientRect();
-      const folderAnimation = part.animate([
+      part.animate([
         { transform: `${restingTransform} translateY(${start.top - end.top}px)` },
         { transform: restingTransform }
       ], {
@@ -86,7 +83,6 @@ function setExpanded(expanded) {
         easing: 'cubic-bezier(.16,1,.3,1)',
         fill: 'both'
       });
-      folderAnimation.finished.finally(() => folderAnimation.cancel());
     });
   });
 }
