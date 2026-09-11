@@ -48,16 +48,24 @@ function setExpanded(expanded) {
     cards.forEach((card, index) => {
       const end = card.getBoundingClientRect();
       const start = cardStarts[index];
-      const surface = card.querySelector('.card-surface');
-      surface.animate([
+      const delay = expanded ? index * 105 : (cards.length - 1 - index) * 55;
+      const duration = expanded ? 820 : 560;
+      card.animate([
         {
-          transform: `translate(${start.left - end.left}px, ${start.top - end.top}px) scale(${start.width / end.width}, ${start.height / end.height})`,
-          transformOrigin: 'top left'
+          opacity: expanded ? .72 : 1,
+          transform: `translate(${start.left - end.left}px, ${start.top - end.top + (expanded ? 46 : 0)}px) scale(${start.width / end.width}, ${start.height / end.height})`,
+          transformOrigin: 'bottom center'
         },
-        { transform: 'translate(0, 0) scale(1)', transformOrigin: 'top left' }
+        {
+          opacity: 1,
+          transform: 'translate(0, 0) scale(1)',
+          transformOrigin: 'bottom center'
+        }
       ], {
-        duration: 720,
-        easing: 'cubic-bezier(.2,.8,.2,1)'
+        delay,
+        duration,
+        easing: 'cubic-bezier(.16,1,.3,1)',
+        fill: 'both'
       });
     });
 
@@ -70,8 +78,10 @@ function setExpanded(expanded) {
         { transform: `${restingTransform} translateY(${start.top - end.top}px)` },
         { transform: restingTransform }
       ], {
-        duration: 760,
-        easing: 'cubic-bezier(.2,.8,.2,1)'
+        delay: expanded ? 120 : 0,
+        duration: expanded ? 900 : 620,
+        easing: 'cubic-bezier(.16,1,.3,1)',
+        fill: 'both'
       });
     });
   });
