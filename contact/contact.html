@@ -8,143 +8,49 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="../portfolio-styles.css">
   <link rel="stylesheet" href="../navigation.css?v=3">
   <link rel="stylesheet" href="../footer.css?v=1">
+  <link rel="stylesheet" href="contact.css?v=4">
   <script src="../navigation.js?v=2" defer></script>
   <script src="../nav-scroll.js?v=1" defer></script>
-  <script src="../portfolio-script.js?v=3" defer></script>
+  <script src="contact.js?v=1" defer></script>
 </head>
 <body data-theme="light">
-
   <nav class="navigation" aria-label="Primary navigation">
-    <div class="nav-container">
-      <div class="nav-links">
-        <a href="../index.html" class="nav-link">Home</a>
-        <div class="nav-dropdown">
-          <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">Work</button>
-          <div class="nav-dropdown-menu">
-            <a href="../skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
-            <a href="../intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
-            <a href="../koto.html" class="nav-dropdown-item">Koto</a>
-            <a href="../skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
-          </div>
+    <div class="nav-container"><div class="nav-links">
+      <a href="../index.html" class="nav-link">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">Work</button>
+        <div class="nav-dropdown-menu">
+          <a href="../skytab-onboarding.html" class="nav-dropdown-item">SkyTab Onboarding</a>
+          <a href="../intelligence-inbox-premium-case-study.html" class="nav-dropdown-item">Intelligence Inbox</a>
+          <a href="../koto.html" class="nav-dropdown-item">Koto</a>
+          <a href="../skytab-kiosk.html" class="nav-dropdown-item">SkyTab Kiosk</a>
         </div>
-        <a href="../Ricky_Liu_Resume.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
-        <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
       </div>
-    </div>
+      <a href="../Ricky_Liu_Resume.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
+      <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+    </div></div>
   </nav>
-
-  <main>
-    <div class="container">
-
-      <section class="hero">
-        <h1 class="hero-name"><span class="hero-name-gradient">Let's Connect</span></h1>
-        <p class="hero-description" style="max-width: 600px; margin-left: auto; margin-right: auto;">I'm always open to discussing product design opportunities, collaborations, or exploring how AI tools are shaping the future of design.</p>
-      </section>
-
-      <section class="work-section">
-        <div style="max-width: 600px; margin: 0 auto;">
-
-          <form id="contact-form" style="display: flex; flex-direction: column; gap: var(--spacing-6);">
-
-            <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
-              <label for="name" class="contact-label">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="contact-input"
-              >
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
-              <label for="email" class="contact-label">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="contact-input"
-              >
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
-              <label for="message" class="contact-label">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                required
-                class="contact-input contact-textarea"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="contact-submit-btn"
-            >
-              Send Message
-            </button>
-          </form>
-
-          <div style="display: none; flex-direction: column; gap: var(--spacing-8); margin-bottom: var(--spacing-16);">
-
-            <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
-              <h3 style="margin: 0; font-size: var(--font-size-xl); font-weight: var(--font-weight-medium);">Email</h3>
-              <a href="mailto:rickyliudesign@gmail.com" style="font-size: var(--font-size-lg); color: var(--color-accent); text-decoration: none;">rickyliudesign@gmail.com</a>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
-              <h3 style="margin: 0; font-size: var(--font-size-xl); font-weight: var(--font-weight-medium);">Phone</h3>
-              <a href="tel:+13106344130" style="font-size: var(--font-size-lg); color: var(--color-accent); text-decoration: none;">(310) 634-4130</a>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
-              <h3 style="margin: 0; font-size: var(--font-size-xl); font-weight: var(--font-weight-medium);">LinkedIn</h3>
-              <a href="https://www.linkedin.com/in/ricky-liu/" target="_blank" rel="noopener" style="font-size: var(--font-size-lg); color: var(--color-accent); text-decoration: none;">linkedin.com/in/ricky-liu</a>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
-              <h3 style="margin: 0; font-size: var(--font-size-xl); font-weight: var(--font-weight-medium);">Location</h3>
-              <p style="font-size: var(--font-size-lg); color: var(--color-text-secondary); margin: 0;">Remote (Los Angeles, CA)</p>
-            </div>
-
-          </div>
-
-          <div style="display: none; padding: var(--spacing-8); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg);">
-            <h3 style="margin-top: 0; margin-bottom: var(--spacing-4);">What I Can Help With</h3>
-            <ul style="margin: 0; padding-left: var(--spacing-8); display: flex; flex-direction: column; gap: var(--spacing-3);">
-              <li>B2B SaaS and PaaS product design</li>
-              <li>Design system creation and scaling</li>
-              <li>Complex workflow and data-rich interface design</li>
-              <li>User research and prototyping</li>
-              <li>Cross-platform experiences (web, desktop, mobile)</li>
-            </ul>
-          </div>
-
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-copyright">
-          © 2026 Ricky Liu
-        </div>
-        <div class="footer-links">
-          <a href="https://www.linkedin.com/in/ricky-liu/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="mailto:rickyliudesign@gmail.com">Email</a>
-        </div>
+  <main class="contact-main">
+    <section class="contact-stage" aria-labelledby="contact-title">
+      <div class="contact-intro">
+        <h1 id="contact-title">Let's connect.</h1>
+        <p>Open to product design roles, thoughtful collaborations, and conversations about practical AI in design.</p>
       </div>
-    </div>
-  </footer>
-
+      <div class="contact-form-wrap">
+        <form id="contact-form" class="contact-form">
+          <div class="contact-field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+          <div class="contact-field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+          <div class="contact-field contact-field-message"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+          <button type="submit" class="contact-submit-btn"><span>Send message</span><span class="contact-arrow" aria-hidden="true"></span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-content">
+    <div class="footer-copyright">© 2026 Ricky Liu</div>
+    <div class="footer-links"><a href="https://www.linkedin.com/in/ricky-liu/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:rickyliudesign@gmail.com">Email</a></div>
+  </div></div></footer>
 </body>
 </html>
