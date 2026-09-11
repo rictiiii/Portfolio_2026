@@ -326,7 +326,7 @@ html.skip-intro .folder-shell { opacity: 1; transform: none; }
 }
 
 .project-koto .card-surface {
-  background: radial-gradient(circle at 82% 18%, rgba(215,25,32,.42), transparent 35%), linear-gradient(145deg, #101010 0%, #242120 100%);
+  background: radial-gradient(circle at 82% 18%, rgba(215,25,32,.2), transparent 36%), linear-gradient(145deg, #f3e7e9 0%, #edc9ce 58%, #f7dadd 100%);
 }
 
 .project-kiosk .card-surface {
