@@ -318,19 +318,19 @@ html.skip-intro .folder-shell { opacity: 1; transform: none; }
 }
 
 .project-onboarding .card-surface {
-  background: linear-gradient(135deg, #a9c8f4 0%, #c8eee8 100%);
+  background: linear-gradient(135deg, #dce9fa 0%, #c8e1fb 58%, #dceff2 100%);
 }
 
 .project-inbox .card-surface {
-  background: linear-gradient(135deg, #cabcf0 0%, #ddd9ff 100%);
+  background: linear-gradient(135deg, #eee9ff 0%, #dcd2fb 54%, #cfc3f4 100%);
 }
 
 .project-koto .card-surface {
-  background: linear-gradient(135deg, #e9c8ef 0%, #ffb8bd 100%);
+  background: radial-gradient(circle at 82% 18%, rgba(215,25,32,.42), transparent 35%), linear-gradient(145deg, #101010 0%, #242120 100%);
 }
 
 .project-kiosk .card-surface {
-  background: linear-gradient(135deg, #ffd2ac 0%, #fff0a6 100%);
+  background: linear-gradient(135deg, #fff0bd 0%, #ffdc82 52%, #ffc45c 100%);
 }
 
 .project-onboarding .card-surface::after,
