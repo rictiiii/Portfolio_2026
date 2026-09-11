@@ -22,6 +22,78 @@
   transform: translateY(calc(-100% - 24px)) !important;
 }
 
+/* Shared chapter navigation for every portfolio case study. */
+.sky-case { --case-nav-accent: #1769d2; }
+.koto-case { --case-nav-accent: #e5252a; }
+.kiosk-redesign { --case-nav-accent: #f28a00; }
+.ii-page { --case-nav-accent: #5b5ce2; }
+
+.case-chapters {
+  position: fixed !important;
+  inset: 0 0 auto !important;
+  z-index: 9000 !important;
+  overflow: hidden;
+  border-bottom: 1px solid var(--case-nav-line, rgba(21, 21, 21, 0.1));
+  background: rgba(255, 255, 255, 0.94) !important;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-110%);
+  visibility: hidden;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: opacity 0.18s ease, transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.24s;
+}
+
+.case-chapters.case-chapters--visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.case-chapters__inner {
+  display: flex !important;
+  width: min(1400px, calc(100% - clamp(32px, 8vw, 128px))) !important;
+  min-height: 66px;
+  margin-inline: auto !important;
+  align-items: center;
+  justify-content: center !important;
+  gap: clamp(20px, 3vw, 40px) !important;
+}
+
+.case-chapters a {
+  flex: none;
+  color: var(--case-nav-muted, #667085);
+  font: 500 14px/1.2 "Outfit", sans-serif;
+  text-decoration: none;
+  transition: color 0.16s ease;
+}
+
+.case-chapters a::after {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 5px;
+  border-radius: 999px;
+  background: var(--case-nav-accent, #1769d2);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.35);
+  transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.case-chapters a:hover,
+.case-chapters a.case-chapters__active { color: var(--case-nav-active, #151515); }
+.case-chapters a:hover::after,
+.case-chapters a.case-chapters__active::after { opacity: 1; transform: scaleX(1); }
+
+@media (max-width: 767px) {
+  .case-chapters { overflow-x: auto; scrollbar-width: none; }
+  .case-chapters::-webkit-scrollbar { display: none; }
+  .case-chapters__inner { width: max-content !important; min-width: 100%; justify-content: flex-start !important; gap: 24px !important; }
+}
+
 .navigation .nav-container {
   display: flex;
   align-items: center;

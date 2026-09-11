@@ -413,6 +413,18 @@ section:last-child {
   margin-bottom: 0;
 }
 
+/* Modern case-study pages own their section rhythm and main spacing locally.
+   Add this class to the page shell to prevent legacy spacer bands. */
+.case-study-v2 section {
+  margin-bottom: 0;
+}
+
+.case-study-v2 main {
+  min-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 /* ========================================
    HERO SECTION
    ======================================== */

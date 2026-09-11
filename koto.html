@@ -9,21 +9,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="portfolio-styles.css?v=10">
+  <link rel="stylesheet" href="portfolio-styles.css?v=11">
   <link rel="stylesheet" href="hero-section.css?v=11">
   <link rel="stylesheet" href="Koto/koto.css?v=12">
-  <link rel="stylesheet" href="Koto/pie-charts.css?v=10">
-  <link rel="stylesheet" href="navigation.css?v=3">
-  <link rel="stylesheet" href="footer.css?v=1">
+  <link rel="stylesheet" href="Koto/koto-v2.css?v=6">
+  <link rel="stylesheet" href="navigation.css?v=4">
+  <link rel="stylesheet" href="footer.css?v=2">
   <script src="project-password-modal.js?v=20260729" defer></script>
   <script src="navigation.js?v=2" defer></script>
-  <script src="nav-scroll.js?v=1" defer></script>
-  <script src="Koto/pie-charts.js?v=10" defer></script>
-  <script src="scroll-hijack.js" defer></script>
-  <script src="chat-widget.js" defer></script>
-  <script src="go-to-top.js" defer></script>
+  <script src="Koto/koto-interactions.js?v=1" defer></script>
+  <script src="case-study-nav.js?v=1" defer></script>
 </head>
-<body class="case-study-page">
+<body class="case-study-page koto-case">
 
   <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container">
@@ -88,6 +85,60 @@
     </section>
   </div>
   <!-- End Hero Wrapper -->
+
+  <div class="koto-v2 case-study-v2">
+    <header class="k2-hero" id="koto-overview">
+      <div class="k2-shell k2-hero__grid">
+        <div class="k2-hero__copy">
+          <p class="k2-kicker">KOTO by Toyota</p>
+          <h1>Car care, without the friction</h1>
+          <p>I designed one mobile experience for discovering services, booking care, and securely sharing vehicle access.</p>
+          <a class="k2-button" href="#koto-solution">View the solution</a>
+        </div>
+        <figure class="k2-hero__visual"><img src="Koto/Hero.png" alt="KOTO mobile app screens for appointments and digital key"></figure>
+      </div>
+    </header>
+
+    <section class="k2-summary" data-chapter-trigger aria-label="Project outcomes and overview">
+      <div class="k2-shell">
+        <div class="k2-proof"><div><strong>45%</strong><span>increase in service bookings</span></div><div><strong>82%</strong><span>digital key adoption</span></div><div><strong>3.5×</strong><span>faster checkout flow</span></div></div>
+        <div class="k2-snapshot"><div><span>Role</span><strong>Product Designer</strong></div><div><span>Scope</span><strong>Research, product strategy, interaction design, prototyping</strong></div><div><span>Platform</span><strong>Mobile app and responsive web</strong></div><div><span>Market</span><strong>Toyota vehicle owners in Japan</strong></div></div>
+      </div>
+    </section>
+
+    <nav class="k2-chapters case-chapters" data-case-chapters aria-label="KOTO case study chapters"><div class="k2-shell k2-chapters__inner case-chapters__inner"><a href="#koto-overview">Overview</a><a href="#koto-problem">Problem</a><a href="#koto-insight">Insight</a><a href="#koto-decision">Decision</a><a href="#koto-solution">Solution</a><a href="#koto-impact">Impact</a></div></nav>
+
+    <main class="k2-main">
+      <section class="k2-section k2-section--problem" id="koto-problem"><div class="k2-shell">
+        <div class="k2-intro"><p class="k2-kicker">The problem</p><h2>Vehicle ownership was split across disconnected moments</h2><p>Owners searched for services without clear prices, coordinated appointments through calls and emails, then managed physical keys separately.</p></div>
+        <div class="k2-problem-grid"><ol class="k2-callouts"><li><span>1</span><div><strong>Opaque pricing</strong><p>Hidden fees made it difficult to commit with confidence.</p></div></li><li><span>2</span><div><strong>Scheduling friction</strong><p>Booking stretched across calls and confirmations.</p></div></li><li><span>3</span><div><strong>Awkward handoffs</strong><p>Physical key exchange complicated service and shared access.</p></div></li></ol><figure class="k2-media k2-problem-art"><img src="Koto/User pain point.png" alt="Illustration of vehicle-service pain points" loading="lazy"></figure></div>
+        <blockquote class="k2-thesis">The opportunity was not another booking tool. It was one continuous relationship between the owner, the car, and Toyota.</blockquote>
+      </div></section>
+
+      <section class="k2-section" id="koto-insight"><div class="k2-shell">
+        <div class="k2-intro"><p class="k2-kicker">Research insight</p><h2>Trust depends on clarity before convenience</h2><p>Interviews with 20 vehicle owners, service-provider conversations, behavioral analysis, and competitive review revealed three conditions for digital adoption.</p></div>
+        <div class="k2-principles"><article><span>01</span><h3>Show the full cost</h3><p>Transparent pricing removes the fear of surprise charges.</p></article><article><span>02</span><h3>Confirm every handoff</h3><p>Availability, status, and reminders make booking predictable.</p></article><article><span>03</span><h3>Explain access</h3><p>Visible permissions help digital keys feel secure.</p></article></div>
+        <div class="k2-discovery"><figure class="k2-media"><img src="Koto/koto-information-architecture.png" alt="KOTO information architecture" loading="lazy"><figcaption>Architecture connected discovery, booking, ownership, and access.</figcaption></figure><figure class="k2-media"><img src="Koto/koto-user-flow.png" alt="KOTO service booking user flow" loading="lazy"><figcaption>The core flow reduced decisions between need and confirmation.</figcaption></figure></div>
+      </div></section>
+
+      <section class="k2-section k2-section--decision" id="koto-decision"><div class="k2-shell k2-decision"><div><p class="k2-kicker">Design decision</p><h2>Unify the journey around the vehicle</h2><p class="k2-decision__line">One account. One car. One continuous service relationship.</p></div><dl><div><dt>Evidence</dt><dd>Owners understood tasks better when services, appointments, and access were grounded in their vehicle.</dd></div><div><dt>Decision</dt><dd>Make the vehicle the shared context for shopping, scheduling, tracking, and key permissions.</dd></div><div><dt>Tradeoff</dt><dd>Accept a more connected system architecture to remove repeated setup and fragmented handoffs.</dd></div></dl></div></section>
+
+      <section class="k2-section" id="koto-solution"><div class="k2-shell">
+        <div class="k2-intro"><p class="k2-kicker">Final design</p><h2>Two product pillars, designed as one experience</h2><p>The visual system keeps high-value actions clear while the vehicle profile carries context across every task.</p></div>
+        <article class="k2-moment"><div class="k2-moment__copy"><span>Service marketplace</span><h3>Discover and book with confidence</h3><p>Owners browse relevant services, see pricing before committing, choose an available time, and receive a clear confirmation.</p><ul><li>Vehicle-aware recommendations</li><li>Transparent price and availability</li><li>Fewer steps from discovery to booking</li></ul></div><figure class="k2-media"><img src="Koto/Service Booking2.png" alt="KOTO service discovery and booking screens" loading="lazy"><figcaption>Discovery and booking share one consistent decision flow.</figcaption></figure></article>
+        <article class="k2-moment k2-moment--reverse"><div class="k2-moment__copy"><span>Appointment management</span><h3>Keep the next step visible</h3><p>Upcoming service, appointment details, and live status remain easy to find, reducing follow-up calls.</p><ul><li>Clear appointment state</li><li>Timely preparation guidance</li><li>Progress attached to the vehicle</li></ul></div><figure class="k2-media"><img src="Koto/Appointment details & tracking.png" alt="KOTO appointment details and tracking screens" loading="lazy"><figcaption>Booking becomes a trackable service relationship.</figcaption></figure></article>
+        <article class="k2-moment"><div class="k2-moment__copy"><span>Digital key</span><h3>Make access secure and shareable</h3><p>Owners can add a vehicle, understand key status, and share access for family, valet, or service without exchanging a physical key.</p><ul><li>Explicit permission and vehicle context</li><li>Simple add-car setup</li><li>Contactless service handoff</li></ul></div><figure class="k2-media"><img src="Koto/Add new car to digital key.png" alt="KOTO digital key vehicle setup screens" loading="lazy"><figcaption>Permission clarity makes connected access easier to trust.</figcaption></figure></article>
+      </div></section>
+
+      <section class="k2-section k2-section--iteration"><div class="k2-shell"><div class="k2-intro"><p class="k2-kicker">Iteration</p><h2>Structure came before surface</h2><p>Sketches and low-fidelity flows tested how much information owners needed at each decision before visual styling entered the process.</p></div><figure class="k2-media"><img src="Koto/LoFi Wireframes.png" alt="Low-fidelity KOTO wireframes" loading="lazy"><figcaption>Wireframes established the complete booking logic and edge cases.</figcaption></figure></div></section>
+
+      <section class="k2-section k2-section--impact" id="koto-impact"><div class="k2-shell"><div class="k2-intro"><p class="k2-kicker">Reported outcomes</p><h2>Less friction translated into adoption</h2><p>The integrated experience improved service conversion and confidence in connected vehicle access.</p></div><div class="k2-results"><article><strong>45%</strong><h3>More bookings</h3><p>Increase against the previous phone and walk-in baseline.</p></article><article><strong>82%</strong><h3>Digital key adoption</h3><p>Among owners completing at least one service appointment.</p></article><article><strong>3.5×</strong><h3>Faster checkout</h3><p>Booking time fell from roughly 15 minutes to under five.</p></article><article><strong>4.7/5</strong><h3>App rating</h3><p>Strong feedback for convenience and key reliability.</p></article></div><div class="k2-reflection"><div><h3>What I learned</h3><p>In an opaque category, clarity is not a finishing touch—it is the product value. Price, status, and permission design made convenience believable.</p></div><div><h3>What I would test next</h3><p>Mileage-based maintenance recommendations, stronger digital-key recovery, and accessibility in outdoor and gloved-use contexts.</p></div></div></div></section>
+
+      <section class="k2-quote-section" id="koto-principle" aria-label="KOTO design principle"><div class="k2-shell"><blockquote class="k2-closing">Design the relationship, not just the transaction.</blockquote></div></section>
+
+      <section class="k2-section k2-section--appendix"><div class="k2-shell"><div class="k2-intro"><p class="k2-kicker">Deep dive</p><h2>Supporting design artifacts</h2><p>Additional material for reviewers who want to inspect the system in more detail.</p></div><div class="k2-appendix"><details><summary>Brand direction and visual language</summary><div class="k2-appendix__grid"><img src="Koto/Mood Board.png" alt="KOTO mood board" loading="lazy"><img src="Koto/Logo Exploration.png" alt="KOTO logo explorations" loading="lazy"></div></details><details><summary>Typography and component system</summary><div class="k2-appendix__grid"><img src="Koto/Typography Paring.png" alt="KOTO typography scale" loading="lazy"><img src="Koto/Components.png" alt="KOTO component library" loading="lazy"></div></details><details><summary>Explorations and final screens</summary><div class="k2-appendix__grid"><img src="Koto/Design Explorations.png" alt="KOTO design explorations" loading="lazy"><img src="Koto/Home.png" alt="KOTO final home screen" loading="lazy"></div></details></div></div></section>
+    </main>
+  </div>
 
   <main>
     <div class="container">
@@ -560,7 +611,6 @@
   </main>
 
   <!-- Back to Top Button -->
-  <button class="back-to-top" aria-label="Back to top">↑</button>
 
   <footer class="site-footer">
     <div class="container">

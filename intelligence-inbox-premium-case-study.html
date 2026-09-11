@@ -10,13 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="portfolio-styles.css?v=12">
-  <link rel="stylesheet" href="navigation.css?v=3">
-  <link rel="stylesheet" href="footer.css?v=1">
+  <link rel="stylesheet" href="navigation.css?v=4">
+  <link rel="stylesheet" href="footer.css?v=2">
+  <link rel="stylesheet" href="intelligence-inbox/intelligence-inbox-v2.css?v=1">
   <script src="navigation.js?v=2" defer></script>
-  <script src="nav-scroll.js?v=1" defer></script>
+  <script src="case-study-nav.js?v=1" defer></script>
   <script src="portfolio-script.js" defer></script>
-  <script src="chat-widget.js" defer></script>
-  <script src="go-to-top.js" defer></script>
 </head>
 <body class="ii-page" data-theme="light">
 
@@ -40,12 +39,20 @@
   </nav>
 
   <main>
-    <header class="ii-hero">
+    <header class="ii-hero" id="ii-overview" data-chapter-trigger>
       <div class="container">
-        <div class="ii-kicker">AI Product Design · Restaurant Operations</div>
-        <h1>From an AI inbox to an operational copilot.</h1>
-        <p class="ii-hero__lede">I designed a new AI-powered experience that tells restaurant operators what needs attention, explains why, and helps them take the next step.</p>
-        <a class="ii-hero-prototype-cta" href="#final-prototype">Try the AI prototype</a>
+        <div class="ii-hero__grid">
+          <div class="ii-hero__copy">
+            <div class="ii-kicker">AI product design for restaurant operations</div>
+            <h1>From an AI inbox to an operational copilot.</h1>
+            <p class="ii-hero__lede">I designed a new AI-powered experience that tells restaurant operators what needs attention, explains why, and helps them take the next step.</p>
+            <a class="ii-hero-prototype-cta" href="#final-prototype">Try the AI prototype</a>
+          </div>
+          <figure class="ii-hero__visual">
+            <img src="intelligence-inbox/ai-chat-home-final.png" alt="Final Intelligence Inbox home screen prioritizing four restaurant operations issues">
+            <figcaption>Final concept: AI operations assistant</figcaption>
+          </figure>
+        </div>
 
         <div class="ii-meta">
           <div class="ii-meta__item">
@@ -72,18 +79,20 @@
             <h2>Less interface. More direction.</h2>
             <p>The final concept moved away from asking operators to manage AI insights and toward letting the AI prioritize the day, explain each issue, and lead directly into action.</p>
           </div>
-          <figure class="ii-hero-product">
-            <img src="intelligence-inbox/ai-chat-home-final.png" alt="Final Intelligence Inbox home screen prioritizing four restaurant operations issues">
-            <figcaption>Final concept · AI Operations Assistant</figcaption>
-          </figure>
         </div>
       </div>
     </header>
 
-    <section class="ii-section ii-section--challenge">
+    <nav class="case-chapters ii-chapters" data-case-chapters aria-label="Intelligence Inbox case study chapters">
+      <div class="container case-chapters__inner">
+        <a href="#ii-overview">Overview</a><a href="#ii-challenge">Challenge</a><a href="#draft-prototype">Draft</a><a href="#ii-improvements">Improvements</a><a href="#ii-decisions">Decisions</a><a href="#final-prototype">Final prototype</a><a href="#ii-outcome">Outcome</a>
+      </div>
+    </nav>
+
+    <section class="ii-section ii-section--challenge" id="ii-challenge">
       <div class="container">
         <div class="ii-section__head">
-          <div class="ii-section__number">01 / The challenge</div>
+          <div class="ii-section__number">The challenge</div>
           <div>
             <h2>The first concept surfaced too much at once.</h2>
             <p class="ii-section__intro">The initial prototype explored rich operational analysis, confidence scores, filters, lifecycle tabs, recommended actions, and ROI estimates. It was powerful, but the operator still had to scan, interpret, prioritize, and manage the system.</p>
@@ -133,7 +142,7 @@
     <section class="ii-section ii-section--prototype" id="draft-prototype">
       <div class="container">
         <div class="ii-section__head">
-          <div class="ii-section__number">02 / Early prototype</div>
+          <div class="ii-section__number">Early prototype</div>
           <div>
             <h2>The draft made the complexity visible.</h2>
             <p class="ii-section__intro">The first prototype tested a data-rich inbox organized around insights, filters, evidence, status, and recommended actions.</p>
@@ -161,14 +170,25 @@
       </div>
     </section>
 
-    <section class="ii-section">
+    <section class="ii-section" id="ii-improvements">
       <div class="container">
         <div class="ii-section__head">
-          <div class="ii-section__number">03 / What improved</div>
+          <div class="ii-section__number">What improved</div>
           <div>
             <h2>The final design changes the user’s job.</h2>
             <p class="ii-section__intro">Instead of managing a system of recommendations, the operator arrives to a short, personalized briefing and acts through focused entry points.</p>
           </div>
+        </div>
+
+        <div class="ii-snapshot-comparison ii-reveal" aria-label="Draft and final home screen comparison">
+          <figure>
+            <div class="ii-snapshot-comparison__label">Draft: insight inbox</div>
+            <img src="intelligence-inbox/ai-chat-home-before.png" alt="Draft Intelligence Inbox home screen with filters, confidence scores, and many competing controls">
+          </figure>
+          <figure>
+            <div class="ii-snapshot-comparison__label ii-snapshot-comparison__label--final">Final: daily briefing</div>
+            <img src="intelligence-inbox/ai-chat-home-final.png" alt="Final AI assistant home screen with four prioritized restaurant operations issues">
+          </figure>
         </div>
 
         <div class="ii-comparison ii-reveal">
@@ -218,10 +238,10 @@
       </div>
     </section>
 
-    <section class="ii-section">
+    <section class="ii-section" id="ii-decisions">
       <div class="container">
         <div class="ii-section__head">
-          <div class="ii-section__number">04 / Design decisions</div>
+          <div class="ii-section__number">Design decisions</div>
           <div>
             <h2>Four decisions made the AI feel more useful.</h2>
           </div>
@@ -255,7 +275,7 @@
     <section class="ii-section ii-section--prototype ii-section--final-prototype" id="final-prototype">
       <div class="container">
         <div class="ii-section__head">
-          <div class="ii-section__number">05 / Final prototype</div>
+          <div class="ii-section__number">Final prototype</div>
           <div>
             <h2>The finished experience turns insight into direction.</h2>
             <p class="ii-section__intro">The final prototype prioritizes four issues, reveals context progressively, and leads operators directly toward resolution.</p>
@@ -283,7 +303,7 @@
       </div>
     </section>
 
-    <section class="ii-section">
+    <section class="ii-section" id="ii-outcome">
       <div class="container">
         <div class="ii-outcome ii-reveal">
           <h2>The final concept is simpler because the AI does more of the organizing.</h2>

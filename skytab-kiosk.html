@@ -12,15 +12,15 @@
   <link rel="stylesheet" href="portfolio-styles.css">
   <link rel="stylesheet" href="hero-section.css?v=11">
   <link rel="stylesheet" href="skytab-kiosk/skytab-kiosk.css">
-  <link rel="stylesheet" href="navigation.css?v=3">
-  <link rel="stylesheet" href="footer.css?v=1">
+  <link rel="stylesheet" href="skytab-kiosk/kiosk-v2.css?v=10">
+  <link rel="stylesheet" href="navigation.css?v=4">
+  <link rel="stylesheet" href="footer.css?v=2">
   <script src="project-password-modal.js?v=20260729" defer></script>
   <script src="navigation.js?v=2" defer></script>
-  <script src="nav-scroll.js?v=1" defer></script>
-  <script src="chat-widget.js" defer></script>
-  <script src="go-to-top.js" defer></script>
+  <script src="case-study-nav.js?v=1" defer></script>
+  <script src="skytab-kiosk/kiosk-v2.js?v=2" defer></script>
 </head>
-<body class="case-study-page">
+<body class="case-study-page case-study-v2 kiosk-redesign">
 
   <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container">
@@ -40,6 +40,113 @@
       </div>
     </div>
   </nav>
+
+  <div class="ks2">
+    <header class="ks2-hero" id="kiosk-overview">
+      <div class="ks2-shell ks2-hero__grid">
+        <div class="ks2-hero__copy">
+          <p class="ks2-kicker">Shift4 Kiosk</p>
+          <h1>Move the line.<br>Keep the appetite.</h1>
+          <p class="ks2-lede">A touch-first ordering system built for faster decisions, clearer customization, and flexible checkout.</p>
+          <a class="ks2-button" href="#kiosk-solution">View the solution</a>
+        </div>
+        <figure class="ks2-hero__media">
+          <img src="skytab-kiosk/Kiosk hero.png" alt="Shift4 self-ordering kiosk interface" fetchpriority="high">
+        </figure>
+      </div>
+    </header>
+
+    <section class="ks2-summary" data-chapter-trigger aria-label="Project outcomes and overview">
+      <div class="ks2-shell">
+        <div class="ks2-proof">
+          <div><strong>30%</strong><span>faster average order completion</span></div>
+          <div><strong>20 pts</strong><span>increase in kiosk usage</span></div>
+          <div><strong>15%</strong><span>fewer support tickets</span></div>
+          <div><strong>MVP</strong><span>delivered on schedule</span></div>
+        </div>
+        <dl class="ks2-snapshot">
+          <div><dt>Role</dt><dd>Product Designer</dd></div>
+          <div><dt>Focus</dt><dd>Research, interaction design, prototyping</dd></div>
+          <div><dt>Platform</dt><dd>15-inch self-service kiosk</dd></div>
+          <div><dt>Audience</dt><dd>Restaurant guests and operators</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <nav class="ks2-chapters case-chapters" data-case-chapters aria-label="Kiosk case study chapters"><div class="ks2-shell ks2-chapters__inner case-chapters__inner"><a href="#kiosk-overview">Overview</a><a href="#kiosk-problem">Problem</a><a href="#kiosk-principles">Principles</a><a href="#kiosk-process">Process</a><a href="#kiosk-solution">Solution</a><a href="#kiosk-impact">Impact</a></div></nav>
+
+    <main class="ks2-main">
+      <section class="ks2-section ks2-problem" id="kiosk-problem">
+        <div class="ks2-shell">
+          <div class="ks2-intro"><h2>Every extra step becomes a line</h2><p>Counter ordering created delays, manual-entry errors, and checkout friction when restaurants were busiest.</p></div>
+          <figure class="ks2-queue"><img src="skytab-kiosk/Cartoon people standing in queue flat vector illustration [Converted]-01.png" alt="Restaurant guests waiting in a long ordering line"><figcaption>Long queues and repeated handoffs made speed and confidence the primary design requirements.</figcaption></figure>
+          <div class="ks2-frictions">
+            <article><span>01</span><h3>Peak-hour pressure</h3><p>Long lines reduced throughput and made waiting feel uncertain.</p></article>
+            <article><span>02</span><h3>Order ambiguity</h3><p>Staff-entered orders introduced miscommunication and avoidable waste.</p></article>
+            <article><span>03</span><h3>Payment friction</h3><p>Guests needed the choice to pay at the kiosk or at the counter.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ks2-section ks2-principles" id="kiosk-principles">
+        <div class="ks2-shell">
+          <div class="ks2-intro"><h2>Design for a person standing, deciding, and hungry</h2><p>The kiosk is not a large phone. Its form factor rewards fewer choices, bigger targets, and immediate feedback.</p></div>
+          <div class="ks2-principle-grid">
+            <article class="ks2-principle-grid__lead"><strong>One purpose<br>per screen</strong><p>Show only what helps the next decision.</p></article>
+            <article><h3>Touch first</h3><p>Large, forgiving targets support fast selection from different angles.</p></article>
+            <article><h3>Visual before verbal</h3><p>Food imagery and hierarchy make scanning faster than descriptions alone.</p></article>
+            <article><h3>Recover clearly</h3><p>Errors always provide an obvious route forward without a dead end.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ks2-section ks2-process" id="kiosk-process">
+        <div class="ks2-shell">
+          <div class="ks2-intro"><h2>Structure before polish</h2><p>The work moved from complete journey mapping to hardware-scale wireframes, then into a working high-fidelity prototype.</p></div>
+          <div class="ks2-process-grid">
+            <figure class="ks2-media ks2-media--flow"><img src="skytab-kiosk/Kiosk Flow.png" alt="Complete Shift4 Kiosk ordering flow"><figcaption>Mapping every branch exposed payment, loyalty, and recovery decisions early.</figcaption></figure>
+            <figure class="ks2-media ks2-media--sketch"><img src="skytab-kiosk/Kiosk Sketch.png" alt="Early kiosk wireframe sketches"><figcaption>Actual-size wireframes established the menu, cart, and fixed checkout structure.</figcaption></figure>
+          </div>
+          <figure class="ks2-prototype"><video autoplay loop muted playsinline aria-label="High-fidelity kiosk prototype"><source src="skytab-kiosk/Kiosk HiFi.mov" type="video/mp4"></video><figcaption>High-fidelity testing simulated the complete touch and payment journey.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="ks2-section ks2-iterations">
+        <div class="ks2-shell">
+          <div class="ks2-intro"><h2>Three changes removed hesitation</h2><p>Testing focused the interface on precise selection, visible context, and confidence at checkout.</p></div>
+          <article class="ks2-iteration"><div class="ks2-iteration__copy"><span>Category navigation</span><h3>Turn narrow tabs into touch targets</h3><p>Pill-style categories added separation, generous hit areas, and a clear active state.</p></div><div class="ks2-compare ks2-compare--tabs"><figure><img src="skytab-kiosk/Tabs before.png?v=3" alt="Category tabs before redesign"><figcaption>Before</figcaption></figure><figure><img src="skytab-kiosk/Tabs After.png?v=3" alt="Category tabs after redesign"><figcaption>After</figcaption></figure></div></article>
+          <article class="ks2-iteration ks2-iteration--reverse"><div class="ks2-iteration__copy"><span>Modifier selection</span><h3>Keep choices in view</h3><p>A landscape layout used the kiosk width so guests could compare major options without excessive scrolling.</p></div><div class="ks2-compare ks2-compare--landscape"><figure><img src="skytab-kiosk/modifier before.png" alt="Modifier selection before redesign"><figcaption>Before</figcaption></figure><figure><img src="skytab-kiosk/modifier after.png" alt="Modifier selection after redesign"><figcaption>After</figcaption></figure></div></article>
+          <article class="ks2-iteration"><div class="ks2-iteration__copy"><span>Cart review</span><h3>Make the order easy to verify</h3><p>Persistent product details, totals, and actions reduced uncertainty before payment.</p></div><div class="ks2-compare ks2-compare--portrait"><figure><img src="skytab-kiosk/cart before.png" alt="Cart before redesign"><figcaption>Before</figcaption></figure><figure><img src="skytab-kiosk/Cart after.png" alt="Cart after redesign"><figcaption>After</figcaption></figure></div></article>
+        </div>
+      </section>
+
+      <section class="ks2-section ks2-solution" id="kiosk-solution">
+        <div class="ks2-shell">
+          <div class="ks2-intro"><h2>A complete order, one clear decision at a time</h2><p>The final 12-screen journey moves from welcome to feedback with a single job for every screen.</p></div>
+          <div class="ks2-screen-strip" tabindex="0" aria-label="Final kiosk screens, horizontally scrollable">
+            <figure><img src="skytab-kiosk/final-screens/1.png" alt="Kiosk welcome screen"><figcaption>Welcome</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/2.png" alt="Order type selection"><figcaption>Order type</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/4.png" alt="Menu browsing and cart"><figcaption>Build the order</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/5.png" alt="Product customization"><figcaption>Customize</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/7.png" alt="Payment method selection"><figcaption>Choose payment</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/9.png" alt="Card payment instructions"><figcaption>Pay</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/11.png" alt="Order confirmation"><figcaption>Confirm</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/12.png" alt="Experience feedback"><figcaption>Feedback</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="ks2-section ks2-impact" id="kiosk-impact">
+        <div class="ks2-shell">
+          <div class="ks2-intro"><h2>Faster for guests. Lighter for staff.</h2><p>The MVP improved the ordering experience while helping restaurants move more customers through peak periods.</p></div>
+          <div class="ks2-impact-grid"><article><strong>4.5</strong><span>minutes before</span></article><div class="ks2-impact-arrow" aria-hidden="true"><svg viewBox="0 0 220 72" role="presentation"><defs><linearGradient id="kioskArrowGradient" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffd76a"/><stop offset="1" stop-color="#f28a00"/></linearGradient></defs><path d="M8 36C72 36 129 36 196 36M170 10L197 36L170 62"/></svg></div><article class="ks2-impact-grid__after"><strong>3.1</strong><span>minutes after</span></article><article><strong>+35%</strong><span>peak-hour throughput</span></article></div>
+          <div class="ks2-outcomes"><article><strong>20 pts</strong><p>increase in kiosk adoption</p></article><article><strong>15%</strong><p>reduction in support tickets</p></article><article><strong>0</strong><p>post-launch hardware revisions</p></article></div>
+        </div>
+      </section>
+
+      <section class="ks2-quote"><div class="ks2-shell"><blockquote>Design for the moment of use, not the screen size.</blockquote></div></section>
+    </main>
+  </div>
 
   <!-- Hero Wrapper with shared gradient background -->
   <div class="hero-wrapper">
@@ -728,7 +835,6 @@
   </main>
 
   <!-- Back to Top Button -->
-  <button class="back-to-top" aria-label="Back to top">↑</button>
 
   <footer class="site-footer">
     <div class="container">

@@ -8,6 +8,12 @@
   background: #ffffff;
 }
 
+/* Case studies end flush with the footer; body backgrounds must never become empty strips. */
+body.case-study-page > .site-footer,
+body.ii-page > .site-footer {
+  margin-top: 0;
+}
+
 .site-footer .container {
   width: 100%;
   max-width: 1400px;
@@ -55,6 +61,11 @@
   .site-footer {
     margin-top: 16px;
     padding: 16px 0;
+  }
+
+  body.case-study-page > .site-footer,
+  body.ii-page > .site-footer {
+    margin-top: 0;
   }
 
   .site-footer .container {

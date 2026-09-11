@@ -3,24 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkyTab Onboarding Case Study | Ricky Liu</title>
-  <meta name="description" content="How a state-aware onboarding system helped 11,000+ merchants launch faster, saving 4.7 days per merchant and driving 18,000+ feature adoptions">
+  <title>SkyTab Onboarding: A State-Aware Merchant Hub | Ricky Liu</title>
+  <meta name="description" content="A state-aware Merchant Hub that helped 11,000+ restaurants launch faster and supported 18,000+ feature activations.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="portfolio-styles.css">
-  <link rel="stylesheet" href="hero-section.css?v=11">
-  <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding.css?v=4">
-  <link rel="stylesheet" href="navigation.css?v=3">
-  <link rel="stylesheet" href="footer.css?v=1">
+  <link rel="stylesheet" href="navigation.css?v=4">
+  <link rel="stylesheet" href="footer.css?v=2">
+  <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding-v2.css?v=10">
   <script src="navigation.js?v=2" defer></script>
-  <script src="nav-scroll.js?v=1" defer></script>
-  <script src="chat-widget.js" defer></script>
-  <script src="go-to-top.js" defer></script>
+  <script src="case-study-nav.js?v=1" defer></script>
 </head>
-<body data-theme="light">
-
+<body class="case-study-page case-study-v2 sky-case" data-theme="light">
   <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container">
       <div class="nav-links">
@@ -40,585 +35,223 @@
     </div>
   </nav>
 
-  <!-- Hero Wrapper with shared Unicorn Studio background -->
-  <div class="hero-wrapper">
-    <!-- Unicorn Studio Background -->
-    <div class="unicorn-studio-background">
-      <div data-us-project="MHDhsF4L2aXAN70CmB0o" style="width: 100%; height: 100%; min-width: 1440px; min-height: 900px;"></div><script type="text/javascript">!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.4/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();</script>
+  <header class="sky-hero" id="overview">
+    <div class="sky-shell sky-hero__grid">
+      <div class="sky-hero__copy">
+        <p class="sky-eyebrow">SkyTab onboarding</p>
+            <h1>Onboarding that evolves</h1>
+        <p class="sky-hero__lede">I designed a state-aware Merchant Hub that helped restaurants launch faster and discover more SkyTab capabilities.</p>
+        <div class="sky-hero__actions">
+          <a class="sky-button" href="#solution">View the solution</a>
+          <a class="sky-text-link" href="interactive-prototype/index.html" target="_blank" rel="noopener">Open prototype</a>
+        </div>
+      </div>
+      <figure class="sky-hero__visual">
+        <img src="skytab-onboarding/Hero-1800.png" width="1800" height="1186" alt="SkyTab Merchant Hub shown on a laptop" fetchpriority="high">
+      </figure>
     </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content-wrapper">
-        <div class="hero-main">
-          <div class="hero-text">
-            <h1 class="hero-title">SkyTab Onboarding: Reimagining Merchant Experience Across Lifecycle Stages</h1>
-            <p class="hero-subtitle">How a state-aware onboarding system helped 11,000+ merchants launch faster, saving 4.7 days per merchant and driving 18,000+ feature adoptions</p>
-            <a class="hero-prototype-cta" href="#ai-prototype">Try the AI prototype</a>
-          </div>
-          <div class="hero-image-container">
-            <img src="skytab-onboarding/Hero.png" alt="SkyTab Onboarding Dashboard" style="width: 100%; height: auto; border-radius: 16px;">
-          </div>
+  <section class="sky-project-summary" data-chapter-trigger aria-label="Project outcomes and overview">
+    <div class="sky-shell">
+      <div class="sky-proof__grid">
+        <div class="sky-proof__item"><strong>11,000+</strong><span>merchants launched through Launch Center</span></div>
+        <div class="sky-proof__item"><strong>4.7 days</strong><span>reduction in onboarding order confirmation time</span></div>
+        <div class="sky-proof__item"><strong>18,000+</strong><span>Value-Added Service activations in 2025</span></div>
+      </div>
+      <div class="sky-snapshot__grid">
+        <div><span>Role</span><strong>Product Designer</strong></div>
+        <div><span>Scope</span><strong>Research, lifecycle architecture, interaction design, prototyping</strong></div>
+        <div><span>Collaboration</span><strong>Engineering and illustrator Trey Ingram</strong></div>
+        <div><span>Shipped</span><strong>Launch Center and adaptive Merchant Hub</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="sky-chapters case-chapters" data-case-chapters aria-label="Case study chapters">
+    <div class="sky-shell sky-chapters__inner case-chapters__inner">
+      <a href="#overview">Overview</a><a href="#problem">Problem</a><a href="#insight">Insight</a>
+      <a href="#decision">Decision</a><a href="#solution">Solution</a><a href="#impact">Impact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="sky-section sky-section--problem" id="problem">
+      <div class="sky-shell">
+        <div class="sky-section__intro">
+          <h2>The same dashboard served merchants with completely different needs</h2>
+          <p>A restaurant preparing to launch needed setup tasks, deadlines, installation status, and access to its Customer Success Manager. A live restaurant needed performance data and ways to expand its setup. Merchant Hub treated both the same.</p>
         </div>
-        <div class="hero-metrics">
-          <div class="hero-metric-card">
-            <div class="hero-metric-value">11,000+</div>
-            <p class="hero-metric-label">Merchants launched through Launch Center</p>
-          </div>
-          <div class="hero-metric-card">
-            <div class="hero-metric-value">4.7 days</div>
-            <p class="hero-metric-label">Faster onboarding order confirmation</p>
-          </div>
-          <div class="hero-metric-card">
-            <div class="hero-metric-value">18,000+</div>
-            <p class="hero-metric-label">VAS features adopted in 2025</p>
-          </div>
-          <div class="hero-metric-card">
-            <div class="hero-metric-value">90%</div>
-            <p class="hero-metric-label">Bug resolution rate (283 resolved, 29 open)</p>
-          </div>
+        <div class="sky-before">
+          <figure class="sky-media sky-before__image">
+            <img src="dashboard-before.png" width="4608" height="3051" alt="Previous Merchant Hub dashboard with a generic data-first layout" loading="lazy">
+          </figure>
+          <ol class="sky-callouts">
+            <li><span>1</span><div><strong>No clear next action</strong><p>Launch requirements were scattered across the product.</p></div></li>
+            <li><span>2</span><div><strong>Data without context</strong><p>New merchants saw dashboard information before it could help them.</p></div></li>
+            <li><span>3</span><div><strong>One hierarchy for everyone</strong><p>The interface did not adjust as merchant goals changed.</p></div></li>
+          </ol>
         </div>
-        <div class="hero-details">
-          <div class="hero-detail-item">Product Design</div>
-          <div class="hero-detail-item">UX Research</div>
-          <div class="hero-detail-item">Dashboard</div>
-          <div class="hero-detail-item">B2B</div>
-          <div class="hero-detail-item">SaaS Product</div>
+        <blockquote class="sky-thesis">The opportunity was not to build separate dashboards. It was to create one system that changed its priorities as merchant context changed.</blockquote>
+      </div>
+    </section>
+
+    <section class="sky-section" id="insight">
+      <div class="sky-shell">
+        <div class="sky-section__intro">
+          <h2>Lifecycle stage should determine what comes next</h2>
+          <p>Workshops and affinity mapping organized merchant needs around four recurring jobs. This became the single model used across onboarding, daily operations, and feature discovery.</p>
+        </div>
+        <div class="sky-lifecycle" aria-label="Merchant lifecycle">
+          <article><h3>Activate</h3><p class="sky-lifecycle__goal">Get ready to take the first payment.</p><p>Prioritize required tasks, deadlines, installation status, and support.</p></article>
+          <article><h3>Configure</h3><p class="sky-lifecycle__goal">Tailor SkyTab to the business.</p><p>Sequence setup, teach in context, and confirm readiness.</p></article>
+          <article><h3>Operate</h3><p class="sky-lifecycle__goal">Run service with confidence.</p><p>Surface performance, system health, exceptions, and timely support.</p></article>
+          <article><h3>Optimize</h3><p class="sky-lifecycle__goal">Find opportunities to grow.</p><p>Connect trends and merchant needs to relevant capabilities.</p></article>
+        </div>
+        <div class="sky-discovery">
+          <figure class="sky-media"><img src="skytab-onboarding/workshop-1200.jpg" width="1200" height="900" alt="Cross-functional workshop mapping merchant lifecycle needs" loading="lazy"></figure>
+          <figure class="sky-media"><img src="skytab-onboarding/affinity-1200.jpg" width="1200" height="900" alt="Affinity map organizing merchant needs by lifecycle stage" loading="lazy"></figure>
+          <div class="sky-discovery__copy">
+            <h3>Discovery input</h3>
+            <p>The work reframed onboarding as an ongoing lifecycle rather than a single setup flow. Merchant context, not account type, became the strongest organizing principle.</p>
+            <p class="sky-note">The detailed lifecycle map and workshop artifacts are available in the deep dive below.</p>
+          </div>
         </div>
       </div>
     </section>
-  </div>
-  <!-- End Hero Wrapper -->
 
-  <main>
-    <div class="container">
+    <section class="sky-section sky-section--decision" id="decision">
+      <div class="sky-shell sky-decision">
+        <div class="sky-decision__statement">
+          <h2>Adapt the priority without restricting access</h2>
+          <p>State-aware, not state-gated.</p>
+        </div>
+        <dl class="sky-decision__logic">
+          <div><dt>Evidence</dt><dd>Merchants needed a different next action at each lifecycle stage.</dd></div>
+          <div><dt>Decision</dt><dd>Change hierarchy, guidance, and tone based on context while keeping the full product available.</dd></div>
+          <div><dt>Tradeoff</dt><dd>Accept greater system complexity so merchants retain control and can explore beyond the recommended path.</dd></div>
+        </dl>
+      </div>
+    </section>
 
-      <article class="case-study-content">
-
-        <section class="content-section">
-          <div class="section-label">Problem</div>
-          <h2 class="section-title">Merchants in Different States Need Different Experiences</h2>
-          <div class="section-divider"></div>
-
-          <h3>The Business Challenge</h3>
-          <p>SkyTab merchants exist in vastly different states throughout their lifecycle—from pre-launch setup to mature operations—yet the MX Hub interface treated all merchants the same. This one-size-fits-all approach created friction, confusion, and missed opportunities for engagement at critical moments.</p>
-
-          <div class="case-study-image" style="width: 60%; margin-left: auto; margin-right: auto;">
-            <img src="dashboard-before.png" alt="Dashboard before redesign showing scattered information and unclear hierarchy">
-            <div class="case-study-image-caption">
-              Previous dashboard design with scattered information and unclear visual hierarchy
-            </div>
+    <section class="sky-section" id="solution">
+      <div class="sky-shell">
+        <div class="sky-section__intro">
+          <h2>One merchant journey, from setup to growth</h2>
+          <p>The dashboard keeps its structure familiar while changing the information and actions that deserve priority.</p>
+        </div>
+        <article class="sky-moment">
+          <div class="sky-moment__copy">
+            <span>Activate and configure</span>
+            <h3>Make the critical path impossible to miss</h3>
+            <p>Required tasks, launch progress, installation details, menu programming, and Customer Success support move to the foreground. Optional features remain available without competing with launch work.</p>
+            <ul><li>Clear ownership and status for every launch requirement</li><li>Progressive setup that builds confidence</li><li>Direct access to support when a blocker appears</li></ul>
           </div>
-
-          <p><strong>Three distinct merchant states required different experiences:</strong></p>
-
-          <div class="merchant-states-flow">
-            <!-- State 1 -->
-            <div class="state-card">
-              <div class="state-header">
-                <span class="state-icon">🚀</span>
-                <h4 class="state-title">State 1: Merchant is Launching</h4>
-              </div>
-              <div class="state-content">
-                <p class="state-description">Merchants preparing for launch need to:</p>
-                <ul class="state-list">
-                  <li>Complete basic setup requirements</li>
-                  <li>Access critical launching information (scheduled install date, menu programming status)</li>
-                  <li>Connect with their Customer Success Manager (CSM)</li>
-                  <li>Handle pre-launch activities (rescheduling, file uploads, CSM coordination)</li>
-                </ul>
-                <div class="state-pain-point">
-                  <strong>Pain Point:</strong> No clear path to required actions; launching information scattered and hard to find
-                </div>
-              </div>
-            </div>
-
-            <!-- Arrow -->
-            <div class="state-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-
-            <!-- State 2 -->
-            <div class="state-card">
-              <div class="state-header">
-                <span class="state-icon">⚙️</span>
-                <h4 class="state-title">State 2: Merchant Just Completed Setup (Pre-live)</h4>
-              </div>
-              <div class="state-content">
-                <p class="state-description">Merchants who completed required setup but haven't gone live yet need to:</p>
-                <ul class="state-list">
-                  <li>Complete additional feature configuration</li>
-                  <li>Learn about the SkyTab system through tutorials</li>
-                  <li>Stay informed about SkyTab releases</li>
-                  <li>Prepare for launch day</li>
-                </ul>
-                <div class="state-pain-point">
-                  <strong>Pain Point:</strong> No dashboard data available yet, but interface didn't guide merchants on what to do next
-                </div>
-              </div>
-            </div>
-
-            <!-- Arrow -->
-            <div class="state-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-
-            <!-- State 3 -->
-            <div class="state-card">
-              <div class="state-header">
-                <span class="state-icon">📊</span>
-                <h4 class="state-title">State 3: Merchant Has Been Live</h4>
-              </div>
-              <div class="state-content">
-                <p class="state-description">Established merchants with operational systems need to:</p>
-                <ul class="state-list">
-                  <li>Access real-time data and dashboards</li>
-                  <li>Set up new features as they're released</li>
-                  <li>Configure features their business newly needs</li>
-                  <li>Continue learning about system capabilities</li>
-                  <li>Stay updated on releases</li>
-                </ul>
-                <div class="state-pain-point">
-                  <strong>Pain Point:</strong> Dashboard existed but lacked depth; feature discovery was poor; status indicators missing
-                </div>
-              </div>
-            </div>
+          <figure class="sky-media sky-moment__visual">
+            <img src="skytab-onboarding/launch-dashboard.png" width="5378" height="3262" alt="Launch dashboard prioritizing order status, setup progress, support, products, and tutorials" loading="lazy">
+            <figcaption>Launch work is prioritized without hiding the rest of Merchant Hub.</figcaption>
+          </figure>
+        </article>
+        <article class="sky-moment sky-moment--reverse">
+          <div class="sky-moment__copy">
+            <span>Operate</span>
+            <h3>Replace setup guidance with useful business context</h3>
+            <p>After launch, the same dashboard shifts toward real-time performance, operational status, tutorials, and recommendations that support the restaurant's daily work.</p>
+            <ul><li>Data appears when it can be interpreted and acted on</li><li>Exceptions and system health become visible</li><li>Education continues after initial onboarding</li></ul>
           </div>
-
-          <h3>The Opportunity</h3>
-          <p>By creating a state-aware system that adapts to merchant lifecycle stages, we could:</p>
-
-          <div class="opportunity-cards">
-            <div class="opportunity-card">
-              <div class="opportunity-icon">🧠</div>
-              <p class="opportunity-text">Reduce cognitive load by showing only relevant information</p>
-            </div>
-            <div class="opportunity-card">
-              <div class="opportunity-icon">⚡</div>
-              <p class="opportunity-text">Accelerate time-to-value for new merchants</p>
-            </div>
-            <div class="opportunity-card">
-              <div class="opportunity-icon">📈</div>
-              <p class="opportunity-text">Improve feature adoption across all merchant segments</p>
-            </div>
-            <div class="opportunity-card">
-              <div class="opportunity-icon">✨</div>
-              <p class="opportunity-text">Create a more engaging, helpful experience that grows with the merchant</p>
-            </div>
+          <figure class="sky-media sky-moment__visual">
+            <img src="skytab-onboarding/Existing merchant dashboard.png" width="4491" height="2335" alt="Merchant Hub dashboard for a live restaurant with performance data and recommendations" loading="lazy">
+            <figcaption>The interface moves from readiness to operations while preserving familiar patterns.</figcaption>
+          </figure>
+        </article>
+        <article class="sky-extension">
+          <div class="sky-extension__copy">
+            <span>Optimize</span>
+            <h3>Use context to support feature discovery</h3>
+            <p>Relevant capabilities appear as the merchant is ready for them, connecting feature activation to an immediate business need instead of presenting a generic catalog.</p>
           </div>
-        </section>
+          <figure class="sky-media">
+            <img src="feature-modules.png" width="5960" height="4120" alt="Feature module flow for discovering and activating an additional SkyTab capability" loading="lazy">
+            <figcaption>Feature setup extends the same lifecycle architecture beyond initial launch.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
 
-        <section class="content-section">
-          <div class="section-label">Design Strategy</div>
-          <h2 class="section-title">Creating State-Aware Experiences</h2>
-          <div class="section-divider"></div>
+    <section class="sky-section sky-section--iteration">
+      <div class="sky-shell">
+        <div class="sky-section__intro">
+          <h2>Iteration focused the hierarchy on readiness</h2>
+          <p>Explorations compared how setup, status, and optional capabilities should compete for attention. The final direction gave required launch work a clear visual lead.</p>
+        </div>
+        <figure class="sky-media sky-iteration">
+          <img src="skytab-onboarding/skytab-onboarding-wireframes.png" width="9040" height="3400" alt="Wireframe explorations comparing onboarding information hierarchies" loading="lazy">
+          <figcaption><strong>What changed:</strong> launch tasks and progress became the primary story. Education and optional capabilities remained visible as secondary actions.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-          <h3>Guiding Principles</h3>
+    <section class="sky-section sky-section--impact" id="impact">
+      <div class="sky-shell">
+        <div class="sky-section__intro">
+          <h2>Measured impact across launch and adoption</h2>
+          <p>The system supported merchants from their first setup task through ongoing feature activation.</p>
+        </div>
+        <div class="sky-results">
+          <article><strong>11,000+</strong><h3>Merchants launched</h3><p>Reach through the redesigned Launch Center since launch.</p></article>
+          <article><strong>4.7 days</strong><h3>Faster confirmation</h3><p>Reduction in onboarding order confirmation time.</p></article>
+          <article><strong>18,000+</strong><h3>Feature activations</h3><p>Value-Added Service activations recorded in 2025.</p></article>
+        </div>
+        <p class="sky-measurement">Measurement note: these figures combine product reach, process improvement, and feature activation. They are not presented as isolated A/B test results.</p>
+        <div class="sky-reflection">
+          <div><h3>What I learned</h3><p>Complexity handled at the system level can create a simpler experience for merchants. A shared structure also made it possible to change priorities without making each lifecycle stage feel like a different product.</p></div>
+          <div><h3>What I would test next</h3><p>I would explore stronger mobile workflows, predictive feature recommendations, and performance benchmarks that help live merchants understand what to do next.</p></div>
+        </div>
+        <blockquote class="sky-closing">Design for the user's context, not your convenience.</blockquote>
+      </div>
+    </section>
 
-          <div class="highlight-grid">
-            <div class="highlight-box">
-              <h4>1. State-Aware, Not State-Gated</h4>
-              <p>The interface adapts to merchant state but never blocks access to information. Merchants can always explore, but we guide them to what matters now.</p>
+    <section class="sky-section sky-section--appendix" id="appendix">
+      <div class="sky-shell">
+        <div class="sky-section__intro">
+          <h2>Deep dive</h2>
+          <p>Supporting artifacts are available for reviewers who want to inspect the system in more detail.</p>
+        </div>
+        <div class="sky-appendix">
+          <details>
+            <summary>Lifecycle architecture and illustration system</summary>
+            <div class="sky-appendix__content">
+              <figure class="sky-media"><img src="skytab-onboarding/merchant-lifecycle-revised.svg" width="1640" height="1700" alt="Detailed Activate, Configure, Operate, and Optimize lifecycle map" loading="lazy"></figure>
+              <figure class="sky-media"><img src="skytab-onboarding/Icons.png" width="3000" height="1040" alt="Illustration system created with Trey Ingram" loading="lazy"><figcaption>I provided art direction and worked with Trey Ingram to create consistent visual anchors for the experience.</figcaption></figure>
             </div>
-
-            <div class="highlight-box">
-              <h4>2. Progressive Disclosure</h4>
-              <p>Surface critical information first, then layer in additional capabilities as merchants are ready for them.</p>
-            </div>
-
-            <div class="highlight-box">
-              <h4>3. Build Confidence Early</h4>
-              <p>Especially for launching merchants, every interaction should reduce anxiety and build confidence in the system.</p>
-            </div>
-
-            <div class="highlight-box">
-              <h4>4. Data as Engagement</h4>
-              <p>For live merchants, make data instantly useful and actionable, not just informative.</p>
-            </div>
-          </div>
-
-          <h3>Research & Discovery</h3>
-
-          <div class="image-grid-2col">
-            <div class="case-study-image">
-              <img src="skytab-onboarding/skytab-onboarding-workshop.jpg" alt="Workshop session with team members collaborating on merchant states">
-              <div class="case-study-image-caption">
-                Workshop session mapping merchant lifecycle states and identifying pain points across the journey
+          </details>
+          <details>
+            <summary>Onboarding screens and feature activation flow</summary>
+            <div class="sky-appendix__content">
+              <figure class="sky-media"><img src="skytab-onboarding/onboarding-wizard-screens.png" width="6042" height="4120" alt="Onboarding wizard screens for required setup" loading="lazy"></figure>
+              <div class="sky-appendix__grid">
+                <img src="skytab-onboarding/1.png" width="2880" height="1960" alt="Online ordering activation entry" loading="lazy">
+                <img src="skytab-onboarding/2.png" width="2880" height="1960" alt="Online ordering channel selection" loading="lazy">
+                <img src="skytab-onboarding/6.png" width="2880" height="1960" alt="Online ordering activation complete" loading="lazy">
               </div>
             </div>
-
-            <div class="case-study-image">
-              <img src="skytab-onboarding/skytab-onboarding-affinity-mapping.jpg" alt="Affinity mapping exercise organizing user research findings">
-              <div class="case-study-image-caption">
-                Affinity mapping helped identify patterns across merchant segments and prioritize features for each state
-              </div>
+          </details>
+          <details>
+            <summary>Delivery quality and interactive prototype</summary>
+            <div class="sky-appendix__content sky-appendix__content--compact">
+              <p><strong>283 issues resolved, 29 open.</strong> Error-state coverage and close design-engineering collaboration contributed to a 90% resolution rate while the product continued to evolve.</p>
+              <a class="sky-button" href="interactive-prototype/index.html" target="_blank" rel="noopener">Open interactive prototype</a>
             </div>
-          </div>
-
-          <h3>Strategic Decisions</h3>
-
-          <h4>Multi-State Wizard System</h4>
-          <p>Created a dynamic wizard that changes content, tone, and actions based on merchant lifecycle state:</p>
-
-          <div class="wizard-states-flow">
-            <div class="wizard-state-card">
-              <h5 class="wizard-state-title">Pre-launch</h5>
-              <p class="wizard-state-description">Task-oriented with deadlines and CSM information</p>
-            </div>
-
-            <div class="wizard-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 12L20 12M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-
-            <div class="wizard-state-card">
-              <h5 class="wizard-state-title">Pre-live</h5>
-              <p class="wizard-state-description">Education-focused with system tutorials</p>
-            </div>
-
-            <div class="wizard-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 12L20 12M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-
-            <div class="wizard-state-card">
-              <h5 class="wizard-state-title">Live</h5>
-              <p class="wizard-state-description">Dashboard-first with feature discovery</p>
-            </div>
-          </div>
-
-          <h4>Illustration System (Collaboration with Trey Ingram)</h4>
-          <p>Worked with illustrator Trey Ingram to develop a cohesive illustration system that:</p>
-
-          <div class="illustration-system-bullets">
-            <div class="illustration-bullet-item">Visually represents each merchant state</div>
-            <div class="illustration-bullet-item">Uses consistent style and color language</div>
-            <div class="illustration-bullet-item">Feels professional yet approachable</div>
-            <div class="illustration-bullet-item">Works across different screen sizes</div>
-          </div>
-
-          <div class="illustration-system-image-solo">
-            <img src="skytab-onboarding/Icons.png" alt="Illustration system icons representing different merchant states">
-          </div>
-        </section>
-
-        <section class="content-section">
-          <div class="section-label">Solution</div>
-          <h2 class="section-title">State-Adaptive Dashboard</h2>
-          <div class="section-divider"></div>
-
-          <h3>How It Works</h3>
-          <p>The core of the solution is a dashboard that intelligently adapts to merchant lifecycle stage:</p>
-
-          <div class="case-study-image">
-            <img src="skytab-onboarding/merchant-lifecycle-revised.svg" alt="SkyTab onboarding lifecycle diagram showing Activate, Configure, Operate, and Optimize stages with merchant goals, what merchants see, SkyTab guidance, and transition examples">
-            <div class="case-study-image-caption">
-              Complete user flow mapping how merchants transition between states and what they see at each stage
-            </div>
-          </div>
-
-          <h3>Design Iterations</h3>
-
-          <div class="case-study-image">
-            <img src="skytab-onboarding/skytab-onboarding-wireframes.png" alt="Wireframe iterations exploring different dashboard layouts">
-            <div class="case-study-image-caption">
-              Wireframe explorations testing different information hierarchies and layouts for each merchant state
-            </div>
-          </div>
-
-          <h3>Final Execution & Outcomes</h3>
-
-          <h4>New Merchants Onboarding Wizard</h4>
-          <p><strong>Primary Focus:</strong> Task completion and preparation</p>
-          <p><strong>Key Features:</strong></p>
-          <ul>
-            <li>State-aware wizard that adapts content and tone based on merchant lifecycle stage</li>
-            <li>Additional setup wizard for optional features</li>
-            <li>Tutorial library with video walkthroughs</li>
-            <li>Release notes and what's new</li>
-            <li>Community resources and support links</li>
-          </ul>
-
-          <div class="case-study-image">
-            <img src="skytab-onboarding/onboarding-wizard-screens.png" alt="Onboarding wizard screens adapting to merchant state">
-            <div class="case-study-image-caption">
-              State-aware wizard screens that adapt content and tone based on merchant lifecycle stage
-            </div>
-          </div>
-
-          <h4>Dashboard for New Merchants</h4>
-          <p><strong>Primary Focus:</strong> Education and feature discovery</p>
-
-          <div class="case-study-image" style="width: 100%; margin-left: auto; margin-right: auto;">
-            <img src="skytab-onboarding/new merchant dashboard.png" alt="Dashboard for new merchants with task checklist and CSM contact">
-          </div>
-
-          <div class="image-grid-2col">
-            <div class="case-study-image">
-              <img src="skytab-onboarding/Launch Progress.png" alt="Launch progress interface" style="border-radius: 16px;">
-            </div>
-            <div class="case-study-image">
-              <img src="skytab-onboarding/Capical.png" alt="Capital interface" style="border-radius: 16px;">
-            </div>
-          </div>
-
-          <div class="case-study-image">
-            <img src="skytab-onboarding/Render2.png" alt="Final dashboard design for launching merchants">
-            <div class="case-study-image-caption">
-              Final dashboard design for new merchants preparing to launch, featuring task completion and preparation tools
-            </div>
-          </div>
-
-          <h4>Dashboard for Existing Merchants</h4>
-          <p><strong>Primary Focus:</strong> Data, insights, and ongoing optimization</p>
-
-          <div class="case-study-image" style="width: 100%; margin-left: auto; margin-right: auto;">
-            <img src="skytab-onboarding/Existing merchant dashboard.png" alt="Dashboard for existing merchants with real-time data and insights">
-          </div>
-
-          <div class="case-study-image">
-            <img src="skytab-onboarding/Render1.png" alt="Final dashboard design for existing live merchants">
-            <div class="case-study-image-caption">
-              Final dashboard design for existing merchants with real-time data, insights, and ongoing optimization features
-            </div>
-          </div>
-
-          <h4>Feature Modules</h4>
-          <p><strong>Primary Focus:</strong> Feature discovery and activation</p>
-          <p><strong>Key Features:</strong></p>
-          <ul>
-            <li>Feature setup hub for new capabilities</li>
-            <li>"New" badge system driving awareness of recently released capabilities</li>
-            <li>Contextual feature discovery based on merchant needs</li>
-            <li>Streamlined activation flows for Value-Added Services</li>
-          </ul>
-
-          <p>The system includes multiple feature modules for different merchant needs. Below is an example of the "Online Ordering" module activation flow, demonstrating how merchants can discover, configure, and launch new capabilities:</p>
-
-          <div class="feature-modules-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 32px 0;">
-            <div class="case-study-image">
-              <img src="skytab-onboarding/1.png" alt="Online Ordering module step 1" style="border-radius: 16px;">
-            </div>
-            <div class="case-study-image">
-              <img src="skytab-onboarding/2.png" alt="Online Ordering module step 2" style="border-radius: 16px;">
-            </div>
-            <div class="case-study-image">
-              <img src="skytab-onboarding/3.png" alt="Online Ordering module step 3">
-            </div>
-            <div class="case-study-image" style="display: flex; justify-content: center; align-items: center;">
-              <img src="skytab-onboarding/4.png" alt="Online Ordering module step 4" style="border-radius: 16px; width: 80%;">
-            </div>
-            <div class="case-study-image">
-              <img src="skytab-onboarding/5.png" alt="Online Ordering module step 5" style="border-radius: 16px;">
-            </div>
-            <div class="case-study-image">
-              <img src="skytab-onboarding/6.png" alt="Online Ordering module step 6" style="border-radius: 16px;">
-            </div>
-          </div>
-
-          <div class="prototype-showcase" id="ai-prototype">
-            <div class="prototype-showcase-header">
-              <h3>Try the AI Prototype</h3>
-              <p>Explore the end-to-end onboarding flow, from account setup through the adaptive Customer Hub dashboard.</p>
-            </div>
-            <div class="prototype-frame">
-              <iframe
-                src="interactive-prototype/index.html"
-                title="Interactive SkyTab onboarding prototype"
-                loading="lazy"
-                allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-
-          <style>
-            @media (max-width: 1014px) {
-              .feature-modules-grid {
-                grid-template-columns: 1fr !important;
-                gap: 8px !important;
-                row-gap: 8px !important;
-                column-gap: 8px !important;
-              }
-
-              .feature-modules-grid .case-study-image {
-                margin: 0 !important;
-              }
-            }
-
-            @media (max-width: 768px) {
-              .feature-modules-grid {
-                grid-template-columns: 1fr !important;
-                gap: 8px !important;
-                row-gap: 8px !important;
-                column-gap: 8px !important;
-              }
-
-              .feature-modules-grid .case-study-image {
-                margin: 0 !important;
-              }
-            }
-          </style>
-        </section>
-
-        <section class="content-section">
-          <div class="section-label">Learnings & Reflections</div>
-          <h2 class="section-title">Key Takeaways</h2>
-          <div class="section-divider"></div>
-
-          <div class="takeaway-container">
-            <div class="takeaway-cards">
-              <div class="takeaway-card">
-                <div class="takeaway-number">01</div>
-                <h4 class="takeaway-title">State-Aware Architecture</h4>
-                <p class="takeaway-description">Designing for multiple states from the start created a cohesive system that scaled to 11,000+ merchants while reducing cognitive load.</p>
-              </div>
-
-              <div class="takeaway-card">
-                <div class="takeaway-number">02</div>
-                <h4 class="takeaway-title">Visual Communication</h4>
-                <p class="takeaway-description">Illustrations with Trey Ingram became navigation tools, helping merchants orient themselves across lifecycle transitions.</p>
-              </div>
-
-              <div class="takeaway-card">
-                <div class="takeaway-number">03</div>
-                <h4 class="takeaway-title">Error State Priority</h4>
-                <p class="takeaway-description">Comprehensive error handling upfront contributed to 90% bug resolution rate and velocity exceeding new reports.</p>
-              </div>
-
-              <div class="takeaway-card">
-                <div class="takeaway-number">04</div>
-                <h4 class="takeaway-title">Real Data Validation</h4>
-                <p class="takeaway-description">Using live merchant data revealed opportunities and drove 18,000+ feature adoptions through contextual value.</p>
-              </div>
-            </div>
-
-            <div class="takeaway-image">
-              <img src="skytab-onboarding/Success Rendering.png" alt="Success rendering visualization" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
-            </div>
-          </div>
-
-          <div class="key-insight">
-            <h3>Core Insight</h3>
-            <p><strong>Design for the user's context, not your convenience.</strong> By adapting the experience to merchant lifecycle stages, we created a system that serves merchants where they are—resulting in measurable impact across onboarding, adoption, and satisfaction.</p>
-          </div>
-
-          <style>
-            .takeaway-container {
-              display: flex;
-              gap: 32px;
-              margin: 48px 0;
-              align-items: stretch;
-            }
-
-            .takeaway-cards {
-              display: flex;
-              flex-direction: column;
-              gap: 24px;
-              width: 40%;
-            }
-
-            .takeaway-image {
-              width: 60%;
-              display: flex;
-              align-items: stretch;
-            }
-
-            .takeaway-card {
-              background: var(--surface-color, #ffffff);
-              border: 1px solid var(--border-color, #e5e7eb);
-              border-radius: 16px;
-              padding: 32px;
-              transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            }
-
-            .takeaway-card:hover {
-              transform: translateY(-4px);
-              box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-              border-color: rgba(59, 130, 246, 0.3);
-            }
-
-            .takeaway-number {
-              font-size: 14px;
-              font-weight: 600;
-              color: var(--accent-color, #3b82f6);
-              margin-bottom: 16px;
-              letter-spacing: 0.05em;
-            }
-
-            .takeaway-title {
-              font-size: 20px;
-              font-weight: 600;
-              color: var(--text-primary, #111827);
-              margin-bottom: 12px;
-              margin-top: 0;
-            }
-
-            .takeaway-description {
-              font-size: 15px;
-              color: var(--text-secondary, #6b7280);
-              line-height: 1.6;
-              margin: 0;
-            }
-
-            .key-insight {
-              background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-              border-radius: 16px;
-              padding: 48px;
-              margin-top: 48px;
-            }
-
-            .key-insight h3 {
-              font-size: 24px;
-              font-weight: 600;
-              color: var(--text-primary, #111827);
-              margin-top: 0;
-              margin-bottom: 16px;
-            }
-
-            .key-insight p {
-              font-size: 16px;
-              line-height: 1.7;
-              color: var(--text-primary, #111827);
-              margin: 0;
-            }
-
-            @media (max-width: 768px) {
-              .takeaway-container {
-                flex-direction: column;
-              }
-
-              .takeaway-cards {
-                width: 100%;
-              }
-
-              .takeaway-image {
-                width: 100%;
-              }
-
-              .key-insight {
-                padding: 32px 24px;
-              }
-            }
-          </style>
-        </section>
-
-      </article>
-
-    </div>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-copyright">
-          © 2026 Ricky Liu
-        </div>
+        <div class="footer-copyright">© 2026 Ricky Liu</div>
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/ricky-liu/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:rickyliudesign@gmail.com">Email</a>
@@ -626,6 +259,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
