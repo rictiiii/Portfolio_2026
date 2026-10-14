@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#192b1c"/><path d="M18 47V17h13c12 0 13 17 1 18l14 12H35L23 35v12zm5-18h8c5 0 5-6 0-6h-8z" fill="#b6dd83"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Ricky — modular R</title>
+  <rect width="64" height="64" rx="14" fill="#192b1c"/>
+  <g fill="#b6dd83">
+    <path d="M8 8h22v22H8z"/>
+    <path d="M34 8h11a11 11 0 0 1 0 22h-1a10 10 0 0 1-10-10z"/>
+    <path d="M8 34h9a13 13 0 0 1 13 13v9H8z"/>
+    <path d="M34 34h9l13 22H44a10 10 0 0 1-10-10z"/>
+  </g>
+</svg>
