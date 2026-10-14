@@ -19,6 +19,7 @@
   const isVerified = sessionStorage.getItem(sessionKey);
 
   if (isVerified === 'true') {
+    document.body.style.visibility = 'visible';
     return; // Already verified in this session
   }
 
@@ -28,6 +29,7 @@
   // Create password overlay
   const overlay = document.createElement('div');
   overlay.style.cssText = `
+    visibility: visible;
     position: fixed;
     top: 0;
     left: 0;
@@ -67,6 +69,7 @@
 
   const input = document.createElement('input');
   input.type = 'password';
+  input.setAttribute('aria-label', 'Project password');
   input.placeholder = 'Enter password';
   input.style.cssText = `
     width: 100%;
@@ -80,6 +83,7 @@
   `;
 
   const errorMsg = document.createElement('p');
+  errorMsg.setAttribute('role', 'alert');
   errorMsg.style.cssText = `
     color: #ef4444;
     font-size: 14px;
