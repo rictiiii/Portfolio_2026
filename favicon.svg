@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="4 4 56 56">
   <title>Ricky — modular R</title>
   <style>
-    .mark { fill: #16723c; }
-    @media (prefers-color-scheme: dark) { .mark { fill: #48b979; } }
+    .mark { fill: #39d900; }
+    @media (prefers-color-scheme: dark) { .mark { fill: #76ff03; } }
   </style>
-  <g class="mark" fill="#16723c">
+  <g class="mark" fill="#39d900">
     <path d="M8 8h22v22H8z"/>
     <path d="M34 8h11a11 11 0 0 1 0 22h-1a10 10 0 0 1-10-10z"/>
     <path d="M8 34h9a13 13 0 0 1 13 13v9H8z"/>
