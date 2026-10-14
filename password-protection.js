@@ -142,11 +142,28 @@
     }
   });
 
+  const projectName = window.location.pathname.includes('intelligence-inbox')
+    ? 'Intelligence Inbox' : 'SkyTab Onboarding';
+  const requestLink = document.createElement('a');
+  requestLink.textContent = 'Request password';
+  requestLink.href = 'mailto:rickyliudesign@gmail.com?subject=' +
+    encodeURIComponent('Portfolio password request — ' + projectName) +
+    '&body=' + encodeURIComponent('Hi Ricky,\n\nI’d like to view your ' + projectName + ' case study. Could you please share the password?\n\nThank you!');
+  requestLink.style.cssText = `
+    display: inline-block;
+    margin-top: 24px;
+    padding: 10px 12px;
+    color: var(--color-text-primary, #1a1a1a);
+    font-size: 16px;
+    text-underline-offset: 4px;
+  `;
+
   container.appendChild(title);
   container.appendChild(description);
   container.appendChild(input);
   container.appendChild(errorMsg);
   container.appendChild(button);
+  container.appendChild(requestLink);
   overlay.appendChild(container);
   document.body.appendChild(overlay);
 
