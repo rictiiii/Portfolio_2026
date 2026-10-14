@@ -5,17 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SkyTab Onboarding: A State-Aware Merchant Hub | Ricky Liu</title>
   <meta name="description" content="A state-aware Merchant Hub that helped 11,000+ restaurants launch faster and supported 18,000+ feature activations.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="portfolio-styles.css">
-  <link rel="stylesheet" href="navigation.css?v=4">
-  <link rel="stylesheet" href="footer.css?v=2">
+  <link rel="stylesheet" href="navigation.css?v=7">
+  <link rel="stylesheet" href="footer.css?v=5">
   <link rel="stylesheet" href="skytab-onboarding/skytab-onboarding-v2.css?v=10">
-  <script src="navigation.js?v=2" defer></script>
-  <script src="case-study-nav.js?v=1" defer></script>
+  <script src="navigation.js?v=3" defer></script>
+  <script src="case-study-nav.js?v=2" defer></script>
+  <style>
+    .skip-to-content { position: fixed; top: 12px; left: 12px; z-index: 100000; padding: 12px 18px; background: #fff; color: #111; border: 2px solid #111; border-radius: 4px; transform: translateY(-200%); }
+    .skip-to-content:focus { transform: translateY(0); }
+  </style>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="media.css">
+  <link rel="stylesheet" href="case-editorial.css?v=6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/outfit-variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="lifecycle.css?v=2">
+<script src="lifecycle.js?v=1" defer></script>
 </head>
 <body class="case-study-page case-study-v2 sky-case" data-theme="light">
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
   <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container">
       <div class="nav-links">
@@ -47,7 +56,7 @@
         </div>
       </div>
       <figure class="sky-hero__visual">
-        <img src="skytab-onboarding/Hero-1800.png" width="1800" height="1186" alt="SkyTab Merchant Hub shown on a laptop" fetchpriority="high">
+        <img src="assets/previews/onboarding-1200.webp" srcset="assets/previews/onboarding-640.webp 640w, assets/previews/onboarding-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 60vw" width="1800" height="1186" alt="SkyTab Merchant Hub shown on a laptop" fetchpriority="high">
       </figure>
     </div>
   </header>
@@ -75,7 +84,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="sky-section sky-section--problem" id="problem">
       <div class="sky-shell">
         <div class="sky-section__intro">
@@ -134,6 +143,38 @@
       </div>
     </section>
 
+<section class="lifecycle sky-shell" id="lifecycle" aria-labelledby="lifecycle-title">
+ <div class="lifecycle-heading">
+  <p class="section-label">Inside the work / SkyTab Merchant Hub</p>
+  <h2 id="lifecycle-title">A dashboard is not<br>the starting point.</h2>
+  <p class="lifecycle-intro">The merchant’s situation is. Explore how I changed the same product from a generic dashboard into a guide for launch, daily operations, and growth.</p>
+ </div>
+ <div class="lifecycle-controls" role="group" aria-label="Explore merchant stages" hidden>
+  <button type="button" aria-pressed="true" aria-controls="stage-before" data-stage="stage-before"><span aria-hidden="true">00</span> The starting point</button>
+  <button type="button" aria-pressed="false" aria-controls="stage-launch" data-stage="stage-launch"><span aria-hidden="true">01</span> Before launch</button>
+  <button type="button" aria-pressed="false" aria-controls="stage-operate" data-stage="stage-operate"><span aria-hidden="true">02</span> In operation</button>
+  <button type="button" aria-pressed="false" aria-controls="stage-grow" data-stage="stage-grow"><span aria-hidden="true">03</span> Ready to grow</button>
+ </div>
+ <div class="lifecycle-stages">
+  <article class="lifecycle-stage" id="stage-before" aria-labelledby="stage-before-title">
+   <div class="stage-copy"><p class="section-label">00 / The problem</p><h3 id="stage-before-title">A dashboard before there was a business to measure.</h3><p>New restaurants and live restaurants saw the same data-first layout. Launch requirements were scattered, with no clear next action.</p><p class="stage-priority"><span>The design decision</span>Change the priority, not access to the product.</p></div>
+   <figure><div class="stage-image"><img src="assets/previews/lifecycle-before.webp" srcset="assets/previews/lifecycle-before-800.webp 800w, assets/previews/lifecycle-before.webp 1440w" sizes="(max-width: 900px) calc(100vw - 64px), 760px" width="1440" height="953" loading="lazy" decoding="async" alt="Original Merchant Hub dashboard showing a generic data-first layout"></div><figcaption>Before / One hierarchy for every merchant</figcaption></figure>
+  </article>
+  <article class="lifecycle-stage" id="stage-launch" aria-labelledby="stage-launch-title">
+   <div class="stage-copy"><p class="section-label">01 / Activate</p><h3 id="stage-launch-title">Make the next step obvious.</h3><p>Setup progress, installation status, and support come first. A new merchant needs a clear path to their first payment.</p><p class="stage-priority"><span>Design priority</span>Readiness before reporting</p></div>
+   <figure><div class="stage-image"><img src="assets/previews/lifecycle-launch.webp?v=2" srcset="assets/previews/lifecycle-launch-800.webp 800w, assets/previews/lifecycle-launch.webp?v=2 1440w" sizes="(max-width: 900px) calc(100vw - 64px), 760px" width="1440" height="873" loading="lazy" decoding="async" alt="Launch dashboard with setup progress, order status, and a dedicated support contact"></div><figcaption>Launch Center / Preparing to open</figcaption></figure>
+  </article>
+  <article class="lifecycle-stage" id="stage-operate" aria-labelledby="stage-operate-title">
+   <div class="stage-copy"><p class="section-label">02 / Operate</p><h3 id="stage-operate-title">Bring the business into focus.</h3><p>Once a restaurant is live, performance data and recommendations take priority. The same hub now supports the rhythm of daily operations.</p><p class="stage-priority"><span>Design priority</span>Performance in context</p></div>
+   <figure><div class="stage-image"><img src="assets/previews/lifecycle-operate.webp?v=2" srcset="assets/previews/lifecycle-operate-800.webp 800w, assets/previews/lifecycle-operate.webp?v=2 1440w" sizes="(max-width: 900px) calc(100vw - 64px), 760px" width="1440" height="749" loading="lazy" decoding="async" alt="Live merchant dashboard showing restaurant performance data and recommendations"></div><figcaption>Merchant Hub / Running the restaurant</figcaption></figure>
+  </article>
+  <article class="lifecycle-stage" id="stage-grow" aria-labelledby="stage-grow-title">
+   <div class="stage-copy"><p class="section-label">03 / Optimize</p><h3 id="stage-grow-title">Make more possible, in context.</h3><p>Feature discovery connects merchants to additional SkyTab capabilities, with a path from understanding a feature to activating it.</p><p class="stage-priority"><span>Design priority</span>Discovery through activation</p></div>
+   <figure><div class="stage-image"><img src="assets/previews/lifecycle-grow.webp?v=2" srcset="assets/previews/lifecycle-grow-800.webp 800w, assets/previews/lifecycle-grow.webp?v=2 1440w" sizes="(max-width: 900px) calc(100vw - 64px), 760px" width="1440" height="995" loading="lazy" decoding="async" alt="Feature module screens showing discovery and activation of an additional SkyTab capability"></div><figcaption>Feature modules / Expanding the setup</figcaption></figure>
+  </article>
+ </div>
+ <a class="text-link lifecycle-link" href="#solution">Explore the design decisions <span aria-hidden="true">↗</span></a>
+</section>
     <section class="sky-section" id="solution">
       <div class="sky-shell">
         <div class="sky-section__intro">
@@ -248,6 +289,11 @@
     </section>
   </main>
 
+  <aside class="case-continuation" aria-label="Continue exploring">
+    <p>Keep exploring</p>
+    <a href="index.html#work">More selected work <span aria-hidden="true">↗</span></a>
+    <a href="contact/contact.html">Start a conversation <span aria-hidden="true">↗</span></a>
+  </aside>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">

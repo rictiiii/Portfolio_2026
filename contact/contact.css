@@ -4,7 +4,7 @@ html,body { background:#fff; }
 body { min-width:320px; margin:0; overflow-x:hidden; }
 a { color:inherit; }
 button,input,textarea { font:inherit; }
-::selection { color:#fff; background:#147b9b; }
+::selection { color:#fff; background:#147991; }
 .contact-main { position:relative; min-height:calc(100dvh - 82px); overflow:hidden; background:#fff; isolation:isolate; }
 .contact-stage { position:relative; z-index:1; display:grid; grid-template-columns:minmax(280px,.82fr) minmax(440px,1.18fr); gap:clamp(56px,7vw,120px); width:min(1180px,calc(100% - 64px)); min-height:calc(100dvh - 82px); align-items:center; margin:0 auto; padding:112px 0 72px; }
 .contact-intro { position:relative; z-index:2; align-self:center; padding-bottom:28px; }
@@ -31,3 +31,39 @@ button,input,textarea { font:inherit; }
 @media (max-width:900px) { .contact-stage { grid-template-columns:1fr; gap:72px; width:min(680px,calc(100% - 40px)); padding-top:126px; } .contact-intro { padding-bottom:0; } .contact-intro h1 { max-width:none; font-size:clamp(58px,13vw,88px); } .contact-intro p { max-width:540px; } }
 @media (max-width:560px) { .contact-stage { gap:60px; width:calc(100% - 28px); padding:108px 0 56px; } .contact-intro { padding-inline:8px; } .contact-intro h1 { font-size:clamp(52px,17vw,72px); } .contact-intro p { margin-top:20px; font-size:17px; } .contact-form-wrap { padding:0; } .contact-form { grid-template-columns:1fr; gap:18px; } .contact-field-message,.contact-submit-btn { grid-column:auto; } .contact-field textarea { min-height:136px; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+
+.contact-help{color:var(--contact-muted);font-size:15px;line-height:1.6;margin:0 0 24px;overflow-wrap:anywhere}.contact-help a{text-underline-offset:4px}.contact-field input:focus-visible,.contact-field textarea:focus-visible{outline:2px solid #155f78;outline-offset:3px}
+
+/* Match the case-study editorial frame at the final step of the journey. */
+:root { --contact-ink: #142329; --contact-muted: #536368; }
+html, body, .contact-main, .site-footer { background: #f1f3f3; }
+.contact-intro h1 { font-weight: 500; line-height: 1.02; }
+.contact-field input, .contact-field textarea { border: 1px solid #85979e; border-radius: 4px; background: #fff; color: var(--contact-ink); transition: border-color .18s ease; }
+.contact-field input:focus, .contact-field textarea:focus { transform: none; }
+.contact-submit-btn { border: 1px solid #142329; border-radius: 4px; background: #142329; color: #fff; box-shadow: none; font-weight: 500; }
+.contact-submit-btn:hover, .contact-submit-btn:focus-visible { background: #10667a; box-shadow: none; transform: none; }
+.contact-arrow { background: transparent; }
+.contact-arrow::before { background: #fff; }
+.contact-arrow::after { border-color: #fff; }
+.contact-form-wrap { animation: none; }
+.contact-skip { position: fixed; top: 12px; left: 12px; z-index: 10002; padding: 14px 20px; background: #142329; color: #fff; transform: translateY(-160%); }
+.contact-skip:focus { transform: none; }
+.contact-main:focus { outline: none; }
+@media(max-width:560px) { .contact-stage { width: calc(100% - 40px); gap: 40px; } .contact-intro { padding-inline: 0; } }
+
+/* Contact belongs to the personal site identity. */
+:root { --contact-ink:#19271d; --contact-muted:#566454; --contact-accent:#16723c; }
+html,body,.contact-main,.site-footer { background:#f5f7f0; }
+::selection { background:#d4e9b5; color:var(--contact-ink); }
+.contact-field label { color:var(--contact-muted); }
+.contact-field input,.contact-field textarea { border-color:#87967b; background:#fbfcf8; }
+.contact-submit-btn { background:var(--contact-accent); border-color:var(--contact-accent); }
+.contact-submit-btn:hover,.contact-submit-btn:focus-visible { background:#10592e; border-color:#10592e; }
+.contact-skip { background:var(--contact-ink); }
+a:focus-visible,.contact-submit-btn:focus-visible,.contact-field input:focus-visible,.contact-field textarea:focus-visible,.navigation :focus-visible,.site-footer .footer-links a:focus-visible { outline-color:var(--contact-accent); }
+.site-footer { border-color:#d4ddce; }
+.site-footer .footer-copyright,.site-footer .footer-links a { color:var(--contact-muted); }
+.site-footer .footer-links a:hover,.contact-help a:hover { color:var(--contact-accent); }
+.navigation .nav-links { background:rgba(245,247,240,.42); }
+.navigation .nav-dropdown-menu { background:rgba(245,247,240,.65); }
+@media(prefers-reduced-transparency:reduce) { .navigation .nav-links,.navigation .nav-dropdown-menu { background:#f5f7f0; } }

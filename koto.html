@@ -5,22 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Koto by Toyota Case Study | Ricky Liu</title>
   <meta name="description" content="Designing a comprehensive automotive service platform for Toyota in Japan that combines e-commerce and digital key technology for seamless vehicle ownership">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="portfolio-styles.css?v=11">
   <link rel="stylesheet" href="hero-section.css?v=11">
   <link rel="stylesheet" href="Koto/koto.css?v=12">
   <link rel="stylesheet" href="Koto/koto-v2.css?v=6">
-  <link rel="stylesheet" href="navigation.css?v=4">
-  <link rel="stylesheet" href="footer.css?v=2">
+  <link rel="stylesheet" href="navigation.css?v=7">
+  <link rel="stylesheet" href="footer.css?v=5">
   <script src="project-password-modal.js?v=20260729" defer></script>
-  <script src="navigation.js?v=2" defer></script>
+  <script src="navigation.js?v=3" defer></script>
   <script src="Koto/koto-interactions.js?v=1" defer></script>
-  <script src="case-study-nav.js?v=1" defer></script>
+  <script src="case-study-nav.js?v=2" defer></script>
+  <style>
+    .skip-to-content { position: fixed; top: 12px; left: 12px; z-index: 100000; padding: 12px 18px; background: #fff; color: #111; border: 2px solid #111; border-radius: 4px; transform: translateY(-200%); }
+    .skip-to-content:focus { transform: translateY(0); }
+  </style>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="media.css">
+  <link rel="stylesheet" href="case-editorial.css?v=6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/outfit-variable.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 <body class="case-study-page koto-case">
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
   <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container">
@@ -41,6 +47,7 @@
     </div>
   </nav>
 
+  <template id="legacy-koto-hero">
   <!-- Hero Wrapper with shared gradient background -->
   <div class="hero-wrapper">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
@@ -55,7 +62,7 @@
             <p class="hero-subtitle">Designing a unified platform that combines automotive e-commerce with contactless digital key technology to modernize vehicle ownership</p>
           </div>
           <div class="hero-image-container" style="overflow: visible; position: relative; display: flex; align-items: center; justify-content: center;">
-            <img src="Koto/Hero.png" alt="Koto app screens showing Digital Key and Appointments features" style="width: 90%; height: auto; border-radius: 24px; transform: translateY(-60px);">
+            <img src="assets/previews/koto-1200.webp" srcset="assets/previews/koto-640.webp 640w, assets/previews/koto-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 60vw" alt="Koto app screens showing Digital Key and Appointments features" style="width: 90%; height: auto; border-radius: 24px; transform: translateY(-60px);" width="3044" height="3026" loading="lazy">
           </div>
         </div>
         <div class="hero-metrics">
@@ -85,6 +92,7 @@
     </section>
   </div>
   <!-- End Hero Wrapper -->
+  </template>
 
   <div class="koto-v2 case-study-v2">
     <header class="k2-hero" id="koto-overview">
@@ -95,7 +103,7 @@
           <p>I designed one mobile experience for discovering services, booking care, and securely sharing vehicle access.</p>
           <a class="k2-button" href="#koto-solution">View the solution</a>
         </div>
-        <figure class="k2-hero__visual"><img src="Koto/Hero.png" alt="KOTO mobile app screens for appointments and digital key"></figure>
+        <figure class="k2-hero__visual"><img fetchpriority="high" src="assets/previews/koto-1200.webp" srcset="assets/previews/koto-640.webp 640w, assets/previews/koto-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 60vw" alt="KOTO mobile app screens for appointments and digital key" width="3044" height="3026"></figure>
       </div>
     </header>
 
@@ -108,38 +116,39 @@
 
     <nav class="k2-chapters case-chapters" data-case-chapters aria-label="KOTO case study chapters"><div class="k2-shell k2-chapters__inner case-chapters__inner"><a href="#koto-overview">Overview</a><a href="#koto-problem">Problem</a><a href="#koto-insight">Insight</a><a href="#koto-decision">Decision</a><a href="#koto-solution">Solution</a><a href="#koto-impact">Impact</a></div></nav>
 
-    <main class="k2-main">
+    <main class="k2-main" id="main-content" tabindex="-1">
       <section class="k2-section k2-section--problem" id="koto-problem"><div class="k2-shell">
         <div class="k2-intro"><p class="k2-kicker">The problem</p><h2>Vehicle ownership was split across disconnected moments</h2><p>Owners searched for services without clear prices, coordinated appointments through calls and emails, then managed physical keys separately.</p></div>
-        <div class="k2-problem-grid"><ol class="k2-callouts"><li><span>1</span><div><strong>Opaque pricing</strong><p>Hidden fees made it difficult to commit with confidence.</p></div></li><li><span>2</span><div><strong>Scheduling friction</strong><p>Booking stretched across calls and confirmations.</p></div></li><li><span>3</span><div><strong>Awkward handoffs</strong><p>Physical key exchange complicated service and shared access.</p></div></li></ol><figure class="k2-media k2-problem-art"><img src="Koto/User pain point.png" alt="Illustration of vehicle-service pain points" loading="lazy"></figure></div>
+        <div class="k2-problem-grid"><ol class="k2-callouts"><li><span>1</span><div><strong>Opaque pricing</strong><p>Hidden fees made it difficult to commit with confidence.</p></div></li><li><span>2</span><div><strong>Scheduling friction</strong><p>Booking stretched across calls and confirmations.</p></div></li><li><span>3</span><div><strong>Awkward handoffs</strong><p>Physical key exchange complicated service and shared access.</p></div></li></ol><figure class="k2-media k2-problem-art"><img src="Koto/User pain point.png" alt="Illustration of vehicle-service pain points" loading="lazy" width="421" height="421"></figure></div>
         <blockquote class="k2-thesis">The opportunity was not another booking tool. It was one continuous relationship between the owner, the car, and Toyota.</blockquote>
       </div></section>
 
       <section class="k2-section" id="koto-insight"><div class="k2-shell">
         <div class="k2-intro"><p class="k2-kicker">Research insight</p><h2>Trust depends on clarity before convenience</h2><p>Interviews with 20 vehicle owners, service-provider conversations, behavioral analysis, and competitive review revealed three conditions for digital adoption.</p></div>
         <div class="k2-principles"><article><span>01</span><h3>Show the full cost</h3><p>Transparent pricing removes the fear of surprise charges.</p></article><article><span>02</span><h3>Confirm every handoff</h3><p>Availability, status, and reminders make booking predictable.</p></article><article><span>03</span><h3>Explain access</h3><p>Visible permissions help digital keys feel secure.</p></article></div>
-        <div class="k2-discovery"><figure class="k2-media"><img src="Koto/koto-information-architecture.png" alt="KOTO information architecture" loading="lazy"><figcaption>Architecture connected discovery, booking, ownership, and access.</figcaption></figure><figure class="k2-media"><img src="Koto/koto-user-flow.png" alt="KOTO service booking user flow" loading="lazy"><figcaption>The core flow reduced decisions between need and confirmation.</figcaption></figure></div>
+        <div class="k2-discovery"><figure class="k2-media"><img src="Koto/koto-information-architecture.png" alt="KOTO information architecture" loading="lazy" width="3047" height="2113"><figcaption>Architecture connected discovery, booking, ownership, and access.</figcaption></figure><figure class="k2-media"><img src="Koto/koto-user-flow.png" alt="KOTO service booking user flow" loading="lazy" width="3834" height="1782"><figcaption>The core flow reduced decisions between need and confirmation.</figcaption></figure></div>
       </div></section>
 
       <section class="k2-section k2-section--decision" id="koto-decision"><div class="k2-shell k2-decision"><div><p class="k2-kicker">Design decision</p><h2>Unify the journey around the vehicle</h2><p class="k2-decision__line">One account. One car. One continuous service relationship.</p></div><dl><div><dt>Evidence</dt><dd>Owners understood tasks better when services, appointments, and access were grounded in their vehicle.</dd></div><div><dt>Decision</dt><dd>Make the vehicle the shared context for shopping, scheduling, tracking, and key permissions.</dd></div><div><dt>Tradeoff</dt><dd>Accept a more connected system architecture to remove repeated setup and fragmented handoffs.</dd></div></dl></div></section>
 
       <section class="k2-section" id="koto-solution"><div class="k2-shell">
         <div class="k2-intro"><p class="k2-kicker">Final design</p><h2>Two product pillars, designed as one experience</h2><p>The visual system keeps high-value actions clear while the vehicle profile carries context across every task.</p></div>
-        <article class="k2-moment"><div class="k2-moment__copy"><span>Service marketplace</span><h3>Discover and book with confidence</h3><p>Owners browse relevant services, see pricing before committing, choose an available time, and receive a clear confirmation.</p><ul><li>Vehicle-aware recommendations</li><li>Transparent price and availability</li><li>Fewer steps from discovery to booking</li></ul></div><figure class="k2-media"><img src="Koto/Service Booking2.png" alt="KOTO service discovery and booking screens" loading="lazy"><figcaption>Discovery and booking share one consistent decision flow.</figcaption></figure></article>
-        <article class="k2-moment k2-moment--reverse"><div class="k2-moment__copy"><span>Appointment management</span><h3>Keep the next step visible</h3><p>Upcoming service, appointment details, and live status remain easy to find, reducing follow-up calls.</p><ul><li>Clear appointment state</li><li>Timely preparation guidance</li><li>Progress attached to the vehicle</li></ul></div><figure class="k2-media"><img src="Koto/Appointment details & tracking.png" alt="KOTO appointment details and tracking screens" loading="lazy"><figcaption>Booking becomes a trackable service relationship.</figcaption></figure></article>
-        <article class="k2-moment"><div class="k2-moment__copy"><span>Digital key</span><h3>Make access secure and shareable</h3><p>Owners can add a vehicle, understand key status, and share access for family, valet, or service without exchanging a physical key.</p><ul><li>Explicit permission and vehicle context</li><li>Simple add-car setup</li><li>Contactless service handoff</li></ul></div><figure class="k2-media"><img src="Koto/Add new car to digital key.png" alt="KOTO digital key vehicle setup screens" loading="lazy"><figcaption>Permission clarity makes connected access easier to trust.</figcaption></figure></article>
+        <article class="k2-moment"><div class="k2-moment__copy"><span>Service marketplace</span><h3>Discover and book with confidence</h3><p>Owners browse relevant services, see pricing before committing, choose an available time, and receive a clear confirmation.</p><ul><li>Vehicle-aware recommendations</li><li>Transparent price and availability</li><li>Fewer steps from discovery to booking</li></ul></div><figure class="k2-media"><img src="Koto/Service Booking2.png" alt="KOTO service discovery and booking screens" loading="lazy" width="6546" height="2896"><figcaption>Discovery and booking share one consistent decision flow.</figcaption></figure></article>
+        <article class="k2-moment k2-moment--reverse"><div class="k2-moment__copy"><span>Appointment management</span><h3>Keep the next step visible</h3><p>Upcoming service, appointment details, and live status remain easy to find, reducing follow-up calls.</p><ul><li>Clear appointment state</li><li>Timely preparation guidance</li><li>Progress attached to the vehicle</li></ul></div><figure class="k2-media"><img src="Koto/Appointment details & tracking.png" alt="KOTO appointment details and tracking screens" loading="lazy" width="2725" height="2564"><figcaption>Booking becomes a trackable service relationship.</figcaption></figure></article>
+        <article class="k2-moment"><div class="k2-moment__copy"><span>Digital key</span><h3>Make access secure and shareable</h3><p>Owners can add a vehicle, understand key status, and share access for family, valet, or service without exchanging a physical key.</p><ul><li>Explicit permission and vehicle context</li><li>Simple add-car setup</li><li>Contactless service handoff</li></ul></div><figure class="k2-media"><img src="Koto/Add new car to digital key.png" alt="KOTO digital key vehicle setup screens" loading="lazy" width="3244" height="1994"><figcaption>Permission clarity makes connected access easier to trust.</figcaption></figure></article>
       </div></section>
 
-      <section class="k2-section k2-section--iteration"><div class="k2-shell"><div class="k2-intro"><p class="k2-kicker">Iteration</p><h2>Structure came before surface</h2><p>Sketches and low-fidelity flows tested how much information owners needed at each decision before visual styling entered the process.</p></div><figure class="k2-media"><img src="Koto/LoFi Wireframes.png" alt="Low-fidelity KOTO wireframes" loading="lazy"><figcaption>Wireframes established the complete booking logic and edge cases.</figcaption></figure></div></section>
+      <section class="k2-section k2-section--iteration"><div class="k2-shell"><div class="k2-intro"><p class="k2-kicker">Iteration</p><h2>Structure came before surface</h2><p>Sketches and low-fidelity flows tested how much information owners needed at each decision before visual styling entered the process.</p></div><figure class="k2-media"><img src="Koto/LoFi Wireframes.png" alt="Low-fidelity KOTO wireframes" loading="lazy" width="8220" height="2466"><figcaption>Wireframes established the complete booking logic and edge cases.</figcaption></figure></div></section>
 
       <section class="k2-section k2-section--impact" id="koto-impact"><div class="k2-shell"><div class="k2-intro"><p class="k2-kicker">Reported outcomes</p><h2>Less friction translated into adoption</h2><p>The integrated experience improved service conversion and confidence in connected vehicle access.</p></div><div class="k2-results"><article><strong>45%</strong><h3>More bookings</h3><p>Increase against the previous phone and walk-in baseline.</p></article><article><strong>82%</strong><h3>Digital key adoption</h3><p>Among owners completing at least one service appointment.</p></article><article><strong>3.5×</strong><h3>Faster checkout</h3><p>Booking time fell from roughly 15 minutes to under five.</p></article><article><strong>4.7/5</strong><h3>App rating</h3><p>Strong feedback for convenience and key reliability.</p></article></div><div class="k2-reflection"><div><h3>What I learned</h3><p>In an opaque category, clarity is not a finishing touch—it is the product value. Price, status, and permission design made convenience believable.</p></div><div><h3>What I would test next</h3><p>Mileage-based maintenance recommendations, stronger digital-key recovery, and accessibility in outdoor and gloved-use contexts.</p></div></div></div></section>
 
       <section class="k2-quote-section" id="koto-principle" aria-label="KOTO design principle"><div class="k2-shell"><blockquote class="k2-closing">Design the relationship, not just the transaction.</blockquote></div></section>
 
-      <section class="k2-section k2-section--appendix"><div class="k2-shell"><div class="k2-intro"><p class="k2-kicker">Deep dive</p><h2>Supporting design artifacts</h2><p>Additional material for reviewers who want to inspect the system in more detail.</p></div><div class="k2-appendix"><details><summary>Brand direction and visual language</summary><div class="k2-appendix__grid"><img src="Koto/Mood Board.png" alt="KOTO mood board" loading="lazy"><img src="Koto/Logo Exploration.png" alt="KOTO logo explorations" loading="lazy"></div></details><details><summary>Typography and component system</summary><div class="k2-appendix__grid"><img src="Koto/Typography Paring.png" alt="KOTO typography scale" loading="lazy"><img src="Koto/Components.png" alt="KOTO component library" loading="lazy"></div></details><details><summary>Explorations and final screens</summary><div class="k2-appendix__grid"><img src="Koto/Design Explorations.png" alt="KOTO design explorations" loading="lazy"><img src="Koto/Home.png" alt="KOTO final home screen" loading="lazy"></div></details></div></div></section>
+      <section class="k2-section k2-section--appendix"><div class="k2-shell"><div class="k2-intro"><p class="k2-kicker">Deep dive</p><h2>Supporting design artifacts</h2><p>Additional material for reviewers who want to inspect the system in more detail.</p></div><div class="k2-appendix"><details><summary>Brand direction and visual language</summary><div class="k2-appendix__grid"><img src="Koto/Mood Board.png" alt="KOTO mood board" loading="lazy" width="2880" height="2048"><img src="Koto/Logo Exploration.png" alt="KOTO logo explorations" loading="lazy" width="1796" height="624"></div></details><details><summary>Typography and component system</summary><div class="k2-appendix__grid"><img src="Koto/Typography Paring.png" alt="KOTO typography scale" loading="lazy" width="3616" height="1200"><img src="Koto/Components.png" alt="KOTO component library" loading="lazy" width="5772" height="2500"></div></details><details><summary>Explorations and final screens</summary><div class="k2-appendix__grid"><img src="Koto/Design Explorations.png" alt="KOTO design explorations" loading="lazy" width="1674" height="3568"><img src="Koto/Home.png" alt="KOTO final home screen" loading="lazy" width="1275" height="1556"></div></details></div></div></section>
     </main>
   </div>
 
+  <template id="legacy-koto-case">
   <main>
     <div class="container">
 
@@ -176,13 +185,13 @@
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin: 32px 0;">
           <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="Koto/Online Shop.png" alt="Online Shop" style="width: 200px; height: 200px; margin-bottom: 48px;">
+            <img src="Koto/Online Shop.png" alt="Online Shop" style="width: 200px; height: 200px; margin-bottom: 48px;" width="516" height="516" loading="lazy">
             <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Online Shop</h4>
             <p style="margin-bottom: 0; font-size: 14px; color: #666;">Allows users to browse, select, and purchase various automotive services<br>and products directly from the app</p>
           </div>
 
           <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="Koto/Ditital Key.png" alt="Digital Key" style="width: 200px; height: 200px; margin-bottom: 48px;">
+            <img src="Koto/Ditital Key.png" alt="Digital Key" style="width: 200px; height: 200px; margin-bottom: 48px;" width="505" height="506" loading="lazy">
             <h4 style="color: #EB0A1E; margin-top: 0; font-size: 16px;">Digital Key</h4>
             <p style="margin-bottom: 0; font-size: 14px; color: #666;">Enhance vehicle access and control via the mobile app, offering users a<br>contactless, secure way to unlock and start their vehicles.</p>
           </div>
@@ -299,7 +308,7 @@
             </div>
           </div>
           <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="Koto/User pain point.png" alt="User pain points visualization" style="width: 50%; height: auto; border-radius: 16px;">
+            <img src="Koto/User pain point.png" alt="User pain points visualization" style="width: 50%; height: auto; border-radius: 16px;" width="421" height="421" loading="lazy">
           </div>
         </div>
 
@@ -365,7 +374,7 @@
 
         <div style="display: grid; grid-template-columns: 50% 50%; gap: 40px; align-items: center; margin: 40px 0;">
           <div class="case-study-image">
-            <img src="Koto/koto-wireframe-sketches.png" alt="Hand-drawn wireframe sketches in notebook showing early interface explorations" style="width: 100%; border-radius: 0;">
+            <img src="Koto/koto-wireframe-sketches.png" alt="Hand-drawn wireframe sketches in notebook showing early interface explorations" style="width: 100%; border-radius: 0;" width="1920" height="1282" loading="lazy">
           </div>
           <div>
             <p>Based on the research insights, I mapped out comprehensive user journeys focusing on the mobile app experience:</p>
@@ -382,7 +391,7 @@
         <p>Started with wireframes to map out the complete service booking flow, from vehicle information entry to appointment confirmation. This phase focused on establishing information architecture and user flow logic.</p>
 
         <div class="case-study-image" style="margin-bottom: 80px; border-radius: 0 !important;">
-          <img src="Koto/LoFi Wireframes.png" alt="Low-fidelity wireframes showing booking flow" style="width: 100%; border-radius: 0 !important;">
+          <img src="Koto/LoFi Wireframes.png" alt="Low-fidelity wireframes showing booking flow" style="width: 100%; border-radius: 0 !important;" width="8220" height="2466" loading="lazy">
         </div>
 
         <div style="display: grid; grid-template-columns: 50% 50%; gap: 40px; align-items: center;">
@@ -392,7 +401,7 @@
           </div>
           <div class="case-study-image" style="display: flex; justify-content: center; align-items: center;">
             <div class="scroll-container" id="visual-design-scroll" style="width: 80%; max-height: 50vh; overflow-y: auto; overflow-x: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
-              <img src="Koto/Design Explorations.png" alt="Design exploration variations" style="width: 100%; display: block;">
+              <img src="Koto/Design Explorations.png" alt="Design exploration variations" style="width: 100%; display: block;" width="1674" height="3568" loading="lazy">
             </div>
           </div>
         </div>
@@ -404,7 +413,7 @@
           <p>Established the visual direction drawing inspiration from luxury, sophistication, and dynamic automotive design. The mood board guided decisions around elegance, minimalism, and creative presentation.</p>
 
           <div class="case-study-image" style="display: flex; justify-content: center;">
-            <img src="Koto/Mood Board.png" alt="Mood board showing luxury, sophisticated, and dynamic themes" style="width: 80%;">
+            <img src="Koto/Mood Board.png" alt="Mood board showing luxury, sophisticated, and dynamic themes" style="width: 80%;" width="2880" height="2048" loading="lazy">
           </div>
         </div>
 
@@ -414,7 +423,7 @@
             <p>Developed multiple logo variations with different approaches. The final wordmark uses a clean, bold typeface with a distinctive red dot accent following "KOTO." This simple yet memorable design creates strong brand recognition while maintaining versatility across light and dark backgrounds.</p>
           </div>
           <div class="case-study-image" style="overflow: hidden;">
-            <img src="Koto/Logo Exploration.png" alt="Logo exploration showing various iterations" style="width: 100%; max-width: 100%; height: auto; display: block;">
+            <img src="Koto/Logo Exploration.png" alt="Logo exploration showing various iterations" style="width: 100%; max-width: 100%; height: auto; display: block;" width="1796" height="624" loading="lazy">
           </div>
         </div>
 
@@ -422,14 +431,14 @@
         <p style="margin-bottom: 48px;">Established a visual type scale with clear hierarchy across four sizes (Large, Medium, Regular, Small) ensuring readability and consistency across all touchpoints.</p>
 
         <div class="case-study-image" style="display: flex; justify-content: center;">
-          <img src="Koto/Typography Paring.png" alt="Typography system showing type scale" style="width: 80%;">
+          <img src="Koto/Typography Paring.png" alt="Typography system showing type scale" style="width: 80%;" width="3616" height="1200" loading="lazy">
         </div>
 
         <h3>Component Library</h3>
         <p>Built a comprehensive design system with reusable components including navigation bars, pricing cards, calendars, booking forms, and profile elements. This ensured consistency across the platform while enabling rapid iteration.</p>
 
         <div class="case-study-image" style="display: flex; justify-content: center;">
-          <img src="Koto/Components.png" alt="Component library showing UI elements" style="width: 80%;">
+          <img src="Koto/Components.png" alt="Component library showing UI elements" style="width: 80%;" width="5772" height="2500" loading="lazy">
         </div>
       </section>
 
@@ -443,11 +452,11 @@
 
         <div class="image-grid" style="align-items: center; padding: 40px 40px 40px 40px; height: 580px;">
           <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; height: 100%;">
-            <img src="Koto/Log In.png" alt="Login screen" style="width: 40%; height: auto; object-fit: contain;">
+            <img src="Koto/Log In.png" alt="Login screen" style="width: 40%; height: auto; object-fit: contain;" width="1392" height="2880" loading="lazy">
           </div>
           <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 2; height: 100%; padding: 4px;">
             <div style="width: calc(100% + 2px); height: calc(100% + 2px); overflow: hidden; border-radius: 50px; aspect-ratio: 1/1;">
-              <img src="Koto/Hand_Black_01.png" alt="Biometric authentication" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="Koto/Hand_Black_01.png" alt="Biometric authentication" style="width: 100%; height: 100%; object-fit: cover;" width="4830" height="4830" loading="lazy">
             </div>
           </div>
         </div>
@@ -456,7 +465,7 @@
         <p>The home screen brings together all essential features in a cohesive interface, providing quick access to services, appointments, and vehicle management.</p>
 
         <div class="case-study-image">
-          <img src="Koto/Service Booking2.png" alt="Koto service booking screens showing categories and booking flow" style="width: 100%;">
+          <img src="Koto/Service Booking2.png" alt="Koto service booking screens showing categories and booking flow" style="width: 100%;" width="6546" height="2896" loading="lazy">
         </div>
 
         <h3>Service Booking</h3>
@@ -464,10 +473,10 @@
 
         <div class="image-grid" style="align-items: center;">
           <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
-            <img src="Koto/iPhone 12 Pro.png" alt="iPhone showing Koto app interface" style="width: 40%;">
+            <img src="Koto/iPhone 12 Pro.png" alt="iPhone showing Koto app interface" style="width: 40%;" width="1400" height="2890" loading="lazy">
           </div>
           <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
-            <img src="Koto/Service Booking.png" alt="Service booking flow" style="width: 100%;">
+            <img src="Koto/Service Booking.png" alt="Service booking flow" style="width: 100%;" width="4464" height="4342" loading="lazy">
           </div>
         </div>
 
@@ -476,10 +485,10 @@
 
         <div class="image-grid" style="align-items: center;">
           <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
-            <img src="Koto/Appointments.png" alt="Appointments dashboard" style="width: 40%;">
+            <img src="Koto/Appointments.png" alt="Appointments dashboard" style="width: 40%;" width="1400" height="2896" loading="lazy">
           </div>
           <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <img src="Koto/Appointment details & tracking.png" alt="Appointment tracking" style="width: 80%;">
+            <img src="Koto/Appointment details & tracking.png" alt="Appointment tracking" style="width: 80%;" width="2725" height="2564" loading="lazy">
           </div>
         </div>
 
@@ -488,10 +497,10 @@
 
         <div class="image-grid" style="align-items: center;">
           <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
-            <img src="Koto/Digital Key.png" alt="Digital key interface" style="width: 40%;">
+            <img src="Koto/Digital Key.png" alt="Digital key interface" style="width: 40%;" width="1400" height="2896" loading="lazy">
           </div>
           <div class="case-study-image" style="display: flex; flex-direction: column; align-items: center;">
-            <img src="Koto/Add new car to digital key.png" alt="Add vehicle to digital key" style="width: 100%;">
+            <img src="Koto/Add new car to digital key.png" alt="Add vehicle to digital key" style="width: 100%;" width="3244" height="1994" loading="lazy">
           </div>
         </div>
       </section>
@@ -610,8 +619,15 @@
     </div>
   </main>
 
+  </template>
+
   <!-- Back to Top Button -->
 
+  <aside class="case-continuation" aria-label="Continue exploring">
+    <p>Keep exploring</p>
+    <a href="index.html#work">More selected work <span aria-hidden="true">↗</span></a>
+    <a href="contact/contact.html">Start a conversation <span aria-hidden="true">↗</span></a>
+  </aside>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">

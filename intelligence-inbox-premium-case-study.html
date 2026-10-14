@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intelligence Inbox Case Study | Ricky Liu</title>
   <meta name="description" content="Designing a new AI-powered operational copilot that helps restaurant operators understand priorities and take action.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="portfolio-styles.css?v=12">
-  <link rel="stylesheet" href="navigation.css?v=4">
-  <link rel="stylesheet" href="footer.css?v=2">
+  <link rel="stylesheet" href="navigation.css?v=7">
+  <link rel="stylesheet" href="footer.css?v=5">
   <link rel="stylesheet" href="intelligence-inbox/intelligence-inbox-v2.css?v=1">
-  <script src="navigation.js?v=2" defer></script>
-  <script src="case-study-nav.js?v=1" defer></script>
+  <script src="navigation.js?v=3" defer></script>
+  <script src="case-study-nav.js?v=2" defer></script>
   <script src="portfolio-script.js" defer></script>
+  <style>
+    .skip-to-content { position: fixed; top: 12px; left: 12px; z-index: 100000; padding: 12px 18px; background: #fff; color: #111; border: 2px solid #111; border-radius: 4px; transform: translateY(-200%); }
+    .skip-to-content:focus { transform: translateY(0); }
+  </style>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="media.css">
+  <link rel="stylesheet" href="case-editorial.css?v=7">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/outfit-variable.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 <body class="ii-page" data-theme="light">
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
   <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container">
@@ -38,7 +44,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <header class="ii-hero" id="ii-overview" data-chapter-trigger>
       <div class="container">
         <div class="ii-hero__grid">
@@ -49,7 +55,7 @@
             <a class="ii-hero-prototype-cta" href="#final-prototype">Try the AI prototype</a>
           </div>
           <figure class="ii-hero__visual">
-            <img src="intelligence-inbox/ai-chat-home-final.png" alt="Final Intelligence Inbox home screen prioritizing four restaurant operations issues">
+            <img fetchpriority="high" src="assets/previews/inbox-1200.webp" srcset="assets/previews/inbox-640.webp 640w, assets/previews/inbox-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 60vw" alt="Final Intelligence Inbox home screen prioritizing four restaurant operations issues" width="1394" height="860">
             <figcaption>Final concept: AI operations assistant</figcaption>
           </figure>
         </div>
@@ -123,15 +129,15 @@
             <h3>Questions reveal depth only when the operator needs it.</h3>
             <p>Short, contextual prompts replaced generic dashboard controls. They make the next step feel conversational while keeping the home experience calm.</p>
             <div class="ii-question-chips" aria-label="Examples of contextual questions">
-              <img src="intelligence-inbox/text.svg" alt="Why did this happen?">
-              <img src="intelligence-inbox/text-1.svg" alt="What happened during peak hours?">
-              <img src="intelligence-inbox/text-2.svg" alt="Versus last month?">
+              <img src="intelligence-inbox/text.svg" alt="Why did this happen?" width="172" height="37" loading="lazy">
+              <img src="intelligence-inbox/text-1.svg" alt="What happened during peak hours?" width="261" height="37" loading="lazy">
+              <img src="intelligence-inbox/text-2.svg" alt="Versus last month?" width="129" height="37" loading="lazy">
             </div>
           </div>
           <div class="ii-artifact-showcase__visual">
-            <img class="ii-opportunity-card" src="intelligence-inbox/container.svg" alt="Recommendation card: Recover $1,440 this month through a peak-hour staffing opportunity">
+            <img class="ii-opportunity-card" src="intelligence-inbox/container.svg" alt="Recommendation card: Recover $1,440 this month through a peak-hour staffing opportunity" width="392" height="173" loading="lazy">
             <div class="ii-signal-detail">
-              <img src="intelligence-inbox/frame-481509.svg" alt="" aria-hidden="true">
+              <img src="intelligence-inbox/frame-481509.svg" alt="" aria-hidden="true" width="56" height="56" loading="lazy">
               <span><strong>Opportunity cue</strong> communicates value before asking for action.</span>
             </div>
           </div>
@@ -183,11 +189,11 @@
         <div class="ii-snapshot-comparison ii-reveal" aria-label="Draft and final home screen comparison">
           <figure>
             <div class="ii-snapshot-comparison__label">Draft: insight inbox</div>
-            <img src="intelligence-inbox/ai-chat-home-before.png" alt="Draft Intelligence Inbox home screen with filters, confidence scores, and many competing controls">
+            <img src="intelligence-inbox/ai-chat-home-before.png" alt="Draft Intelligence Inbox home screen with filters, confidence scores, and many competing controls" width="1394" height="860" loading="lazy">
           </figure>
           <figure>
             <div class="ii-snapshot-comparison__label ii-snapshot-comparison__label--final">Final: daily briefing</div>
-            <img src="intelligence-inbox/ai-chat-home-final.png" alt="Final AI assistant home screen with four prioritized restaurant operations issues">
+            <img src="assets/previews/inbox-1200.webp" srcset="assets/previews/inbox-640.webp 640w, assets/previews/inbox-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 60vw" alt="Final AI assistant home screen with four prioritized restaurant operations issues" width="1394" height="860" loading="lazy">
           </figure>
         </div>
 
@@ -317,6 +323,11 @@
     </section>
   </main>
 
+  <aside class="case-continuation" aria-label="Continue exploring">
+    <p>Keep exploring</p>
+    <a href="index.html#work">More selected work <span aria-hidden="true">↗</span></a>
+    <a href="contact/contact.html">Start a conversation <span aria-hidden="true">↗</span></a>
+  </aside>
   <footer class="ii-footer site-footer">
     <div class="container ii-footer__inner">
       <span>© 2026 Ricky Liu</span>

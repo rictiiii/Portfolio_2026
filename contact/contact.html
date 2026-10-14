@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Ricky Liu - Product Designer</title>
   <meta name="description" content="Get in touch with Ricky Liu for product design opportunities and collaborations">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../navigation.css?v=3">
+  <link rel="stylesheet" href="../navigation.css?v=7">
   <link rel="stylesheet" href="../footer.css?v=1">
-  <link rel="stylesheet" href="contact.css?v=4">
-  <script src="../navigation.js?v=2" defer></script>
-  <script src="../nav-scroll.js?v=1" defer></script>
+  <link rel="stylesheet" href="contact.css?v=8">
+  <script src="../navigation.js?v=3" defer></script>
   <script src="contact.js?v=1" defer></script>
+<link rel="stylesheet" href="../fonts.css">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/outfit-variable.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 <body data-theme="light">
+  <a class="contact-skip" href="#contact-main">Skip to main content</a>
   <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container"><div class="nav-links">
       <a href="../index.html" class="nav-link">Home</a>
@@ -32,19 +32,20 @@
       <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
     </div></div>
   </nav>
-  <main class="contact-main">
+  <main class="contact-main" id="contact-main" tabindex="-1">
     <section class="contact-stage" aria-labelledby="contact-title">
       <div class="contact-intro">
         <h1 id="contact-title">Let's connect.</h1>
         <p>Open to product design roles, thoughtful collaborations, and conversations about practical AI in design.</p>
       </div>
       <div class="contact-form-wrap">
-        <form id="contact-form" class="contact-form">
+        <p class="contact-help" id="email-help">This opens a draft in your email app. You review and send it there. You can also email <a href="mailto:rickyliudesign@gmail.com">rickyliudesign@gmail.com</a>.</p>
+        <form id="contact-form" class="contact-form" aria-describedby="email-help">
           <div class="contact-field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
           <div class="contact-field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
           <div class="contact-field contact-field-message"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
-          <button type="submit" class="contact-submit-btn"><span>Send message</span><span class="contact-arrow" aria-hidden="true"></span></button>
-        </form>
+          <button type="submit" class="contact-submit-btn"><span>Open email draft</span><span class="contact-arrow" aria-hidden="true"></span></button>
+        </form><p id="contact-status" role="status" class="contact-help"></p><noscript><p>Please use the email link above to get in touch.</p></noscript>
       </div>
     </section>
   </main>

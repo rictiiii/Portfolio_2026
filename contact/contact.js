@@ -7,5 +7,6 @@ contactForm?.addEventListener('submit', (event) => {
   const message = String(formData.get('message') || '');
   const subject = encodeURIComponent(`Message from ${name}`);
   const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+  document.querySelector('#contact-status').textContent = 'Your email app should open with a draft. If it does not, use the email address above. Your message remains here.';
   window.location.href = `mailto:rickyliudesign@gmail.com?subject=${subject}&body=${body}`;
 });

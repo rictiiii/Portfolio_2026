@@ -5,22 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shift4 Kiosk Case Study | Ricky Liu</title>
   <meta name="description" content="Designing an intuitive self-ordering kiosk that reduced order time by 30% and increased kiosk adoption by 20%">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="portfolio-styles.css">
   <link rel="stylesheet" href="hero-section.css?v=11">
   <link rel="stylesheet" href="skytab-kiosk/skytab-kiosk.css">
   <link rel="stylesheet" href="skytab-kiosk/kiosk-v2.css?v=10">
-  <link rel="stylesheet" href="navigation.css?v=4">
-  <link rel="stylesheet" href="footer.css?v=2">
+  <link rel="stylesheet" href="navigation.css?v=7">
+  <link rel="stylesheet" href="footer.css?v=5">
   <script src="project-password-modal.js?v=20260729" defer></script>
-  <script src="navigation.js?v=2" defer></script>
-  <script src="case-study-nav.js?v=1" defer></script>
+  <script src="navigation.js?v=3" defer></script>
+  <script src="case-study-nav.js?v=2" defer></script>
   <script src="skytab-kiosk/kiosk-v2.js?v=2" defer></script>
+  <style>
+    .skip-to-content { position: fixed; top: 12px; left: 12px; z-index: 100000; padding: 12px 18px; background: #fff; color: #111; border: 2px solid #111; border-radius: 4px; transform: translateY(-200%); }
+    .skip-to-content:focus { transform: translateY(0); }
+  </style>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="media.css">
+  <link rel="stylesheet" href="case-editorial.css?v=6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/outfit-variable.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 <body class="case-study-page case-study-v2 kiosk-redesign">
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
   <nav class="navigation" aria-label="Primary navigation">
     <div class="nav-container">
@@ -51,7 +57,7 @@
           <a class="ks2-button" href="#kiosk-solution">View the solution</a>
         </div>
         <figure class="ks2-hero__media">
-          <img src="skytab-kiosk/Kiosk hero.png" alt="Shift4 self-ordering kiosk interface" fetchpriority="high">
+          <img src="assets/previews/kiosk-1200.webp" srcset="assets/previews/kiosk-640.webp 640w, assets/previews/kiosk-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 60vw" alt="Shift4 self-ordering kiosk interface" fetchpriority="high" width="2472" height="1866">
         </figure>
       </div>
     </header>
@@ -75,11 +81,11 @@
 
     <nav class="ks2-chapters case-chapters" data-case-chapters aria-label="Kiosk case study chapters"><div class="ks2-shell ks2-chapters__inner case-chapters__inner"><a href="#kiosk-overview">Overview</a><a href="#kiosk-problem">Problem</a><a href="#kiosk-principles">Principles</a><a href="#kiosk-process">Process</a><a href="#kiosk-solution">Solution</a><a href="#kiosk-impact">Impact</a></div></nav>
 
-    <main class="ks2-main">
+    <main class="ks2-main" id="main-content" tabindex="-1">
       <section class="ks2-section ks2-problem" id="kiosk-problem">
         <div class="ks2-shell">
           <div class="ks2-intro"><h2>Every extra step becomes a line</h2><p>Counter ordering created delays, manual-entry errors, and checkout friction when restaurants were busiest.</p></div>
-          <figure class="ks2-queue"><img src="skytab-kiosk/Cartoon people standing in queue flat vector illustration [Converted]-01.png" alt="Restaurant guests waiting in a long ordering line"><figcaption>Long queues and repeated handoffs made speed and confidence the primary design requirements.</figcaption></figure>
+          <figure class="ks2-queue"><img src="skytab-kiosk/Cartoon people standing in queue flat vector illustration [Converted]-01.png" alt="Restaurant guests waiting in a long ordering line" width="2760" height="874" loading="lazy"><figcaption>Long queues and repeated handoffs made speed and confidence the primary design requirements.</figcaption></figure>
           <div class="ks2-frictions">
             <article><span>01</span><h3>Peak-hour pressure</h3><p>Long lines reduced throughput and made waiting feel uncertain.</p></article>
             <article><span>02</span><h3>Order ambiguity</h3><p>Staff-entered orders introduced miscommunication and avoidable waste.</p></article>
@@ -104,19 +110,19 @@
         <div class="ks2-shell">
           <div class="ks2-intro"><h2>Structure before polish</h2><p>The work moved from complete journey mapping to hardware-scale wireframes, then into a working high-fidelity prototype.</p></div>
           <div class="ks2-process-grid">
-            <figure class="ks2-media ks2-media--flow"><img src="skytab-kiosk/Kiosk Flow.png" alt="Complete Shift4 Kiosk ordering flow"><figcaption>Mapping every branch exposed payment, loyalty, and recovery decisions early.</figcaption></figure>
-            <figure class="ks2-media ks2-media--sketch"><img src="skytab-kiosk/Kiosk Sketch.png" alt="Early kiosk wireframe sketches"><figcaption>Actual-size wireframes established the menu, cart, and fixed checkout structure.</figcaption></figure>
+            <figure class="ks2-media ks2-media--flow"><img src="skytab-kiosk/Kiosk Flow.png" alt="Complete Shift4 Kiosk ordering flow" width="6120" height="3240" loading="lazy"><figcaption>Mapping every branch exposed payment, loyalty, and recovery decisions early.</figcaption></figure>
+            <figure class="ks2-media ks2-media--sketch"><img src="skytab-kiosk/Kiosk Sketch.png" alt="Early kiosk wireframe sketches" width="7956" height="4655" loading="lazy"><figcaption>Actual-size wireframes established the menu, cart, and fixed checkout structure.</figcaption></figure>
           </div>
-          <figure class="ks2-prototype"><video autoplay loop muted playsinline aria-label="High-fidelity kiosk prototype"><source src="skytab-kiosk/Kiosk HiFi.mov" type="video/mp4"></video><figcaption>High-fidelity testing simulated the complete touch and payment journey.</figcaption></figure>
+          <figure class="ks2-prototype"><video poster="assets/previews/kiosk-1200.webp" loop muted playsinline aria-label="High-fidelity kiosk prototype" controls preload="none"><source src="skytab-kiosk/Kiosk HiFi.mov" type="video/mp4"></video><figcaption>High-fidelity testing simulated the complete touch and payment journey.</figcaption></figure>
         </div>
       </section>
 
       <section class="ks2-section ks2-iterations">
         <div class="ks2-shell">
           <div class="ks2-intro"><h2>Three changes removed hesitation</h2><p>Testing focused the interface on precise selection, visible context, and confidence at checkout.</p></div>
-          <article class="ks2-iteration"><div class="ks2-iteration__copy"><span>Category navigation</span><h3>Turn narrow tabs into touch targets</h3><p>Pill-style categories added separation, generous hit areas, and a clear active state.</p></div><div class="ks2-compare ks2-compare--tabs"><figure><img src="skytab-kiosk/Tabs before.png?v=3" alt="Category tabs before redesign"><figcaption>Before</figcaption></figure><figure><img src="skytab-kiosk/Tabs After.png?v=3" alt="Category tabs after redesign"><figcaption>After</figcaption></figure></div></article>
-          <article class="ks2-iteration ks2-iteration--reverse"><div class="ks2-iteration__copy"><span>Modifier selection</span><h3>Keep choices in view</h3><p>A landscape layout used the kiosk width so guests could compare major options without excessive scrolling.</p></div><div class="ks2-compare ks2-compare--landscape"><figure><img src="skytab-kiosk/modifier before.png" alt="Modifier selection before redesign"><figcaption>Before</figcaption></figure><figure><img src="skytab-kiosk/modifier after.png" alt="Modifier selection after redesign"><figcaption>After</figcaption></figure></div></article>
-          <article class="ks2-iteration"><div class="ks2-iteration__copy"><span>Cart review</span><h3>Make the order easy to verify</h3><p>Persistent product details, totals, and actions reduced uncertainty before payment.</p></div><div class="ks2-compare ks2-compare--portrait"><figure><img src="skytab-kiosk/cart before.png" alt="Cart before redesign"><figcaption>Before</figcaption></figure><figure><img src="skytab-kiosk/Cart after.png" alt="Cart after redesign"><figcaption>After</figcaption></figure></div></article>
+          <article class="ks2-iteration"><div class="ks2-iteration__copy"><span>Category navigation</span><h3>Turn narrow tabs into touch targets</h3><p>Pill-style categories added separation, generous hit areas, and a clear active state.</p></div><div class="ks2-compare ks2-compare--tabs"><figure><img src="skytab-kiosk/Tabs before.png?v=3" alt="Category tabs before redesign" width="2298" height="176" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="skytab-kiosk/Tabs After.png?v=3" alt="Category tabs after redesign" width="2298" height="176" loading="lazy"><figcaption>After</figcaption></figure></div></article>
+          <article class="ks2-iteration ks2-iteration--reverse"><div class="ks2-iteration__copy"><span>Modifier selection</span><h3>Keep choices in view</h3><p>A landscape layout used the kiosk width so guests could compare major options without excessive scrolling.</p></div><div class="ks2-compare ks2-compare--landscape"><figure><img src="skytab-kiosk/modifier before.png" alt="Modifier selection before redesign" width="3036" height="1840" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="skytab-kiosk/modifier after.png" alt="Modifier selection after redesign" width="3520" height="1840" loading="lazy"><figcaption>After</figcaption></figure></div></article>
+          <article class="ks2-iteration"><div class="ks2-iteration__copy"><span>Cart review</span><h3>Make the order easy to verify</h3><p>Persistent product details, totals, and actions reduced uncertainty before payment.</p></div><div class="ks2-compare ks2-compare--portrait"><figure><img src="skytab-kiosk/cart before.png" alt="Cart before redesign" width="1366" height="2160" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="skytab-kiosk/Cart after.png" alt="Cart after redesign" width="1364" height="2160" loading="lazy"><figcaption>After</figcaption></figure></div></article>
         </div>
       </section>
 
@@ -124,14 +130,14 @@
         <div class="ks2-shell">
           <div class="ks2-intro"><h2>A complete order, one clear decision at a time</h2><p>The final 12-screen journey moves from welcome to feedback with a single job for every screen.</p></div>
           <div class="ks2-screen-strip" tabindex="0" aria-label="Final kiosk screens, horizontally scrollable">
-            <figure><img src="skytab-kiosk/final-screens/1.png" alt="Kiosk welcome screen"><figcaption>Welcome</figcaption></figure>
-            <figure><img src="skytab-kiosk/final-screens/2.png" alt="Order type selection"><figcaption>Order type</figcaption></figure>
-            <figure><img src="skytab-kiosk/final-screens/4.png" alt="Menu browsing and cart"><figcaption>Build the order</figcaption></figure>
-            <figure><img src="skytab-kiosk/final-screens/5.png" alt="Product customization"><figcaption>Customize</figcaption></figure>
-            <figure><img src="skytab-kiosk/final-screens/7.png" alt="Payment method selection"><figcaption>Choose payment</figcaption></figure>
-            <figure><img src="skytab-kiosk/final-screens/9.png" alt="Card payment instructions"><figcaption>Pay</figcaption></figure>
-            <figure><img src="skytab-kiosk/final-screens/11.png" alt="Order confirmation"><figcaption>Confirm</figcaption></figure>
-            <figure><img src="skytab-kiosk/final-screens/12.png" alt="Experience feedback"><figcaption>Feedback</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/1.png" alt="Kiosk welcome screen" width="3840" height="2160" loading="lazy"><figcaption>Welcome</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/2.png" alt="Order type selection" width="3840" height="2160" loading="lazy"><figcaption>Order type</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/4.png" alt="Menu browsing and cart" width="3840" height="2160" loading="lazy"><figcaption>Build the order</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/5.png" alt="Product customization" width="1920" height="1080" loading="lazy"><figcaption>Customize</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/7.png" alt="Payment method selection" width="3840" height="2160" loading="lazy"><figcaption>Choose payment</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/9.png" alt="Card payment instructions" width="3840" height="2160" loading="lazy"><figcaption>Pay</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/11.png" alt="Order confirmation" width="3840" height="2160" loading="lazy"><figcaption>Confirm</figcaption></figure>
+            <figure><img src="skytab-kiosk/final-screens/12.png" alt="Experience feedback" width="3840" height="2160" loading="lazy"><figcaption>Feedback</figcaption></figure>
           </div>
         </div>
       </section>
@@ -148,6 +154,7 @@
     </main>
   </div>
 
+  <template id="legacy-kiosk-case">
   <!-- Hero Wrapper with shared gradient background -->
   <div class="hero-wrapper">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
@@ -162,7 +169,7 @@
             <p class="hero-subtitle">Designing an intuitive self-ordering kiosk that reduced order time by 30% and increased kiosk adoption by 20%</p>
           </div>
           <div class="hero-image-container">
-            <img src="skytab-kiosk/Kiosk hero.png" alt="Shift4 Kiosk Interface" style="width: 100%; height: auto; border-radius: 24px;">
+            <img src="assets/previews/kiosk-1200.webp" srcset="assets/previews/kiosk-640.webp 640w, assets/previews/kiosk-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 60vw" alt="Shift4 Kiosk Interface" style="width: 100%; height: auto; border-radius: 24px;" width="2472" height="1866" loading="lazy">
           </div>
         </div>
         <div class="hero-metrics">
@@ -202,7 +209,7 @@
           <div class="section-divider"></div>
 
           <div style="text-align: center; margin: var(--spacing-12) 0;">
-            <img src="skytab-kiosk/Cartoon people standing in queue flat vector illustration [Converted]-01.png" alt="People waiting in queue" style="max-width: 100%; height: auto;">
+            <img src="skytab-kiosk/Cartoon people standing in queue flat vector illustration [Converted]-01.png" alt="People waiting in queue" style="max-width: 100%; height: auto;" width="2760" height="874" loading="lazy">
             <p style="margin-top: var(--spacing-4); color: var(--color-text-secondary); font-size: var(--font-size-sm);">
               Traditional counter ordering: Long lines + manual entry = 30% longer order times
             </p>
@@ -319,7 +326,7 @@
           <p>Mapped out the key user journeys, ensuring a straightforward and intuitive process from welcome to order completion.</p>
 
           <div class="case-study-image">
-            <img src="skytab-kiosk/Kiosk Flow.png" alt="Kiosk user flow diagram" style="width: 100%; height: auto;">
+            <img src="skytab-kiosk/Kiosk Flow.png" alt="Kiosk user flow diagram" style="width: 100%; height: auto;" width="6120" height="3240" loading="lazy">
             <div class="case-study-image-caption">
               Complete user flow mapping showing all paths
             </div>
@@ -340,7 +347,7 @@
               </ul>
             </div>
             <div class="case-study-image">
-              <img src="skytab-kiosk/Kiosk Sketch.png" alt="Kiosk wireframe sketches" style="width: 100%; height: auto; border-radius: 12px;">
+              <img src="skytab-kiosk/Kiosk Sketch.png" alt="Kiosk wireframe sketches" style="width: 100%; height: auto; border-radius: 12px;" width="7956" height="4655" loading="lazy">
               <div class="case-study-image-caption">
                 Early wireframes focused on minimizing screens and optimizing touch targets
               </div>
@@ -357,7 +364,7 @@
           </ul>
 
           <div style="margin: var(--spacing-8) 0;">
-            <video autoplay loop muted playsinline style="width: 100%; height: auto; border-radius: 12px; display: block;">
+            <video poster="assets/previews/kiosk-1200.webp" loop muted playsinline style="width: 100%; height: auto; border-radius: 12px; display: block;" controls preload="none">
               <source src="skytab-kiosk/Kiosk HiFi.mov" type="video/mp4">
             </video>
             <p style="margin-top: var(--spacing-4); font-size: var(--font-size-sm); color: var(--color-text-secondary); text-align: center;">
@@ -374,7 +381,7 @@
             <div class="image-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: var(--spacing-6) 0; align-items: start;">
               <div>
                 <div style="min-height: 100px; display: flex; align-items: center; justify-content: center;">
-                  <img src="skytab-kiosk/Tabs before.png?v=3" alt="Category navigation before redesign" style="height: 70px !important; width: auto !important; max-width: 100% !important; border-radius: 12px !important; object-fit: contain !important;">
+                  <img src="skytab-kiosk/Tabs before.png?v=3" alt="Category navigation before redesign" style="height: 70px !important; width: auto !important; max-width: 100% !important; border-radius: 12px !important; object-fit: contain !important;" width="2298" height="176" loading="lazy">
                 </div>
                 <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                   Before: Text-based tabs with underline indicator and tight spacing made it difficult to accurately tap the intended category, especially for users with larger fingers or when standing at an angle.
@@ -382,7 +389,7 @@
               </div>
               <div>
                 <div style="min-height: 100px; display: flex; align-items: center; justify-content: center;">
-                  <img src="skytab-kiosk/Tabs After.png?v=3" alt="Category navigation after redesign" style="height: 70px !important; width: auto !important; max-width: 100% !important; border-radius: 12px !important; object-fit: contain !important;">
+                  <img src="skytab-kiosk/Tabs After.png?v=3" alt="Category navigation after redesign" style="height: 70px !important; width: auto !important; max-width: 100% !important; border-radius: 12px !important; object-fit: contain !important;" width="2298" height="176" loading="lazy">
                 </div>
                 <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                   After: Pill-style buttons with generous padding, rounded edges, and clear spacing between each option. The orange fill provides unmistakable active state feedback.
@@ -404,7 +411,7 @@
             <div class="image-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: var(--spacing-6) 0; align-items: start;">
               <div>
                 <div style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
-                  <img src="skytab-kiosk/modifier before.png" alt="Modifier selection before redesign" style="max-height: 280px !important; height: auto !important; width: auto !important; max-width: 100%; border-radius: 12px; object-fit: contain;">
+                  <img src="skytab-kiosk/modifier before.png" alt="Modifier selection before redesign" style="max-height: 280px !important; height: auto !important; width: auto !important; max-width: 100%; border-radius: 12px; object-fit: contain;" width="3036" height="1840" loading="lazy">
                 </div>
                 <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                   Before: Checkbox-based modifiers stacked vertically on the left forced users to scroll extensively. Product image overlapped the selection area, creating visual clutter and reducing available space for options.
@@ -412,7 +419,7 @@
               </div>
               <div>
                 <div style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
-                  <img src="skytab-kiosk/modifier after.png" alt="Modifier selection after redesign" style="max-height: 280px !important; height: auto !important; width: auto !important; max-width: 100%; border-radius: 12px; object-fit: contain;">
+                  <img src="skytab-kiosk/modifier after.png" alt="Modifier selection after redesign" style="max-height: 280px !important; height: auto !important; width: auto !important; max-width: 100%; border-radius: 12px; object-fit: contain;" width="3520" height="1840" loading="lazy">
                 </div>
                 <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                   After: Utilized horizontal space by placing product image on the left and modifier options in a spacious grid on the right. Button-style selections with clear grouping and visual hierarchy.
@@ -435,7 +442,7 @@
             <div class="image-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: var(--spacing-6) 0; align-items: start;">
               <div>
                 <div style="min-height: 450px; display: flex; align-items: center; justify-content: center;">
-                  <img src="skytab-kiosk/cart before.png" alt="Cart before redesign" style="max-height: 430px !important; height: auto !important; width: auto !important; max-width: 100%; border-radius: 12px; object-fit: contain;">
+                  <img src="skytab-kiosk/cart before.png" alt="Cart before redesign" style="max-height: 430px !important; height: auto !important; width: auto !important; max-width: 100%; border-radius: 12px; object-fit: contain;" width="1366" height="2160" loading="lazy">
                 </div>
                 <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                   Before: Loyalty rewards dominated the top of the screen, pushing actual order items and pricing below. Visual hierarchy made it unclear what was most important. The checkout button redundantly showed the price.
@@ -443,7 +450,7 @@
               </div>
               <div>
                 <div style="min-height: 450px; display: flex; align-items: center; justify-content: center;">
-                  <img src="skytab-kiosk/Cart after.png" alt="Cart after redesign" style="max-height: 430px !important; height: auto !important; width: auto !important; max-width: 100%; border-radius: 12px; object-fit: contain;">
+                  <img src="skytab-kiosk/Cart after.png" alt="Cart after redesign" style="max-height: 430px !important; height: auto !important; width: auto !important; max-width: 100%; border-radius: 12px; object-fit: contain;" width="1364" height="2160" loading="lazy">
                 </div>
                 <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                   After: Restructured with clear information hierarchy—"Shopping Bag" title with item count, order items prominently displayed, pricing breakdown clearly separated, and loyalty/actions as secondary elements at bottom.
@@ -467,7 +474,7 @@
           <p><strong>With Hardware Team:</strong> Ensured design worked within hardware constraints, tested on actual kiosk hardware</p>
 
           <div class="case-study-image" style="margin-top: var(--spacing-8);">
-            <img src="skytab-kiosk/Mockup1.png" alt="Kiosk hardware testing mockup" style="width: 100%; height: auto; border-radius: 12px;">
+            <img src="skytab-kiosk/Mockup1.png" alt="Kiosk hardware testing mockup" style="width: 100%; height: auto; border-radius: 12px;" width="2281" height="1195" loading="lazy">
           </div>
         </section>
 
@@ -479,7 +486,7 @@
 
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin: var(--spacing-8) 0;">
             <div>
-              <img src="skytab-kiosk/final-screens/1.png" alt="Welcome screen with restaurant branding" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/1.png" alt="Welcome screen with restaurant branding" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>1. Welcome Screen</strong><br>
                 Branded welcome with real-time wait status keeps customers informed immediately. Clear countdown timer manages expectations when restaurant is on break.
@@ -487,7 +494,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/2.png" alt="Order type selection" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/2.png" alt="Order type selection" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>2. Order Type Selection</strong><br>
                 Large, touch-friendly cards with clear icons let customers choose between dine-in and takeout. Visual differentiation through icon design and selected state.
@@ -495,7 +502,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/3.png" alt="Phone number entry for loyalty" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/3.png" alt="Phone number entry for loyalty" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>3. Loyalty Lookup</strong><br>
                 Optional phone number entry for loyalty rewards with clear skip option. Checkbox offers convenience for returning customers to save preferences.
@@ -503,7 +510,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/4.png" alt="Menu with shopping cart" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/4.png" alt="Menu with shopping cart" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>4. Menu Browse</strong><br>
                 Visual-first menu with high-quality food photography and clear pricing. Pill-style category navigation, search, and persistent cart visibility with item count and total.
@@ -511,7 +518,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/5.png" alt="Product customization modal" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/5.png" alt="Product customization modal" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="1920" height="1080" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>5. Product Customization</strong><br>
                 Horizontal layout maximizes screen space—product image on left, modification options in clear groups on right. Button-style selections with required field indicators.
@@ -519,7 +526,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/6.png" alt="Name entry screen" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/6.png" alt="Name entry screen" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>6. Name Entry</strong><br>
                 Simple name capture for order pickup with full keyboard. Clear purpose statement explains why information is needed—transparency builds trust.
@@ -527,7 +534,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/7.png" alt="Payment method selection" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/7.png" alt="Payment method selection" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>7. Payment Method</strong><br>
                 Three payment options with visual icons: pay at counter, credit card, or loyalty program. Equal visual weight ensures no forced payment hierarchy.
@@ -535,7 +542,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/8.png" alt="Tip selection screen" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/8.png" alt="Tip selection screen" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>8. Tip Selection</strong><br>
                 Preset tip percentages with calculated amounts shown, plus custom tip and no tip options. Clear submit button advances flow only when customer is ready.
@@ -543,7 +550,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/9.png" alt="Card payment processing" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/9.png" alt="Card payment processing" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>9. Payment Processing</strong><br>
                 Illustrated instructions show card insertion methods with animated visual feedback. Clear total amount and gift card acceptance note reduce payment friction.
@@ -551,7 +558,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/10.png" alt="Receipt delivery options" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/10.png" alt="Receipt delivery options" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>10. Receipt Delivery</strong><br>
                 Choice between email or text message receipt delivery. Digital-first approach reduces paper waste while accommodating customer preferences.
@@ -559,7 +566,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/11.png" alt="Order confirmation success" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/11.png" alt="Order confirmation success" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>11. Order Confirmed</strong><br>
                 Celebratory success animation with prominent checkmark provides immediate positive feedback. Finish button resets kiosk for next customer.
@@ -567,7 +574,7 @@
             </div>
 
             <div>
-              <img src="skytab-kiosk/final-screens/12.png" alt="Experience rating screen" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <img src="skytab-kiosk/final-screens/12.png" alt="Experience rating screen" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" width="3840" height="2160" loading="lazy">
               <div style="padding: var(--spacing-4) 0; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
                 <strong>12. Feedback Request</strong><br>
                 Simple thumbs up/down rating with auto-dismiss countdown. Low-friction feedback collection with clear skip option respects customer time.
@@ -834,8 +841,15 @@
     </div>
   </main>
 
+  </template>
+
   <!-- Back to Top Button -->
 
+  <aside class="case-continuation" aria-label="Continue exploring">
+    <p>Keep exploring</p>
+    <a href="index.html#work">More selected work <span aria-hidden="true">↗</span></a>
+    <a href="contact/contact.html">Start a conversation <span aria-hidden="true">↗</span></a>
+  </aside>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">

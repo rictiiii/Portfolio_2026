@@ -49,7 +49,7 @@ body.ii-page > .site-footer {
 }
 
 .site-footer .footer-links a:focus-visible {
-  outline: 2px solid #147b9b;
+  outline: 2px solid #147991;
   outline-offset: 4px;
 }
 
@@ -88,3 +88,6 @@ body.ii-page > .site-footer {
     font-size: 12px;
   }
 }
+
+/* Explicit child color overrides the older global copyright rule. */
+.site-footer .footer-copyright { color: #536368; }
