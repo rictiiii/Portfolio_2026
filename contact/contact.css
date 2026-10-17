@@ -65,5 +65,5 @@ a:focus-visible,.contact-submit-btn:focus-visible,.contact-field input:focus-vis
 .site-footer .footer-copyright,.site-footer .footer-links a { color:var(--contact-muted); }
 .site-footer .footer-links a:hover,.contact-help a:hover { color:var(--contact-accent); }
 .navigation .nav-links { background:rgba(245,247,240,.42); }
-.navigation .nav-dropdown-menu { background:rgba(245,247,240,.65); }
+.navigation .nav-dropdown-menu { background:rgba(245,247,240,.42); }
 @media(prefers-reduced-transparency:reduce) { .navigation .nav-links,.navigation .nav-dropdown-menu { background:#f5f7f0; } }

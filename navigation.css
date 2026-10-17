@@ -127,6 +127,18 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.42);
   box-shadow: 0 4px 14px rgba(24, 31, 42, 0.06), inset 0 1px rgba(255, 255, 255, 0.92);
+  position: relative;
+  z-index: 0;
+}
+
+/* Keep the nav blur on its own layer so it does not limit the dropdown's backdrop. */
+.navigation .nav-links::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
   backdrop-filter: blur(18px) saturate(1.15);
   -webkit-backdrop-filter: blur(18px) saturate(1.15);
 }
@@ -182,10 +194,10 @@
   padding: 8px 0;
   border: 1px solid rgba(21, 21, 21, 0.09);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.42);
   box-shadow: 0 18px 50px rgba(28, 38, 49, 0.14);
-  backdrop-filter: blur(16px) saturate(1.25);
-  -webkit-backdrop-filter: blur(16px) saturate(1.25);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
   opacity: 0;
   visibility: hidden;
   transform: translateX(-50%) translateY(-5px);
@@ -273,3 +285,13 @@
 }
 
 @media(prefers-reduced-transparency:reduce){.navigation .nav-links,.navigation .nav-dropdown-menu{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}}
+
+@media (prefers-reduced-transparency: reduce) {
+  .navigation .nav-links::before,
+  .navigation .nav-dropdown-menu {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .navigation .nav-links,
+  .navigation .nav-dropdown-menu { background: var(--paper, #f5f7f0); }
+}
