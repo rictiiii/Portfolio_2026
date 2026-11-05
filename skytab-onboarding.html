@@ -51,7 +51,7 @@
       <div class="sky-hero__copy">
         <p class="sky-eyebrow">SkyTab onboarding</p>
             <h1>Onboarding that evolves</h1>
-        <p class="sky-hero__lede">I designed a state-aware Merchant Hub that helped restaurants launch faster and discover more SkyTab capabilities.</p>
+        <p class="sky-hero__lede">I designed guided initial setup and an adaptive Merchant Hub to support restaurants from launch preparation to daily operations and growth.</p>
         <div class="sky-hero__actions">
           <a class="sky-button" href="#solution">View the solution</a>
           <a class="sky-text-link" href="interactive-prototype/index.html" target="_blank" rel="noopener">Open prototype</a>
@@ -131,16 +131,29 @@
       </div>
     </section>
 
+    <section class="sky-section" id="initial-setup">
+      <div class="sky-shell">
+        <div class="sky-section__intro">
+          <h2>Initial setup comes before the Hub</h2>
+          <p>Merchants begin with a guided flow covering installation details, menu and tax information, restaurant details, and Offline Mode acknowledgment. They reach the Customer Hub after progressing through this initial setup. The completion screen marks the transition into the Hub. Dashboard access does not mean every operational task or additional service is ready.</p>
+        </div>
+        <figure class="sky-media">
+          <img src="skytab-onboarding/onboarding-wizard-screens.png" width="6042" height="4120" alt="Guided initial setup covering installation, menu, and restaurant details before Customer Hub entry" loading="lazy">
+          <figcaption>Initial setup → completion → enter the Customer Hub. The dashboard follows the guided entry flow.</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="sky-section sky-section--decision" id="decision">
       <div class="sky-shell sky-decision">
         <div class="sky-decision__statement">
-          <h2>Adapt the priority without restricting access</h2>
-          <p>State-aware, not state-gated.</p>
+          <h2>Guide initial setup, then adapt the Merchant Hub</h2>
+          <p>Required setup before Hub access. State-aware guidance afterward.</p>
         </div>
         <dl class="sky-decision__logic">
-          <div><dt>Evidence</dt><dd>Merchants needed a different next action at each lifecycle stage.</dd></div>
-          <div><dt>Decision</dt><dd>Change hierarchy, guidance, and tone based on context while keeping the full product available.</dd></div>
-          <div><dt>Tradeoff</dt><dd>Accept greater system complexity so merchants retain control and can explore beyond the recommended path.</dd></div>
+          <div><dt>Evidence</dt><dd>Merchants needed a guided entry flow and a different next action as their priorities changed.</dd></div>
+          <div><dt>Decision</dt><dd>Guide merchants through initial setup before Hub entry, then adapt hierarchy, guidance, and tone to their context.</dd></div>
+          <div><dt>Tradeoff</dt><dd>Initial setup adds work before dashboard access. Keep that work focused, make progress understandable, and provide support when a blocker appears.</dd></div>
         </dl>
       </div>
     </section>
@@ -149,7 +162,7 @@
  <div class="lifecycle-heading">
   <p class="section-label">Inside the work / SkyTab Merchant Hub</p>
   <h2 id="lifecycle-title">A dashboard is not<br>the starting point.</h2>
-  <p class="lifecycle-intro">The merchant’s situation is. Explore how I changed the same product from a generic dashboard into a guide for launch, daily operations, and growth.</p>
+  <p class="lifecycle-intro">The journey begins with guided initial setup before Hub entry. Once inside, merchants need different priorities for launch preparation, daily operations, and growth.</p>
  </div>
  <div class="lifecycle-controls" role="group" aria-label="Explore merchant stages" hidden>
   <button type="button" aria-pressed="true" aria-controls="stage-before" data-stage="stage-before"><span aria-hidden="true">00</span> The starting point</button>
@@ -159,12 +172,12 @@
  </div>
  <div class="lifecycle-stages">
   <article class="lifecycle-stage" id="stage-before" aria-labelledby="stage-before-title">
-   <div class="stage-copy"><p class="section-label">00 / The problem</p><h3 id="stage-before-title">A dashboard before there was a business to measure.</h3><p>New restaurants and live restaurants saw the same data-first layout. Launch requirements were scattered, with no clear next action.</p><p class="stage-priority"><span>The design decision</span>Change the priority, not access to the product.</p></div>
+   <div class="stage-copy"><p class="section-label">00 / The problem</p><h3 id="stage-before-title">A dashboard before there was a business to measure.</h3><p>New restaurants and live restaurants saw the same data-first layout. Launch requirements were scattered, with no clear next action.</p><p class="stage-priority"><span>The design decision</span>Guide initial setup, then prioritize the next useful action.</p></div>
    <figure><div class="stage-image"><img src="assets/previews/lifecycle-before.webp" srcset="assets/previews/lifecycle-before-800.webp 800w, assets/previews/lifecycle-before.webp 1440w" sizes="(max-width: 900px) calc(100vw - 64px), 760px" width="1440" height="953" loading="lazy" decoding="async" alt="Original Merchant Hub dashboard showing a generic data-first layout"></div><figcaption>Before / One hierarchy for every merchant</figcaption></figure>
   </article>
   <article class="lifecycle-stage" id="stage-launch" aria-labelledby="stage-launch-title">
-   <div class="stage-copy"><p class="section-label">01 / Activate</p><h3 id="stage-launch-title">Make the next step obvious.</h3><p>Setup progress, installation status, and support come first. A new merchant needs a clear path to their first payment.</p><p class="stage-priority"><span>Design priority</span>Readiness before reporting</p></div>
-   <figure><div class="stage-image"><img src="assets/previews/lifecycle-launch.webp?v=2" srcset="assets/previews/lifecycle-launch-800.webp 800w, assets/previews/lifecycle-launch.webp?v=2 1440w" sizes="(max-width: 900px) calc(100vw - 64px), 760px" width="1440" height="873" loading="lazy" decoding="async" alt="Launch dashboard with setup progress, order status, and a dedicated support contact"></div><figcaption>Launch Center / Preparing to open</figcaption></figure>
+   <div class="stage-copy"><p class="section-label">01 / Activate</p><h3 id="stage-launch-title">Make the next step obvious.</h3><p>After initial setup, launch progress, installation status, and support take priority in the Hub. Dashboard access is a step toward readiness, not proof that the restaurant is live.</p><p class="stage-priority"><span>Design priority</span>Readiness before reporting</p></div>
+   <figure><div class="stage-image"><img src="assets/previews/lifecycle-launch.webp?v=2" srcset="assets/previews/lifecycle-launch-800.webp 800w, assets/previews/lifecycle-launch.webp?v=2 1440w" sizes="(max-width: 900px) calc(100vw - 64px), 760px" width="1440" height="873" loading="lazy" decoding="async" alt="Launch dashboard with setup progress, order status, and a dedicated support contact"></div><figcaption>Launch Center / After initial setup, preparing to open</figcaption></figure>
   </article>
   <article class="lifecycle-stage" id="stage-operate" aria-labelledby="stage-operate-title">
    <div class="stage-copy"><p class="section-label">02 / Operate</p><h3 id="stage-operate-title">Bring the business into focus.</h3><p>Once a restaurant is live, performance data and recommendations take priority. The same hub now supports the rhythm of daily operations.</p><p class="stage-priority"><span>Design priority</span>Performance in context</p></div>
@@ -181,18 +194,18 @@
       <div class="sky-shell">
         <div class="sky-section__intro">
           <h2>One merchant journey, from setup to growth</h2>
-          <p>The dashboard keeps its structure familiar while changing the information and actions that deserve priority.</p>
+          <p>A guided setup flow leads into the Merchant Hub. Within the Hub, a familiar dashboard structure supports changing priorities from launch preparation to daily operations and growth.</p>
         </div>
         <article class="sky-moment">
           <div class="sky-moment__copy">
             <span>Activate and configure</span>
             <h3>Make the critical path impossible to miss</h3>
-            <p>Required tasks, launch progress, installation details, menu programming, and Customer Success support move to the foreground. Optional features remain available without competing with launch work.</p>
+            <p>After initial setup, the Hub prioritizes remaining launch work, installation details, menu programming, and Customer Success support. Secondary content supports discovery without competing with immediate launch priorities.</p>
             <ul><li>Clear ownership and status for every launch requirement</li><li>Progressive setup that builds confidence</li><li>Direct access to support when a blocker appears</li></ul>
           </div>
           <figure class="sky-media sky-moment__visual">
             <img src="skytab-onboarding/launch-dashboard.png" width="5378" height="3262" alt="Launch dashboard prioritizing order status, setup progress, support, products, and tutorials" loading="lazy">
-            <figcaption>Launch work is prioritized without hiding the rest of Merchant Hub.</figcaption>
+            <figcaption>After initial setup, launch-related status, remaining work, and support take priority.</figcaption>
           </figure>
         </article>
         <article class="sky-moment sky-moment--reverse">
@@ -269,9 +282,8 @@
             </div>
           </details>
           <details>
-            <summary>Onboarding screens and feature activation flow</summary>
+            <summary>Feature activation flow</summary>
             <div class="sky-appendix__content">
-              <figure class="sky-media"><img src="skytab-onboarding/onboarding-wizard-screens.png" width="6042" height="4120" alt="Onboarding wizard screens for required setup" loading="lazy"></figure>
               <div class="sky-appendix__grid">
                 <img src="skytab-onboarding/1.png" width="2880" height="1960" alt="Online ordering activation entry" loading="lazy">
                 <img src="skytab-onboarding/2.png" width="2880" height="1960" alt="Online ordering channel selection" loading="lazy">
