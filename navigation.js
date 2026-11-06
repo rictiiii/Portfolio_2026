@@ -42,3 +42,40 @@
 })();
 
 // Metrics remain as authored: preserve decimals, currency, units, and qualifiers.
+
+// One shared back-to-top control on every portfolio page.
+(() => {
+  if (document.querySelector('.portfolio-to-top')) return;
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'portfolio-to-top';
+  button.setAttribute('aria-label', 'Back to top');
+  button.title = 'Back to top';
+  button.innerHTML = '<span aria-hidden="true">↑</span>';
+  button.hidden = true;
+  document.body.append(button);
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let scheduled = false;
+  function update() {
+    button.hidden = scrollY < Math.min(600, innerHeight * .75);
+    scheduled = false;
+  }
+  function schedule() {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+  }
+  button.addEventListener('click', () => {
+    const target = document.querySelector('main, h1');
+    if (target) {
+      if (!target.hasAttribute('tabindex')) {
+        target.setAttribute('tabindex', '-1');
+        target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+      }
+      target.focus({ preventScroll: true });
+    }
+    window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+  });
+  addEventListener('scroll', schedule, { passive: true });
+  addEventListener('resize', schedule);
+  addEventListener('pageshow', update);
+  update();
+})();
